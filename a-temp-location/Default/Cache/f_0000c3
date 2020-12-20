@@ -1,0 +1,1662 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/animation/curves.dart', 'packages/flutter/src/widgets/scroll_metrics.dart', 'packages/flutter/src/painting/basic_types.dart', 'packages/flutter/src/physics/spring_simulation.dart', 'packages/flutter/src/physics/friction_simulation.dart', 'packages/flutter/src/rendering/list_wheel_viewport.dart', 'packages/flutter/src/scheduler/binding.dart', 'packages/flutter/src/rendering/viewport_offset.dart', 'packages/flutter/src/rendering/layer.dart'], (function load__packages__flutter__src__widgets__list_wheel_scroll_view_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__animation__curves$46dart, packages__flutter__src__widgets__scroll_metrics$46dart, packages__flutter__src__painting__basic_types$46dart, packages__flutter__src__physics__spring_simulation$46dart, packages__flutter__src__physics__friction_simulation$46dart, packages__flutter__src__rendering__list_wheel_viewport$46dart, packages__flutter__src__scheduler__binding$46dart, packages__flutter__src__rendering__viewport_offset$46dart, packages__flutter__src__rendering__layer$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const _js_helper = dart_sdk._js_helper;
+  const ui = dart_sdk.ui;
+  const collection = dart_sdk.collection;
+  const math = dart_sdk.math;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const scroll_controller = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_controller;
+  const scroll_position_with_single_context = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_position_with_single_context;
+  const scrollable = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scrollable;
+  const scroll_physics = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_physics;
+  const notification_listener = packages__flutter__src__widgets__widget_span$46dart.src__widgets__notification_listener;
+  const scroll_notification = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_notification;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  const scroll_metrics = packages__flutter__src__widgets__scroll_metrics$46dart.src__widgets__scroll_metrics;
+  const basic_types = packages__flutter__src__painting__basic_types$46dart.src__painting__basic_types;
+  const spring_simulation = packages__flutter__src__physics__spring_simulation$46dart.src__physics__spring_simulation;
+  const friction_simulation = packages__flutter__src__physics__friction_simulation$46dart.src__physics__friction_simulation;
+  const list_wheel_viewport = packages__flutter__src__rendering__list_wheel_viewport$46dart.src__rendering__list_wheel_viewport;
+  const binding = packages__flutter__src__scheduler__binding$46dart.src__scheduler__binding;
+  const viewport_offset = packages__flutter__src__rendering__viewport_offset$46dart.src__rendering__viewport_offset;
+  const object = packages__flutter__src__rendering__layer$46dart.src__rendering__object;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  var list_wheel_scroll_view = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $modulo = dartx['%'];
+  var $isEmpty = dartx.isEmpty;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $cast = dartx.cast;
+  var $add = dartx.add;
+  var $noSuchMethod = dartx.noSuchMethod;
+  var $abs = dartx.abs;
+  var $sign = dartx.sign;
+  var $runtimeType = dartx.runtimeType;
+  var $clear = dartx.clear;
+  var $putIfAbsent = dartx.putIfAbsent;
+  var $round = dartx.round;
+  var _LocationL = () => (_LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))();
+  var FutureOfvoid = () => (FutureOfvoid = dart.constFn(async.Future$(dart.void)))();
+  var JSArrayOfFutureOfvoid = () => (JSArrayOfFutureOfvoid = dart.constFn(_interceptors.JSArray$(FutureOfvoid())))();
+  var doubleN = () => (doubleN = dart.constFn(dart.nullable(core.double)))();
+  var DurationToNullN = () => (DurationToNullN = dart.constFn(dart.fnType(core.Null, [core.Duration])))();
+  var NotificationListenerOfScrollNotification = () => (NotificationListenerOfScrollNotification = dart.constFn(notification_listener.NotificationListener$(scroll_notification.ScrollNotification)))();
+  var ScrollNotificationTobool = () => (ScrollNotificationTobool = dart.constFn(dart.fnType(core.bool, [scroll_notification.ScrollNotification])))();
+  var BuildContextAndViewportOffsetToListWheelViewport = () => (BuildContextAndViewportOffsetToListWheelViewport = dart.constFn(dart.fnType(list_wheel_scroll_view.ListWheelViewport, [framework.BuildContext, viewport_offset.ViewportOffset])))();
+  var WidgetN = () => (WidgetN = dart.constFn(dart.nullable(framework.Widget)))();
+  var IdentityMapOfint$WidgetN = () => (IdentityMapOfint$WidgetN = dart.constFn(_js_helper.IdentityMap$(core.int, WidgetN())))();
+  var SplayTreeMapOfint$Element = () => (SplayTreeMapOfint$Element = dart.constFn(collection.SplayTreeMap$(core.int, framework.Element)))();
+  var VoidToWidgetN = () => (VoidToWidgetN = dart.constFn(dart.fnType(WidgetN(), [])))();
+  var VoidToNullN = () => (VoidToNullN = dart.constFn(dart.fnType(core.Null, [])))();
+  var ListWheelParentDataN = () => (ListWheelParentDataN = dart.constFn(dart.nullable(list_wheel_viewport.ListWheelParentData)))();
+  var RenderBoxN = () => (RenderBoxN = dart.constFn(dart.nullable(box.RenderBox)))();
+  var intAndElementToNullN = () => (intAndElementToNullN = dart.constFn(dart.fnType(core.Null, [core.int, framework.Element])))();
+  const CT = Object.create(null);
+  var L1 = "package:flutter/src/widgets/list_wheel_scroll_view.dart";
+  var L0 = "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart";
+  dart.defineLazy(CT, {
+    get C2() {
+      return C2 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C3 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "index",
+        [_Location_column]: 53,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C1 = dart.constList([C2 || CT.C2, C3 || CT.C3], _LocationL());
+    },
+    get C0() {
+      return C0 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C1 || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 96,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    },
+    get C6() {
+      return C6 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C7 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "index",
+        [_Location_column]: 71,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C5 = dart.constList([C6 || CT.C6, C7 || CT.C7], _LocationL());
+    },
+    get C4() {
+      return C4 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C5 || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 142,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    },
+    get C10() {
+      return C10 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 54,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C11 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "index",
+        [_Location_column]: 68,
+        [_Location_line]: 185,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C9 = dart.constList([C10 || CT.C10, C11 || CT.C11], _LocationL());
+    },
+    get C8() {
+      return C8 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C9 || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 37,
+        [_Location_line]: 185,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    },
+    get C14() {
+      return C14 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C15 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "index",
+        [_Location_column]: 61,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C13 = dart.constList([C14 || CT.C14, C15 || CT.C15], _LocationL());
+    },
+    get C12() {
+      return C12 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C13 || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 189,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    },
+    get C16() {
+      return C16 = dart.const(new _js_helper.PrivateSymbol.new('_maxScrollExtent', _maxScrollExtent));
+    },
+    get C17() {
+      return C17 = dart.const(new _js_helper.PrivateSymbol.new('_minScrollExtent', _minScrollExtent));
+    },
+    get C18() {
+      return C18 = dart.const(new _js_helper.PrivateSymbol.new('_viewportDimension', _viewportDimension));
+    },
+    get C19() {
+      return C19 = dart.const(new _js_helper.PrivateSymbol.new('_pixels', _pixels));
+    },
+    get C20() {
+      return C20 = dart.const({
+        __proto__: basic_types.AxisDirection.prototype,
+        [_name]: "AxisDirection.down",
+        index: 2
+      });
+    },
+    get C21() {
+      return C21 = dart.const({
+        __proto__: ui.Clip.prototype,
+        [_name$]: "Clip.hardEdge",
+        index: 1
+      });
+    },
+    get C24() {
+      return C24 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "diameterRatio",
+        [_Location_column]: 13,
+        [_Location_line]: 775,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C25 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "perspective",
+        [_Location_column]: 13,
+        [_Location_line]: 776,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C26 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "offAxisFraction",
+        [_Location_column]: 13,
+        [_Location_line]: 777,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C27 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "useMagnifier",
+        [_Location_column]: 13,
+        [_Location_line]: 778,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C28 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "magnification",
+        [_Location_column]: 13,
+        [_Location_line]: 779,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C29 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overAndUnderCenterOpacity",
+        [_Location_column]: 13,
+        [_Location_line]: 780,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C30 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemExtent",
+        [_Location_column]: 13,
+        [_Location_line]: 781,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C31 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "squeeze",
+        [_Location_column]: 13,
+        [_Location_line]: 782,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C32 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "renderChildrenOutsideViewport",
+        [_Location_column]: 13,
+        [_Location_line]: 783,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C33 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "offset",
+        [_Location_column]: 13,
+        [_Location_line]: 784,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C34 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "childDelegate",
+        [_Location_column]: 13,
+        [_Location_line]: 785,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C35 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "clipBehavior",
+        [_Location_column]: 13,
+        [_Location_line]: 786,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C23 = dart.constList([C24 || CT.C24, C25 || CT.C25, C26 || CT.C26, C27 || CT.C27, C28 || CT.C28, C29 || CT.C29, C30 || CT.C30, C31 || CT.C31, C32 || CT.C32, C33 || CT.C33, C34 || CT.C34, C35 || CT.C35], _LocationL());
+    },
+    get C22() {
+      return C22 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C23 || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 774,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    },
+    get C38() {
+      return C38 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 9,
+        [_Location_line]: 769,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C39 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "physics",
+        [_Location_column]: 9,
+        [_Location_line]: 770,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C40 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemExtent",
+        [_Location_column]: 9,
+        [_Location_line]: 771,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C41 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "restorationId",
+        [_Location_column]: 9,
+        [_Location_line]: 772,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C42 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "viewportBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 773,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C37 = dart.constList([C38 || CT.C38, C39 || CT.C39, C40 || CT.C40, C41 || CT.C41, C42 || CT.C42], _LocationL());
+    },
+    get C36() {
+      return C36 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C37 || CT.C37,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 768,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    },
+    get C45() {
+      return C45 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onNotification",
+        [_Location_column]: 7,
+        [_Location_line]: 753,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C46 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 768,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C44 = dart.constList([C45 || CT.C45, C46 || CT.C46], _LocationL());
+    },
+    get C43() {
+      return C43 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C44 || CT.C44,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 752,
+        [_Location_file]: "file:///D:/flutter/packages/flutter/lib/src/widgets/list_wheel_scroll_view.dart"
+      });
+    }
+  }, false);
+  list_wheel_scroll_view.ListWheelChildDelegate = class ListWheelChildDelegate extends core.Object {
+    trueIndexOf(index) {
+      if (index == null) dart.nullFailed(L0, 55, 23, "index");
+      return index;
+    }
+  };
+  (list_wheel_scroll_view.ListWheelChildDelegate.new = function() {
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelChildDelegate.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelChildDelegate);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelChildDelegate);
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelChildDelegate, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelChildDelegate.__proto__),
+    trueIndexOf: dart.fnType(core.int, [core.int])
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelChildDelegate, L1);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var C2;
+  var C3;
+  var C1;
+  var C0;
+  var children$ = dart.privateName(list_wheel_scroll_view, "ListWheelChildListDelegate.children");
+  list_wheel_scroll_view.ListWheelChildListDelegate = class ListWheelChildListDelegate extends list_wheel_scroll_view.ListWheelChildDelegate {
+    get children() {
+      return this[children$];
+    }
+    set children(value) {
+      super.children = value;
+    }
+    get estimatedChildCount() {
+      return this.children[$length];
+    }
+    build(context, index) {
+      if (context == null) dart.nullFailed(L0, 93, 30, "context");
+      if (index == null) dart.nullFailed(L0, 93, 43, "index");
+      if (dart.notNull(index) < 0 || dart.notNull(index) >= dart.notNull(this.children[$length])) return null;
+      return new basic.IndexedSemantics.new({child: this.children[$_get](index), index: index, $creationLocationd_0dea112b090073317d4: C0 || CT.C0});
+    }
+    shouldRebuild(oldDelegate) {
+      list_wheel_scroll_view.ListWheelChildListDelegate.as(oldDelegate);
+      if (oldDelegate == null) dart.nullFailed(L0, 100, 59, "oldDelegate");
+      return !dart.equals(this.children, oldDelegate.children);
+    }
+  };
+  (list_wheel_scroll_view.ListWheelChildListDelegate.new = function(opts) {
+    let children = opts && 'children' in opts ? opts.children : null;
+    if (children == null) dart.nullFailed(L0, 84, 45, "children");
+    this[children$] = children;
+    if (!(children != null)) dart.assertFailed(null, L0, 84, 65, "children != null");
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelChildListDelegate.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelChildListDelegate);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelChildListDelegate);
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelChildListDelegate, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelChildListDelegate.__proto__),
+    build: dart.fnType(dart.nullable(framework.Widget), [framework.BuildContext, core.int]),
+    shouldRebuild: dart.fnType(core.bool, [dart.nullable(core.Object)])
+  }));
+  dart.setGetterSignature(list_wheel_scroll_view.ListWheelChildListDelegate, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view.ListWheelChildListDelegate.__proto__),
+    estimatedChildCount: core.int
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelChildListDelegate, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.ListWheelChildListDelegate, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.ListWheelChildListDelegate.__proto__),
+    children: dart.finalFieldType(core.List$(framework.Widget))
+  }));
+  var C6;
+  var C7;
+  var C5;
+  var C4;
+  var children$0 = dart.privateName(list_wheel_scroll_view, "ListWheelChildLoopingListDelegate.children");
+  list_wheel_scroll_view.ListWheelChildLoopingListDelegate = class ListWheelChildLoopingListDelegate extends list_wheel_scroll_view.ListWheelChildDelegate {
+    get children() {
+      return this[children$0];
+    }
+    set children(value) {
+      super.children = value;
+    }
+    get estimatedChildCount() {
+      return null;
+    }
+    trueIndexOf(index) {
+      if (index == null) dart.nullFailed(L0, 136, 23, "index");
+      return index[$modulo](this.children[$length]);
+    }
+    build(context, index) {
+      if (context == null) dart.nullFailed(L0, 139, 30, "context");
+      if (index == null) dart.nullFailed(L0, 139, 43, "index");
+      if (dart.test(this.children[$isEmpty])) return null;
+      return new basic.IndexedSemantics.new({child: this.children[$_get](index[$modulo](this.children[$length])), index: index, $creationLocationd_0dea112b090073317d4: C4 || CT.C4});
+    }
+    shouldRebuild(oldDelegate) {
+      list_wheel_scroll_view.ListWheelChildLoopingListDelegate.as(oldDelegate);
+      if (oldDelegate == null) dart.nullFailed(L0, 146, 66, "oldDelegate");
+      return !dart.equals(this.children, oldDelegate.children);
+    }
+  };
+  (list_wheel_scroll_view.ListWheelChildLoopingListDelegate.new = function(opts) {
+    let children = opts && 'children' in opts ? opts.children : null;
+    if (children == null) dart.nullFailed(L0, 127, 52, "children");
+    this[children$0] = children;
+    if (!(children != null)) dart.assertFailed(null, L0, 127, 72, "children != null");
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelChildLoopingListDelegate.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelChildLoopingListDelegate);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelChildLoopingListDelegate);
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelChildLoopingListDelegate, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelChildLoopingListDelegate.__proto__),
+    build: dart.fnType(dart.nullable(framework.Widget), [framework.BuildContext, core.int]),
+    shouldRebuild: dart.fnType(core.bool, [dart.nullable(core.Object)])
+  }));
+  dart.setGetterSignature(list_wheel_scroll_view.ListWheelChildLoopingListDelegate, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view.ListWheelChildLoopingListDelegate.__proto__),
+    estimatedChildCount: dart.nullable(core.int)
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelChildLoopingListDelegate, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.ListWheelChildLoopingListDelegate, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.ListWheelChildLoopingListDelegate.__proto__),
+    children: dart.finalFieldType(core.List$(framework.Widget))
+  }));
+  var C10;
+  var C11;
+  var C9;
+  var C8;
+  var C14;
+  var C15;
+  var C13;
+  var C12;
+  var builder$ = dart.privateName(list_wheel_scroll_view, "ListWheelChildBuilderDelegate.builder");
+  var childCount$ = dart.privateName(list_wheel_scroll_view, "ListWheelChildBuilderDelegate.childCount");
+  list_wheel_scroll_view.ListWheelChildBuilderDelegate = class ListWheelChildBuilderDelegate extends list_wheel_scroll_view.ListWheelChildDelegate {
+    get builder() {
+      return this[builder$];
+    }
+    set builder(value) {
+      super.builder = value;
+    }
+    get childCount() {
+      return this[childCount$];
+    }
+    set childCount(value) {
+      super.childCount = value;
+    }
+    get estimatedChildCount() {
+      return this.childCount;
+    }
+    build(context, index) {
+      let t1, t0, t1$, t0$;
+      if (context == null) dart.nullFailed(L0, 182, 30, "context");
+      if (index == null) dart.nullFailed(L0, 182, 43, "index");
+      if (this.childCount == null) {
+        let child = (t0 = context, t1 = index, this.builder(t0, t1));
+        return child == null ? null : new basic.IndexedSemantics.new({child: child, index: index, $creationLocationd_0dea112b090073317d4: C8 || CT.C8});
+      }
+      if (dart.notNull(index) < 0 || dart.notNull(index) >= dart.nullCheck(this.childCount)) return null;
+      return new basic.IndexedSemantics.new({child: (t0$ = context, t1$ = index, this.builder(t0$, t1$)), index: index, $creationLocationd_0dea112b090073317d4: C12 || CT.C12});
+    }
+    shouldRebuild(oldDelegate) {
+      list_wheel_scroll_view.ListWheelChildBuilderDelegate.as(oldDelegate);
+      if (oldDelegate == null) dart.nullFailed(L0, 193, 62, "oldDelegate");
+      return !dart.equals(this.builder, oldDelegate.builder) || this.childCount != oldDelegate.childCount;
+    }
+  };
+  (list_wheel_scroll_view.ListWheelChildBuilderDelegate.new = function(opts) {
+    let builder = opts && 'builder' in opts ? opts.builder : null;
+    if (builder == null) dart.nullFailed(L0, 161, 19, "builder");
+    let childCount = opts && 'childCount' in opts ? opts.childCount : null;
+    this[builder$] = builder;
+    this[childCount$] = childCount;
+    if (!(builder != null)) dart.assertFailed(null, L0, 163, 15, "builder != null");
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelChildBuilderDelegate.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelChildBuilderDelegate);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelChildBuilderDelegate);
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelChildBuilderDelegate, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelChildBuilderDelegate.__proto__),
+    build: dart.fnType(dart.nullable(framework.Widget), [framework.BuildContext, core.int]),
+    shouldRebuild: dart.fnType(core.bool, [dart.nullable(core.Object)])
+  }));
+  dart.setGetterSignature(list_wheel_scroll_view.ListWheelChildBuilderDelegate, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view.ListWheelChildBuilderDelegate.__proto__),
+    estimatedChildCount: dart.nullable(core.int)
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelChildBuilderDelegate, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.ListWheelChildBuilderDelegate, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.ListWheelChildBuilderDelegate.__proto__),
+    builder: dart.finalFieldType(dart.fnType(dart.nullable(framework.Widget), [framework.BuildContext, core.int])),
+    childCount: dart.finalFieldType(dart.nullable(core.int))
+  }));
+  var initialItem$ = dart.privateName(list_wheel_scroll_view, "FixedExtentScrollController.initialItem");
+  list_wheel_scroll_view.FixedExtentScrollController = class FixedExtentScrollController extends scroll_controller.ScrollController {
+    get initialItem() {
+      return this[initialItem$];
+    }
+    set initialItem(value) {
+      super.initialItem = value;
+    }
+    get selectedItem() {
+      if (!dart.test(this.positions[$isNotEmpty])) dart.assertFailed(dart.str("FixedExtentScrollController.selectedItem cannot be accessed before a ") + dart.str("scroll view is built with it."), L0, 238, 7, "positions.isNotEmpty");
+      if (!(this.positions[$length] === 1)) dart.assertFailed(dart.str("The selectedItem property cannot be read when multiple scroll views are ") + dart.str("attached to the same FixedExtentScrollController."), L0, 243, 7, "positions.length == 1");
+      let position = list_wheel_scroll_view._FixedExtentScrollPosition.as(this.position);
+      return position.itemIndex;
+    }
+    animateToItem(itemIndex, opts) {
+      if (itemIndex == null) dart.nullFailed(L0, 258, 9, "itemIndex");
+      let duration = opts && 'duration' in opts ? opts.duration : null;
+      if (duration == null) dart.nullFailed(L0, 259, 23, "duration");
+      let curve = opts && 'curve' in opts ? opts.curve : null;
+      if (curve == null) dart.nullFailed(L0, 260, 20, "curve");
+      return async.async(dart.void, (function* animateToItem() {
+        if (!dart.test(this.hasClients)) {
+          return;
+        }
+        yield async.Future.wait(dart.void, (() => {
+          let t0 = JSArrayOfFutureOfvoid().of([]);
+          for (let position of this.positions[$cast](list_wheel_scroll_view._FixedExtentScrollPosition))
+            t0[$add](position.animateTo(dart.notNull(itemIndex) * dart.notNull(position.itemExtent), {duration: duration, curve: curve}));
+          return t0;
+        })());
+      }).bind(this));
+    }
+    jumpToItem(itemIndex) {
+      if (itemIndex == null) dart.nullFailed(L0, 280, 23, "itemIndex");
+      for (let position of this.positions[$cast](list_wheel_scroll_view._FixedExtentScrollPosition)) {
+        position.jumpTo(dart.notNull(itemIndex) * dart.notNull(position.itemExtent));
+      }
+    }
+    createScrollPosition(physics, context, oldPosition) {
+      if (physics == null) dart.nullFailed(L0, 287, 53, "physics");
+      if (context == null) dart.nullFailed(L0, 287, 76, "context");
+      return new list_wheel_scroll_view._FixedExtentScrollPosition.new({physics: physics, context: context, initialItem: this.initialItem, oldPosition: oldPosition});
+    }
+  };
+  (list_wheel_scroll_view.FixedExtentScrollController.new = function(opts) {
+    let initialItem = opts && 'initialItem' in opts ? opts.initialItem : 0;
+    if (initialItem == null) dart.nullFailed(L0, 217, 10, "initialItem");
+    this[initialItem$] = initialItem;
+    if (!(initialItem != null)) dart.assertFailed(null, L0, 218, 15, "initialItem != null");
+    list_wheel_scroll_view.FixedExtentScrollController.__proto__.new.call(this);
+    ;
+  }).prototype = list_wheel_scroll_view.FixedExtentScrollController.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.FixedExtentScrollController);
+  dart.addTypeCaches(list_wheel_scroll_view.FixedExtentScrollController);
+  dart.setMethodSignature(list_wheel_scroll_view.FixedExtentScrollController, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.FixedExtentScrollController.__proto__),
+    animateToItem: dart.fnType(async.Future$(dart.void), [core.int], {}, {curve: curves.Curve, duration: core.Duration}),
+    jumpToItem: dart.fnType(dart.void, [core.int])
+  }));
+  dart.setGetterSignature(list_wheel_scroll_view.FixedExtentScrollController, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view.FixedExtentScrollController.__proto__),
+    selectedItem: core.int
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.FixedExtentScrollController, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.FixedExtentScrollController, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.FixedExtentScrollController.__proto__),
+    initialItem: dart.finalFieldType(core.int)
+  }));
+  var itemIndex$ = dart.privateName(list_wheel_scroll_view, "FixedExtentMetrics.itemIndex");
+  list_wheel_scroll_view.FixedExtentMetrics = class FixedExtentMetrics extends scroll_metrics.FixedScrollMetrics {
+    get itemIndex() {
+      return this[itemIndex$];
+    }
+    set itemIndex(value) {
+      super.itemIndex = value;
+    }
+    copyWith(opts) {
+      let t1, t1$, t1$0, t1$1, t1$2, t1$3;
+      let minScrollExtent = opts && 'minScrollExtent' in opts ? opts.minScrollExtent : null;
+      let maxScrollExtent = opts && 'maxScrollExtent' in opts ? opts.maxScrollExtent : null;
+      let pixels = opts && 'pixels' in opts ? opts.pixels : null;
+      let viewportDimension = opts && 'viewportDimension' in opts ? opts.viewportDimension : null;
+      let axisDirection = opts && 'axisDirection' in opts ? opts.axisDirection : null;
+      let itemIndex = opts && 'itemIndex' in opts ? opts.itemIndex : null;
+      return new list_wheel_scroll_view.FixedExtentMetrics.new({minScrollExtent: (t1 = minScrollExtent, t1 == null ? dart.test(this.hasContentDimensions) ? this.minScrollExtent : null : t1), maxScrollExtent: (t1$ = maxScrollExtent, t1$ == null ? dart.test(this.hasContentDimensions) ? this.maxScrollExtent : null : t1$), pixels: (t1$0 = pixels, t1$0 == null ? dart.test(this.hasPixels) ? this.pixels : null : t1$0), viewportDimension: (t1$1 = viewportDimension, t1$1 == null ? dart.test(this.hasViewportDimension) ? this.viewportDimension : null : t1$1), axisDirection: (t1$2 = axisDirection, t1$2 == null ? this.axisDirection : t1$2), itemIndex: (t1$3 = itemIndex, t1$3 == null ? this.itemIndex : t1$3)});
+    }
+  };
+  (list_wheel_scroll_view.FixedExtentMetrics.new = function(opts) {
+    let minScrollExtent = opts && 'minScrollExtent' in opts ? opts.minScrollExtent : null;
+    let maxScrollExtent = opts && 'maxScrollExtent' in opts ? opts.maxScrollExtent : null;
+    let pixels = opts && 'pixels' in opts ? opts.pixels : null;
+    let viewportDimension = opts && 'viewportDimension' in opts ? opts.viewportDimension : null;
+    let axisDirection = opts && 'axisDirection' in opts ? opts.axisDirection : null;
+    if (axisDirection == null) dart.nullFailed(L0, 314, 28, "axisDirection");
+    let itemIndex = opts && 'itemIndex' in opts ? opts.itemIndex : null;
+    if (itemIndex == null) dart.nullFailed(L0, 315, 19, "itemIndex");
+    this[itemIndex$] = itemIndex;
+    list_wheel_scroll_view.FixedExtentMetrics.__proto__.new.call(this, {minScrollExtent: minScrollExtent, maxScrollExtent: maxScrollExtent, pixels: pixels, viewportDimension: viewportDimension, axisDirection: axisDirection});
+    ;
+  }).prototype = list_wheel_scroll_view.FixedExtentMetrics.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.FixedExtentMetrics);
+  dart.addTypeCaches(list_wheel_scroll_view.FixedExtentMetrics);
+  dart.setMethodSignature(list_wheel_scroll_view.FixedExtentMetrics, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.FixedExtentMetrics.__proto__),
+    copyWith: dart.fnType(list_wheel_scroll_view.FixedExtentMetrics, [], {axisDirection: dart.nullable(basic_types.AxisDirection), itemIndex: dart.nullable(core.int), maxScrollExtent: dart.nullable(core.double), minScrollExtent: dart.nullable(core.double), pixels: dart.nullable(core.double), viewportDimension: dart.nullable(core.double)}, {})
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.FixedExtentMetrics, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.FixedExtentMetrics, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.FixedExtentMetrics.__proto__),
+    itemIndex: dart.finalFieldType(core.int)
+  }));
+  var _maxScrollExtent = dart.privateName(list_wheel_scroll_view, "_maxScrollExtent");
+  var C16;
+  var _maxScrollExtent$ = dart.privateName(scroll_metrics, "_maxScrollExtent");
+  var _minScrollExtent = dart.privateName(list_wheel_scroll_view, "_minScrollExtent");
+  var C17;
+  var _minScrollExtent$ = dart.privateName(scroll_metrics, "_minScrollExtent");
+  var _viewportDimension = dart.privateName(list_wheel_scroll_view, "_viewportDimension");
+  var C18;
+  var _viewportDimension$ = dart.privateName(scroll_metrics, "_viewportDimension");
+  var _pixels = dart.privateName(list_wheel_scroll_view, "_pixels");
+  var C19;
+  var _pixels$ = dart.privateName(scroll_metrics, "_pixels");
+  list_wheel_scroll_view._FixedExtentScrollPosition = class _FixedExtentScrollPosition extends scroll_position_with_single_context.ScrollPositionWithSingleContext {
+    static _getItemExtentFromScrollContext(context) {
+      if (context == null) dart.nullFailed(L0, 387, 63, "context");
+      let scrollable = list_wheel_scroll_view._FixedExtentScrollableState.as(context);
+      return scrollable.itemExtent;
+    }
+    get itemExtent() {
+      return list_wheel_scroll_view._FixedExtentScrollPosition._getItemExtentFromScrollContext(this.context);
+    }
+    get itemIndex() {
+      return list_wheel_scroll_view._getItemFromOffset({offset: this.pixels, itemExtent: this.itemExtent, minScrollExtent: this.minScrollExtent, maxScrollExtent: this.maxScrollExtent});
+    }
+    copyWith(opts) {
+      let t1, t1$, t1$0, t1$1, t1$2, t1$3;
+      let minScrollExtent = opts && 'minScrollExtent' in opts ? opts.minScrollExtent : null;
+      let maxScrollExtent = opts && 'maxScrollExtent' in opts ? opts.maxScrollExtent : null;
+      let pixels = opts && 'pixels' in opts ? opts.pixels : null;
+      let viewportDimension = opts && 'viewportDimension' in opts ? opts.viewportDimension : null;
+      let axisDirection = opts && 'axisDirection' in opts ? opts.axisDirection : null;
+      let itemIndex = opts && 'itemIndex' in opts ? opts.itemIndex : null;
+      return new list_wheel_scroll_view.FixedExtentMetrics.new({minScrollExtent: (t1 = minScrollExtent, t1 == null ? dart.test(this.hasContentDimensions) ? this.minScrollExtent : null : t1), maxScrollExtent: (t1$ = maxScrollExtent, t1$ == null ? dart.test(this.hasContentDimensions) ? this.maxScrollExtent : null : t1$), pixels: (t1$0 = pixels, t1$0 == null ? dart.test(this.hasPixels) ? this.pixels : null : t1$0), viewportDimension: (t1$1 = viewportDimension, t1$1 == null ? dart.test(this.hasViewportDimension) ? this.viewportDimension : null : t1$1), axisDirection: (t1$2 = axisDirection, t1$2 == null ? this.axisDirection : t1$2), itemIndex: (t1$3 = itemIndex, t1$3 == null ? this.itemIndex : t1$3)});
+    }
+    get [_maxScrollExtent$]() {
+      return doubleN().as(this[$noSuchMethod](new core._Invocation.getter(C16 || CT.C16)));
+    }
+    get [_minScrollExtent$]() {
+      return doubleN().as(this[$noSuchMethod](new core._Invocation.getter(C17 || CT.C17)));
+    }
+    get [_viewportDimension$]() {
+      return doubleN().as(this[$noSuchMethod](new core._Invocation.getter(C18 || CT.C18)));
+    }
+    get [_pixels$]() {
+      return doubleN().as(this[$noSuchMethod](new core._Invocation.getter(C19 || CT.C19)));
+    }
+  };
+  (list_wheel_scroll_view._FixedExtentScrollPosition.new = function(opts) {
+    let physics = opts && 'physics' in opts ? opts.physics : null;
+    if (physics == null) dart.nullFailed(L0, 368, 28, "physics");
+    let context = opts && 'context' in opts ? opts.context : null;
+    if (context == null) dart.nullFailed(L0, 369, 28, "context");
+    let initialItem = opts && 'initialItem' in opts ? opts.initialItem : null;
+    if (initialItem == null) dart.nullFailed(L0, 370, 18, "initialItem");
+    let keepScrollOffset = opts && 'keepScrollOffset' in opts ? opts.keepScrollOffset : true;
+    if (keepScrollOffset == null) dart.nullFailed(L0, 371, 10, "keepScrollOffset");
+    let oldPosition = opts && 'oldPosition' in opts ? opts.oldPosition : null;
+    let debugLabel = opts && 'debugLabel' in opts ? opts.debugLabel : null;
+    if (!list_wheel_scroll_view._FixedExtentScrollableState.is(context)) dart.assertFailed("FixedExtentScrollController can only be used with ListWheelScrollViews", L0, 375, 10, "context is _FixedExtentScrollableState");
+    list_wheel_scroll_view._FixedExtentScrollPosition.__proto__.new.call(this, {physics: physics, context: context, initialPixels: dart.notNull(list_wheel_scroll_view._FixedExtentScrollPosition._getItemExtentFromScrollContext(context)) * dart.notNull(initialItem), keepScrollOffset: keepScrollOffset, oldPosition: oldPosition, debugLabel: debugLabel});
+    ;
+  }).prototype = list_wheel_scroll_view._FixedExtentScrollPosition.prototype;
+  dart.addTypeTests(list_wheel_scroll_view._FixedExtentScrollPosition);
+  dart.addTypeCaches(list_wheel_scroll_view._FixedExtentScrollPosition);
+  list_wheel_scroll_view._FixedExtentScrollPosition[dart.implements] = () => [list_wheel_scroll_view.FixedExtentMetrics];
+  dart.setMethodSignature(list_wheel_scroll_view._FixedExtentScrollPosition, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view._FixedExtentScrollPosition.__proto__),
+    copyWith: dart.fnType(list_wheel_scroll_view.FixedExtentMetrics, [], {axisDirection: dart.nullable(basic_types.AxisDirection), itemIndex: dart.nullable(core.int), maxScrollExtent: dart.nullable(core.double), minScrollExtent: dart.nullable(core.double), pixels: dart.nullable(core.double), viewportDimension: dart.nullable(core.double)}, {})
+  }));
+  dart.setGetterSignature(list_wheel_scroll_view._FixedExtentScrollPosition, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view._FixedExtentScrollPosition.__proto__),
+    itemExtent: core.double,
+    itemIndex: core.int,
+    [_maxScrollExtent$]: dart.nullable(core.double),
+    [_minScrollExtent$]: dart.nullable(core.double),
+    [_viewportDimension$]: dart.nullable(core.double),
+    [_pixels$]: dart.nullable(core.double)
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view._FixedExtentScrollPosition, L1);
+  var _name = dart.privateName(basic_types, "_name");
+  var C20;
+  var itemExtent$ = dart.privateName(list_wheel_scroll_view, "_FixedExtentScrollable.itemExtent");
+  list_wheel_scroll_view._FixedExtentScrollable = class _FixedExtentScrollable extends scrollable.Scrollable {
+    get itemExtent() {
+      return this[itemExtent$];
+    }
+    set itemExtent(value) {
+      super.itemExtent = value;
+    }
+    createState() {
+      return new list_wheel_scroll_view._FixedExtentScrollableState.new();
+    }
+  };
+  (list_wheel_scroll_view._FixedExtentScrollable.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let axisDirection = opts && 'axisDirection' in opts ? opts.axisDirection : C20 || CT.C20;
+    if (axisDirection == null) dart.nullFailed(L0, 429, 19, "axisDirection");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let physics = opts && 'physics' in opts ? opts.physics : null;
+    let itemExtent = opts && 'itemExtent' in opts ? opts.itemExtent : null;
+    if (itemExtent == null) dart.nullFailed(L0, 432, 19, "itemExtent");
+    let viewportBuilder = opts && 'viewportBuilder' in opts ? opts.viewportBuilder : null;
+    if (viewportBuilder == null) dart.nullFailed(L0, 433, 30, "viewportBuilder");
+    let restorationId = opts && 'restorationId' in opts ? opts.restorationId : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[itemExtent$] = itemExtent;
+    list_wheel_scroll_view._FixedExtentScrollable.__proto__.new.call(this, {key: key, axisDirection: axisDirection, controller: controller, physics: physics, viewportBuilder: viewportBuilder, restorationId: restorationId, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = list_wheel_scroll_view._FixedExtentScrollable.prototype;
+  dart.addTypeTests(list_wheel_scroll_view._FixedExtentScrollable);
+  dart.addTypeCaches(list_wheel_scroll_view._FixedExtentScrollable);
+  dart.setMethodSignature(list_wheel_scroll_view._FixedExtentScrollable, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view._FixedExtentScrollable.__proto__),
+    createState: dart.fnType(list_wheel_scroll_view._FixedExtentScrollableState, [])
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view._FixedExtentScrollable, L1);
+  dart.setFieldSignature(list_wheel_scroll_view._FixedExtentScrollable, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view._FixedExtentScrollable.__proto__),
+    itemExtent: dart.finalFieldType(core.double)
+  }));
+  list_wheel_scroll_view._FixedExtentScrollableState = class _FixedExtentScrollableState extends scrollable.ScrollableState {
+    get itemExtent() {
+      let actualWidget = list_wheel_scroll_view._FixedExtentScrollable.as(this.widget);
+      return actualWidget.itemExtent;
+    }
+  };
+  (list_wheel_scroll_view._FixedExtentScrollableState.new = function() {
+    list_wheel_scroll_view._FixedExtentScrollableState.__proto__.new.call(this);
+    ;
+  }).prototype = list_wheel_scroll_view._FixedExtentScrollableState.prototype;
+  dart.addTypeTests(list_wheel_scroll_view._FixedExtentScrollableState);
+  dart.addTypeCaches(list_wheel_scroll_view._FixedExtentScrollableState);
+  dart.setGetterSignature(list_wheel_scroll_view._FixedExtentScrollableState, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view._FixedExtentScrollableState.__proto__),
+    itemExtent: core.double
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view._FixedExtentScrollableState, L1);
+  list_wheel_scroll_view.FixedExtentScrollPhysics = class FixedExtentScrollPhysics extends scroll_physics.ScrollPhysics {
+    applyTo(ancestor) {
+      return new list_wheel_scroll_view.FixedExtentScrollPhysics.new({parent: this.buildParent(ancestor)});
+    }
+    createBallisticSimulation(position, velocity) {
+      let t1, t1$;
+      if (position == null) dart.nullFailed(L0, 480, 55, "position");
+      if (velocity == null) dart.nullFailed(L0, 480, 72, "velocity");
+      if (!list_wheel_scroll_view._FixedExtentScrollPosition.is(position)) dart.assertFailed(dart.str("FixedExtentScrollPhysics can only be used with Scrollables that uses ") + dart.str("the FixedExtentScrollController"), L0, 482, 7, "position is _FixedExtentScrollPosition");
+      let metrics = list_wheel_scroll_view._FixedExtentScrollPosition.as(position);
+      if (dart.notNull(velocity) <= 0.0 && dart.notNull(metrics.pixels) <= dart.notNull(metrics.minScrollExtent) || dart.notNull(velocity) >= 0.0 && dart.notNull(metrics.pixels) >= dart.notNull(metrics.maxScrollExtent)) {
+        return super.createBallisticSimulation(metrics, velocity);
+      }
+      let testFrictionSimulation = super.createBallisticSimulation(metrics, velocity);
+      if (testFrictionSimulation != null && (testFrictionSimulation.x(1 / 0) == metrics.minScrollExtent || testFrictionSimulation.x(1 / 0) == metrics.maxScrollExtent)) {
+        return super.createBallisticSimulation(metrics, velocity);
+      }
+      let settlingItemIndex = list_wheel_scroll_view._getItemFromOffset({offset: (t1$ = (t1 = testFrictionSimulation, t1 == null ? null : t1.x(1 / 0)), t1$ == null ? metrics.pixels : t1$), itemExtent: metrics.itemExtent, minScrollExtent: metrics.minScrollExtent, maxScrollExtent: metrics.maxScrollExtent});
+      let settlingPixels = dart.notNull(settlingItemIndex) * dart.notNull(metrics.itemExtent);
+      if (velocity[$abs]() < dart.notNull(this.tolerance.velocity) && (settlingPixels - dart.notNull(metrics.pixels))[$abs]() < dart.notNull(this.tolerance.distance)) {
+        return null;
+      }
+      if (settlingItemIndex == metrics.itemIndex) {
+        return new spring_simulation.SpringSimulation.new(this.spring, metrics.pixels, settlingPixels, velocity, {tolerance: this.tolerance});
+      }
+      return friction_simulation.FrictionSimulation.through(metrics.pixels, settlingPixels, velocity, dart.notNull(this.tolerance.velocity) * velocity[$sign]);
+    }
+  };
+  (list_wheel_scroll_view.FixedExtentScrollPhysics.new = function(opts) {
+    let parent = opts && 'parent' in opts ? opts.parent : null;
+    list_wheel_scroll_view.FixedExtentScrollPhysics.__proto__.new.call(this, {parent: parent});
+    ;
+  }).prototype = list_wheel_scroll_view.FixedExtentScrollPhysics.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.FixedExtentScrollPhysics);
+  dart.addTypeCaches(list_wheel_scroll_view.FixedExtentScrollPhysics);
+  dart.setMethodSignature(list_wheel_scroll_view.FixedExtentScrollPhysics, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.FixedExtentScrollPhysics.__proto__),
+    applyTo: dart.fnType(list_wheel_scroll_view.FixedExtentScrollPhysics, [dart.nullable(scroll_physics.ScrollPhysics)])
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.FixedExtentScrollPhysics, L1);
+  var _name$ = dart.privateName(ui, "_name");
+  var C21;
+  var controller$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.controller");
+  var physics$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.physics");
+  var diameterRatio$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.diameterRatio");
+  var perspective$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.perspective");
+  var offAxisFraction$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.offAxisFraction");
+  var useMagnifier$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.useMagnifier");
+  var magnification$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.magnification");
+  var overAndUnderCenterOpacity$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.overAndUnderCenterOpacity");
+  var itemExtent$0 = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.itemExtent");
+  var squeeze$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.squeeze");
+  var onSelectedItemChanged$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.onSelectedItemChanged");
+  var renderChildrenOutsideViewport$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.renderChildrenOutsideViewport");
+  var childDelegate$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.childDelegate");
+  var clipBehavior$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.clipBehavior");
+  var restorationId$ = dart.privateName(list_wheel_scroll_view, "ListWheelScrollView.restorationId");
+  list_wheel_scroll_view.ListWheelScrollView = class ListWheelScrollView extends framework.StatefulWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get physics() {
+      return this[physics$];
+    }
+    set physics(value) {
+      super.physics = value;
+    }
+    get diameterRatio() {
+      return this[diameterRatio$];
+    }
+    set diameterRatio(value) {
+      super.diameterRatio = value;
+    }
+    get perspective() {
+      return this[perspective$];
+    }
+    set perspective(value) {
+      super.perspective = value;
+    }
+    get offAxisFraction() {
+      return this[offAxisFraction$];
+    }
+    set offAxisFraction(value) {
+      super.offAxisFraction = value;
+    }
+    get useMagnifier() {
+      return this[useMagnifier$];
+    }
+    set useMagnifier(value) {
+      super.useMagnifier = value;
+    }
+    get magnification() {
+      return this[magnification$];
+    }
+    set magnification(value) {
+      super.magnification = value;
+    }
+    get overAndUnderCenterOpacity() {
+      return this[overAndUnderCenterOpacity$];
+    }
+    set overAndUnderCenterOpacity(value) {
+      super.overAndUnderCenterOpacity = value;
+    }
+    get itemExtent() {
+      return this[itemExtent$0];
+    }
+    set itemExtent(value) {
+      super.itemExtent = value;
+    }
+    get squeeze() {
+      return this[squeeze$];
+    }
+    set squeeze(value) {
+      super.squeeze = value;
+    }
+    get onSelectedItemChanged() {
+      return this[onSelectedItemChanged$];
+    }
+    set onSelectedItemChanged(value) {
+      super.onSelectedItemChanged = value;
+    }
+    get renderChildrenOutsideViewport() {
+      return this[renderChildrenOutsideViewport$];
+    }
+    set renderChildrenOutsideViewport(value) {
+      super.renderChildrenOutsideViewport = value;
+    }
+    get childDelegate() {
+      return this[childDelegate$];
+    }
+    set childDelegate(value) {
+      super.childDelegate = value;
+    }
+    get clipBehavior() {
+      return this[clipBehavior$];
+    }
+    set clipBehavior(value) {
+      super.clipBehavior = value;
+    }
+    get restorationId() {
+      return this[restorationId$];
+    }
+    set restorationId(value) {
+      super.restorationId = value;
+    }
+    createState() {
+      return new list_wheel_scroll_view._ListWheelScrollViewState.new();
+    }
+  };
+  (list_wheel_scroll_view.ListWheelScrollView.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let physics = opts && 'physics' in opts ? opts.physics : null;
+    let diameterRatio = opts && 'diameterRatio' in opts ? opts.diameterRatio : 2;
+    if (diameterRatio == null) dart.nullFailed(L0, 576, 10, "diameterRatio");
+    let perspective = opts && 'perspective' in opts ? opts.perspective : 0.003;
+    if (perspective == null) dart.nullFailed(L0, 577, 10, "perspective");
+    let offAxisFraction = opts && 'offAxisFraction' in opts ? opts.offAxisFraction : 0;
+    if (offAxisFraction == null) dart.nullFailed(L0, 578, 10, "offAxisFraction");
+    let useMagnifier = opts && 'useMagnifier' in opts ? opts.useMagnifier : false;
+    if (useMagnifier == null) dart.nullFailed(L0, 579, 10, "useMagnifier");
+    let magnification = opts && 'magnification' in opts ? opts.magnification : 1;
+    if (magnification == null) dart.nullFailed(L0, 580, 10, "magnification");
+    let overAndUnderCenterOpacity = opts && 'overAndUnderCenterOpacity' in opts ? opts.overAndUnderCenterOpacity : 1;
+    if (overAndUnderCenterOpacity == null) dart.nullFailed(L0, 581, 10, "overAndUnderCenterOpacity");
+    let itemExtent = opts && 'itemExtent' in opts ? opts.itemExtent : null;
+    if (itemExtent == null) dart.nullFailed(L0, 582, 19, "itemExtent");
+    let squeeze = opts && 'squeeze' in opts ? opts.squeeze : 1;
+    if (squeeze == null) dart.nullFailed(L0, 583, 10, "squeeze");
+    let onSelectedItemChanged = opts && 'onSelectedItemChanged' in opts ? opts.onSelectedItemChanged : null;
+    let renderChildrenOutsideViewport = opts && 'renderChildrenOutsideViewport' in opts ? opts.renderChildrenOutsideViewport : false;
+    if (renderChildrenOutsideViewport == null) dart.nullFailed(L0, 585, 10, "renderChildrenOutsideViewport");
+    let clipBehavior = opts && 'clipBehavior' in opts ? opts.clipBehavior : C21 || CT.C21;
+    if (clipBehavior == null) dart.nullFailed(L0, 586, 10, "clipBehavior");
+    let restorationId = opts && 'restorationId' in opts ? opts.restorationId : null;
+    let children = opts && 'children' in opts ? opts.children : null;
+    if (children == null) dart.nullFailed(L0, 588, 27, "children");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    this[physics$] = physics;
+    this[diameterRatio$] = diameterRatio;
+    this[perspective$] = perspective;
+    this[offAxisFraction$] = offAxisFraction;
+    this[useMagnifier$] = useMagnifier;
+    this[magnification$] = magnification;
+    this[overAndUnderCenterOpacity$] = overAndUnderCenterOpacity;
+    this[itemExtent$0] = itemExtent;
+    this[squeeze$] = squeeze;
+    this[onSelectedItemChanged$] = onSelectedItemChanged;
+    this[renderChildrenOutsideViewport$] = renderChildrenOutsideViewport;
+    this[clipBehavior$] = clipBehavior;
+    this[restorationId$] = restorationId;
+    if (!(children != null)) dart.assertFailed(null, L0, 589, 15, "children != null");
+    if (!(diameterRatio != null)) dart.assertFailed(null, L0, 590, 15, "diameterRatio != null");
+    if (!(dart.notNull(diameterRatio) > 0.0)) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.diameterRatioZeroMessage, L0, 591, 15, "diameterRatio > 0.0");
+    if (!(perspective != null)) dart.assertFailed(null, L0, 592, 15, "perspective != null");
+    if (!(dart.notNull(perspective) > 0)) dart.assertFailed(null, L0, 593, 15, "perspective > 0");
+    if (!(dart.notNull(perspective) <= 0.01)) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.perspectiveTooHighMessage, L0, 594, 15, "perspective <= 0.01");
+    if (!(dart.notNull(magnification) > 0)) dart.assertFailed(null, L0, 595, 15, "magnification > 0");
+    if (!(overAndUnderCenterOpacity != null)) dart.assertFailed(null, L0, 596, 15, "overAndUnderCenterOpacity != null");
+    if (!(dart.notNull(overAndUnderCenterOpacity) >= 0 && dart.notNull(overAndUnderCenterOpacity) <= 1)) dart.assertFailed(null, L0, 597, 15, "overAndUnderCenterOpacity >= 0 && overAndUnderCenterOpacity <= 1");
+    if (!(itemExtent != null)) dart.assertFailed(null, L0, 598, 15, "itemExtent != null");
+    if (!(dart.notNull(itemExtent) > 0)) dart.assertFailed(null, L0, 599, 15, "itemExtent > 0");
+    if (!(squeeze != null)) dart.assertFailed(null, L0, 600, 15, "squeeze != null");
+    if (!(dart.notNull(squeeze) > 0)) dart.assertFailed(null, L0, 601, 15, "squeeze > 0");
+    if (!(renderChildrenOutsideViewport != null)) dart.assertFailed(null, L0, 602, 15, "renderChildrenOutsideViewport != null");
+    if (!(clipBehavior != null)) dart.assertFailed(null, L0, 603, 15, "clipBehavior != null");
+    if (!(!dart.test(renderChildrenOutsideViewport) || dart.equals(clipBehavior, ui.Clip.none))) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.clipBehaviorAndRenderChildrenOutsideViewportConflict, L0, 605, 10, "!renderChildrenOutsideViewport || clipBehavior == Clip.none");
+    this[childDelegate$] = new list_wheel_scroll_view.ListWheelChildListDelegate.new({children: children});
+    list_wheel_scroll_view.ListWheelScrollView.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelScrollView.prototype;
+  (list_wheel_scroll_view.ListWheelScrollView.useDelegate = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let physics = opts && 'physics' in opts ? opts.physics : null;
+    let diameterRatio = opts && 'diameterRatio' in opts ? opts.diameterRatio : 2;
+    if (diameterRatio == null) dart.nullFailed(L0, 617, 10, "diameterRatio");
+    let perspective = opts && 'perspective' in opts ? opts.perspective : 0.003;
+    if (perspective == null) dart.nullFailed(L0, 618, 10, "perspective");
+    let offAxisFraction = opts && 'offAxisFraction' in opts ? opts.offAxisFraction : 0;
+    if (offAxisFraction == null) dart.nullFailed(L0, 619, 10, "offAxisFraction");
+    let useMagnifier = opts && 'useMagnifier' in opts ? opts.useMagnifier : false;
+    if (useMagnifier == null) dart.nullFailed(L0, 620, 10, "useMagnifier");
+    let magnification = opts && 'magnification' in opts ? opts.magnification : 1;
+    if (magnification == null) dart.nullFailed(L0, 621, 10, "magnification");
+    let overAndUnderCenterOpacity = opts && 'overAndUnderCenterOpacity' in opts ? opts.overAndUnderCenterOpacity : 1;
+    if (overAndUnderCenterOpacity == null) dart.nullFailed(L0, 622, 10, "overAndUnderCenterOpacity");
+    let itemExtent = opts && 'itemExtent' in opts ? opts.itemExtent : null;
+    if (itemExtent == null) dart.nullFailed(L0, 623, 19, "itemExtent");
+    let squeeze = opts && 'squeeze' in opts ? opts.squeeze : 1;
+    if (squeeze == null) dart.nullFailed(L0, 624, 10, "squeeze");
+    let onSelectedItemChanged = opts && 'onSelectedItemChanged' in opts ? opts.onSelectedItemChanged : null;
+    let renderChildrenOutsideViewport = opts && 'renderChildrenOutsideViewport' in opts ? opts.renderChildrenOutsideViewport : false;
+    if (renderChildrenOutsideViewport == null) dart.nullFailed(L0, 626, 10, "renderChildrenOutsideViewport");
+    let clipBehavior = opts && 'clipBehavior' in opts ? opts.clipBehavior : C21 || CT.C21;
+    if (clipBehavior == null) dart.nullFailed(L0, 627, 10, "clipBehavior");
+    let restorationId = opts && 'restorationId' in opts ? opts.restorationId : null;
+    let childDelegate = opts && 'childDelegate' in opts ? opts.childDelegate : null;
+    if (childDelegate == null) dart.nullFailed(L0, 629, 19, "childDelegate");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    this[physics$] = physics;
+    this[diameterRatio$] = diameterRatio;
+    this[perspective$] = perspective;
+    this[offAxisFraction$] = offAxisFraction;
+    this[useMagnifier$] = useMagnifier;
+    this[magnification$] = magnification;
+    this[overAndUnderCenterOpacity$] = overAndUnderCenterOpacity;
+    this[itemExtent$0] = itemExtent;
+    this[squeeze$] = squeeze;
+    this[onSelectedItemChanged$] = onSelectedItemChanged;
+    this[renderChildrenOutsideViewport$] = renderChildrenOutsideViewport;
+    this[clipBehavior$] = clipBehavior;
+    this[restorationId$] = restorationId;
+    this[childDelegate$] = childDelegate;
+    if (!(childDelegate != null)) dart.assertFailed(null, L0, 630, 15, "childDelegate != null");
+    if (!(diameterRatio != null)) dart.assertFailed(null, L0, 631, 15, "diameterRatio != null");
+    if (!(dart.notNull(diameterRatio) > 0.0)) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.diameterRatioZeroMessage, L0, 632, 15, "diameterRatio > 0.0");
+    if (!(perspective != null)) dart.assertFailed(null, L0, 633, 15, "perspective != null");
+    if (!(dart.notNull(perspective) > 0)) dart.assertFailed(null, L0, 634, 15, "perspective > 0");
+    if (!(dart.notNull(perspective) <= 0.01)) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.perspectiveTooHighMessage, L0, 635, 15, "perspective <= 0.01");
+    if (!(dart.notNull(magnification) > 0)) dart.assertFailed(null, L0, 636, 15, "magnification > 0");
+    if (!(overAndUnderCenterOpacity != null)) dart.assertFailed(null, L0, 637, 15, "overAndUnderCenterOpacity != null");
+    if (!(dart.notNull(overAndUnderCenterOpacity) >= 0 && dart.notNull(overAndUnderCenterOpacity) <= 1)) dart.assertFailed(null, L0, 638, 15, "overAndUnderCenterOpacity >= 0 && overAndUnderCenterOpacity <= 1");
+    if (!(itemExtent != null)) dart.assertFailed(null, L0, 639, 15, "itemExtent != null");
+    if (!(dart.notNull(itemExtent) > 0)) dart.assertFailed(null, L0, 640, 15, "itemExtent > 0");
+    if (!(squeeze != null)) dart.assertFailed(null, L0, 641, 15, "squeeze != null");
+    if (!(dart.notNull(squeeze) > 0)) dart.assertFailed(null, L0, 642, 15, "squeeze > 0");
+    if (!(renderChildrenOutsideViewport != null)) dart.assertFailed(null, L0, 643, 15, "renderChildrenOutsideViewport != null");
+    if (!(clipBehavior != null)) dart.assertFailed(null, L0, 644, 15, "clipBehavior != null");
+    if (!(!dart.test(renderChildrenOutsideViewport) || dart.equals(clipBehavior, ui.Clip.none))) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.clipBehaviorAndRenderChildrenOutsideViewportConflict, L0, 646, 10, "!renderChildrenOutsideViewport || clipBehavior == Clip.none");
+    list_wheel_scroll_view.ListWheelScrollView.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelScrollView.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelScrollView);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelScrollView);
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelScrollView, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelScrollView.__proto__),
+    createState: dart.fnType(list_wheel_scroll_view._ListWheelScrollViewState, [])
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelScrollView, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.ListWheelScrollView, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.ListWheelScrollView.__proto__),
+    controller: dart.finalFieldType(dart.nullable(scroll_controller.ScrollController)),
+    physics: dart.finalFieldType(dart.nullable(scroll_physics.ScrollPhysics)),
+    diameterRatio: dart.finalFieldType(core.double),
+    perspective: dart.finalFieldType(core.double),
+    offAxisFraction: dart.finalFieldType(core.double),
+    useMagnifier: dart.finalFieldType(core.bool),
+    magnification: dart.finalFieldType(core.double),
+    overAndUnderCenterOpacity: dart.finalFieldType(core.double),
+    itemExtent: dart.finalFieldType(core.double),
+    squeeze: dart.finalFieldType(core.double),
+    onSelectedItemChanged: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [core.int]))),
+    renderChildrenOutsideViewport: dart.finalFieldType(core.bool),
+    childDelegate: dart.finalFieldType(list_wheel_scroll_view.ListWheelChildDelegate),
+    clipBehavior: dart.finalFieldType(ui.Clip),
+    restorationId: dart.finalFieldType(dart.nullable(core.String))
+  }));
+  var _lastReportedItemIndex = dart.privateName(list_wheel_scroll_view, "_lastReportedItemIndex");
+  var C24;
+  var C25;
+  var C26;
+  var C27;
+  var C28;
+  var C29;
+  var C30;
+  var C31;
+  var C32;
+  var C33;
+  var C34;
+  var C35;
+  var C23;
+  var C22;
+  var C38;
+  var C39;
+  var C40;
+  var C41;
+  var C42;
+  var C37;
+  var C36;
+  var C45;
+  var C46;
+  var C44;
+  var C43;
+  list_wheel_scroll_view._ListWheelScrollViewState = class _ListWheelScrollViewState extends framework.State$(list_wheel_scroll_view.ListWheelScrollView) {
+    initState() {
+      let t1;
+      super.initState();
+      this.scrollController = (t1 = this.widget.controller, t1 == null ? new list_wheel_scroll_view.FixedExtentScrollController.new() : t1);
+      if (list_wheel_scroll_view.FixedExtentScrollController.is(this.widget.controller)) {
+        let controller = list_wheel_scroll_view.FixedExtentScrollController.as(dart.nullCheck(this.widget.controller));
+        this[_lastReportedItemIndex] = controller.initialItem;
+      }
+    }
+    didUpdateWidget(oldWidget) {
+      list_wheel_scroll_view.ListWheelScrollView.as(oldWidget);
+      if (oldWidget == null) dart.nullFailed(L0, 739, 44, "oldWidget");
+      super.didUpdateWidget(oldWidget);
+      if (this.widget.controller != null && !dart.equals(this.widget.controller, this.scrollController)) {
+        let oldScrollController = this.scrollController;
+        dart.nullCheck(binding.SchedulerBinding.instance).addPostFrameCallback(dart.fn(_ => {
+          if (_ == null) dart.nullFailed(L0, 743, 56, "_");
+          dart.nullCheck(oldScrollController).dispose();
+        }, DurationToNullN()));
+        this.scrollController = this.widget.controller;
+      }
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(L0, 751, 29, "context");
+      return new (NotificationListenerOfScrollNotification()).new({onNotification: dart.fn(notification => {
+          if (notification == null) dart.nullFailed(L0, 753, 43, "notification");
+          if (notification.depth === 0 && this.widget.onSelectedItemChanged != null && scroll_notification.ScrollUpdateNotification.is(notification) && list_wheel_scroll_view.FixedExtentMetrics.is(notification.metrics)) {
+            let metrics = list_wheel_scroll_view.FixedExtentMetrics.as(notification.metrics);
+            let currentItemIndex = metrics.itemIndex;
+            if (currentItemIndex != this[_lastReportedItemIndex]) {
+              this[_lastReportedItemIndex] = currentItemIndex;
+              let trueIndex = this.widget.childDelegate.trueIndexOf(currentItemIndex);
+              dart.nullCheck(this.widget.onSelectedItemChanged)(trueIndex);
+            }
+          }
+          return false;
+        }, ScrollNotificationTobool()), child: new list_wheel_scroll_view._FixedExtentScrollable.new({controller: this.scrollController, physics: this.widget.physics, itemExtent: this.widget.itemExtent, restorationId: this.widget.restorationId, viewportBuilder: dart.fn((context, offset) => {
+            if (context == null) dart.nullFailed(L0, 773, 40, "context");
+            if (offset == null) dart.nullFailed(L0, 773, 64, "offset");
+            return new list_wheel_scroll_view.ListWheelViewport.new({diameterRatio: this.widget.diameterRatio, perspective: this.widget.perspective, offAxisFraction: this.widget.offAxisFraction, useMagnifier: this.widget.useMagnifier, magnification: this.widget.magnification, overAndUnderCenterOpacity: this.widget.overAndUnderCenterOpacity, itemExtent: this.widget.itemExtent, squeeze: this.widget.squeeze, renderChildrenOutsideViewport: this.widget.renderChildrenOutsideViewport, offset: offset, childDelegate: this.widget.childDelegate, clipBehavior: this.widget.clipBehavior, $creationLocationd_0dea112b090073317d4: C22 || CT.C22});
+          }, BuildContextAndViewportOffsetToListWheelViewport()), $creationLocationd_0dea112b090073317d4: C36 || CT.C36}), $creationLocationd_0dea112b090073317d4: C43 || CT.C43});
+    }
+  };
+  (list_wheel_scroll_view._ListWheelScrollViewState.new = function() {
+    this[_lastReportedItemIndex] = 0;
+    this.scrollController = null;
+    list_wheel_scroll_view._ListWheelScrollViewState.__proto__.new.call(this);
+    ;
+  }).prototype = list_wheel_scroll_view._ListWheelScrollViewState.prototype;
+  dart.addTypeTests(list_wheel_scroll_view._ListWheelScrollViewState);
+  dart.addTypeCaches(list_wheel_scroll_view._ListWheelScrollViewState);
+  dart.setMethodSignature(list_wheel_scroll_view._ListWheelScrollViewState, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view._ListWheelScrollViewState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view._ListWheelScrollViewState, L1);
+  dart.setFieldSignature(list_wheel_scroll_view._ListWheelScrollViewState, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view._ListWheelScrollViewState.__proto__),
+    [_lastReportedItemIndex]: dart.fieldType(core.int),
+    scrollController: dart.fieldType(dart.nullable(scroll_controller.ScrollController))
+  }));
+  var _childWidgets = dart.privateName(list_wheel_scroll_view, "_childWidgets");
+  var _childElements = dart.privateName(list_wheel_scroll_view, "_childElements");
+  list_wheel_scroll_view.ListWheelElement = class ListWheelElement extends framework.RenderObjectElement {
+    get widget() {
+      return list_wheel_scroll_view.ListWheelViewport.as(super.widget);
+    }
+    get renderObject() {
+      return list_wheel_viewport.RenderListWheelViewport.as(super.renderObject);
+    }
+    update(newWidget) {
+      list_wheel_scroll_view.ListWheelViewport.as(newWidget);
+      if (newWidget == null) dart.nullFailed(L0, 820, 33, "newWidget");
+      let oldWidget = this.widget;
+      super.update(newWidget);
+      let newDelegate = newWidget.childDelegate;
+      let oldDelegate = oldWidget.childDelegate;
+      if (!dart.equals(newDelegate, oldDelegate) && (!dart.equals(dart.runtimeType(newDelegate), dart.runtimeType(oldDelegate)) || dart.test(newDelegate.shouldRebuild(oldDelegate)))) this.performRebuild();
+    }
+    get childCount() {
+      return this.widget.childDelegate.estimatedChildCount;
+    }
+    performRebuild() {
+      this[_childWidgets][$clear]();
+      super.performRebuild();
+      if (dart.test(this[_childElements].isEmpty)) return;
+      let firstIndex = dart.nullCheck(this[_childElements].firstKey());
+      let lastIndex = dart.nullCheck(this[_childElements].lastKey());
+      for (let index = firstIndex; index <= lastIndex; index = index + 1) {
+        let newChild = this.updateChild(this[_childElements]._get(index), this.retrieveWidget(index), index);
+        if (newChild != null) {
+          this[_childElements]._set(index, newChild);
+        } else {
+          this[_childElements].remove(index);
+        }
+      }
+    }
+    retrieveWidget(index) {
+      if (index == null) dart.nullFailed(L0, 858, 30, "index");
+      return this[_childWidgets][$putIfAbsent](index, dart.fn(() => this.widget.childDelegate.build(this, index), VoidToWidgetN()));
+    }
+    childExistsAt(index) {
+      if (index == null) dart.nullFailed(L0, 863, 26, "index");
+      return this.retrieveWidget(index) != null;
+    }
+    createChild(index, opts) {
+      if (index == null) dart.nullFailed(L0, 866, 24, "index");
+      let after = opts && 'after' in opts ? opts.after : null;
+      dart.nullCheck(this.owner).buildScope(this, dart.fn(() => {
+        let insertFirst = after == null;
+        if (!(insertFirst || this[_childElements]._get(dart.notNull(index) - 1) != null)) dart.assertFailed(null, L0, 869, 14, "insertFirst || _childElements[index - 1] != null");
+        let newChild = this.updateChild(this[_childElements]._get(index), this.retrieveWidget(index), index);
+        if (newChild != null) {
+          this[_childElements]._set(index, newChild);
+        } else {
+          this[_childElements].remove(index);
+        }
+      }, VoidToNullN()));
+    }
+    removeChild(child) {
+      if (child == null) dart.nullFailed(L0, 881, 30, "child");
+      let index = this.renderObject.indexOf(child);
+      dart.nullCheck(this.owner).buildScope(this, dart.fn(() => {
+        if (!dart.test(this[_childElements].containsKey(index))) dart.assertFailed(null, L0, 884, 14, "_childElements.containsKey(index)");
+        let result = this.updateChild(this[_childElements]._get(index), null, index);
+        if (!(result == null)) dart.assertFailed(null, L0, 886, 14, "result == null");
+        this[_childElements].remove(index);
+        if (!!dart.test(this[_childElements].containsKey(index))) dart.assertFailed(null, L0, 888, 14, "!_childElements.containsKey(index)");
+      }, VoidToNullN()));
+    }
+    updateChild(child, newWidget, newSlot) {
+      let t2, t1, t2$, t1$;
+      let oldParentData = ListWheelParentDataN().as((t1 = child, t1 == null ? null : (t2 = t1.renderObject, t2 == null ? null : t2.parentData)));
+      let newChild = super.updateChild(child, newWidget, newSlot);
+      let newParentData = ListWheelParentDataN().as((t1$ = newChild, t1$ == null ? null : (t2$ = t1$.renderObject, t2$ == null ? null : t2$.parentData)));
+      if (newParentData != null) {
+        newParentData.index = core.int.as(newSlot);
+        if (oldParentData != null) newParentData.offset = oldParentData.offset;
+      }
+      return newChild;
+    }
+    insertRenderObjectChild(child, slot) {
+      let t1;
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(L0, 907, 45, "child");
+      core.int.as(slot);
+      if (slot == null) dart.nullFailed(L0, 907, 56, "slot");
+      let renderObject = this.renderObject;
+      if (!dart.test(renderObject.debugValidateChild(child))) dart.assertFailed(null, L0, 909, 12, "renderObject.debugValidateChild(child)");
+      renderObject.insert(box.RenderBox.as(child), {after: RenderBoxN().as((t1 = this[_childElements]._get(dart.notNull(slot) - 1), t1 == null ? null : t1.renderObject))});
+      if (!dart.equals(renderObject, this.renderObject)) dart.assertFailed(null, L0, 911, 12, "renderObject == this.renderObject");
+    }
+    moveRenderObjectChild(child, oldSlot, newSlot) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(L0, 915, 43, "child");
+      core.int.as(oldSlot);
+      if (oldSlot == null) dart.nullFailed(L0, 915, 54, "oldSlot");
+      core.int.as(newSlot);
+      if (newSlot == null) dart.nullFailed(L0, 915, 67, "newSlot");
+      let moveChildRenderObjectErrorMessage = "Currently we maintain the list in contiguous increasing order, so moving children around is not allowed.";
+      if (!false) dart.assertFailed(moveChildRenderObjectErrorMessage, L0, 919, 12, "false");
+    }
+    removeRenderObjectChild(child, slot) {
+      object.RenderObject.as(child);
+      if (child == null) dart.nullFailed(L0, 923, 45, "child");
+      core.int.as(slot);
+      if (slot == null) dart.nullFailed(L0, 923, 56, "slot");
+      if (!dart.equals(child.parent, this.renderObject)) dart.assertFailed(null, L0, 924, 12, "child.parent == renderObject");
+      this.renderObject.remove(box.RenderBox.as(child));
+    }
+    visitChildren(visitor) {
+      if (visitor == null) dart.nullFailed(L0, 929, 37, "visitor");
+      this[_childElements].forEach(dart.fn((key, child) => {
+        if (key == null) dart.nullFailed(L0, 930, 33, "key");
+        if (child == null) dart.nullFailed(L0, 930, 46, "child");
+        visitor(child);
+      }, intAndElementToNullN()));
+    }
+    forgetChild(child) {
+      if (child == null) dart.nullFailed(L0, 936, 28, "child");
+      this[_childElements].remove(child.slot);
+      super.forgetChild(child);
+    }
+  };
+  (list_wheel_scroll_view.ListWheelElement.new = function(widget) {
+    if (widget == null) dart.nullFailed(L0, 797, 38, "widget");
+    this[_childWidgets] = new (IdentityMapOfint$WidgetN()).new();
+    this[_childElements] = new (SplayTreeMapOfint$Element()).new();
+    list_wheel_scroll_view.ListWheelElement.__proto__.new.call(this, widget);
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelElement.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelElement);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelElement);
+  list_wheel_scroll_view.ListWheelElement[dart.implements] = () => [list_wheel_viewport.ListWheelChildManager];
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelElement, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelElement.__proto__),
+    retrieveWidget: dart.fnType(dart.nullable(framework.Widget), [core.int]),
+    childExistsAt: dart.fnType(core.bool, [core.int]),
+    createChild: dart.fnType(dart.void, [core.int], {}, {after: dart.nullable(box.RenderBox)}),
+    removeChild: dart.fnType(dart.void, [box.RenderBox])
+  }));
+  dart.setGetterSignature(list_wheel_scroll_view.ListWheelElement, () => ({
+    __proto__: dart.getGetters(list_wheel_scroll_view.ListWheelElement.__proto__),
+    widget: list_wheel_scroll_view.ListWheelViewport,
+    renderObject: list_wheel_viewport.RenderListWheelViewport,
+    childCount: dart.nullable(core.int)
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelElement, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.ListWheelElement, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.ListWheelElement.__proto__),
+    [_childWidgets]: dart.finalFieldType(core.Map$(core.int, dart.nullable(framework.Widget))),
+    [_childElements]: dart.finalFieldType(collection.SplayTreeMap$(core.int, framework.Element))
+  }));
+  var diameterRatio$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.diameterRatio");
+  var perspective$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.perspective");
+  var offAxisFraction$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.offAxisFraction");
+  var useMagnifier$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.useMagnifier");
+  var magnification$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.magnification");
+  var overAndUnderCenterOpacity$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.overAndUnderCenterOpacity");
+  var itemExtent$1 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.itemExtent");
+  var squeeze$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.squeeze");
+  var renderChildrenOutsideViewport$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.renderChildrenOutsideViewport");
+  var offset$ = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.offset");
+  var childDelegate$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.childDelegate");
+  var clipBehavior$0 = dart.privateName(list_wheel_scroll_view, "ListWheelViewport.clipBehavior");
+  list_wheel_scroll_view.ListWheelViewport = class ListWheelViewport extends framework.RenderObjectWidget {
+    get diameterRatio() {
+      return this[diameterRatio$0];
+    }
+    set diameterRatio(value) {
+      super.diameterRatio = value;
+    }
+    get perspective() {
+      return this[perspective$0];
+    }
+    set perspective(value) {
+      super.perspective = value;
+    }
+    get offAxisFraction() {
+      return this[offAxisFraction$0];
+    }
+    set offAxisFraction(value) {
+      super.offAxisFraction = value;
+    }
+    get useMagnifier() {
+      return this[useMagnifier$0];
+    }
+    set useMagnifier(value) {
+      super.useMagnifier = value;
+    }
+    get magnification() {
+      return this[magnification$0];
+    }
+    set magnification(value) {
+      super.magnification = value;
+    }
+    get overAndUnderCenterOpacity() {
+      return this[overAndUnderCenterOpacity$0];
+    }
+    set overAndUnderCenterOpacity(value) {
+      super.overAndUnderCenterOpacity = value;
+    }
+    get itemExtent() {
+      return this[itemExtent$1];
+    }
+    set itemExtent(value) {
+      super.itemExtent = value;
+    }
+    get squeeze() {
+      return this[squeeze$0];
+    }
+    set squeeze(value) {
+      super.squeeze = value;
+    }
+    get renderChildrenOutsideViewport() {
+      return this[renderChildrenOutsideViewport$0];
+    }
+    set renderChildrenOutsideViewport(value) {
+      super.renderChildrenOutsideViewport = value;
+    }
+    get offset() {
+      return this[offset$];
+    }
+    set offset(value) {
+      super.offset = value;
+    }
+    get childDelegate() {
+      return this[childDelegate$0];
+    }
+    set childDelegate(value) {
+      super.childDelegate = value;
+    }
+    get clipBehavior() {
+      return this[clipBehavior$0];
+    }
+    set clipBehavior(value) {
+      super.clipBehavior = value;
+    }
+    createElement() {
+      return new list_wheel_scroll_view.ListWheelElement.new(this);
+    }
+    createRenderObject(context) {
+      if (context == null) dart.nullFailed(L0, 1050, 59, "context");
+      let childManager = list_wheel_scroll_view.ListWheelElement.as(context);
+      return new list_wheel_viewport.RenderListWheelViewport.new({childManager: childManager, offset: this.offset, diameterRatio: this.diameterRatio, perspective: this.perspective, offAxisFraction: this.offAxisFraction, useMagnifier: this.useMagnifier, magnification: this.magnification, overAndUnderCenterOpacity: this.overAndUnderCenterOpacity, itemExtent: this.itemExtent, squeeze: this.squeeze, renderChildrenOutsideViewport: this.renderChildrenOutsideViewport, clipBehavior: this.clipBehavior});
+    }
+    updateRenderObject(context, renderObject) {
+      let t1;
+      if (context == null) dart.nullFailed(L0, 1069, 40, "context");
+      list_wheel_viewport.RenderListWheelViewport.as(renderObject);
+      if (renderObject == null) dart.nullFailed(L0, 1069, 73, "renderObject");
+      t1 = renderObject;
+      (() => {
+        t1.offset = this.offset;
+        t1.diameterRatio = this.diameterRatio;
+        t1.perspective = this.perspective;
+        t1.offAxisFraction = this.offAxisFraction;
+        t1.useMagnifier = this.useMagnifier;
+        t1.magnification = this.magnification;
+        t1.overAndUnderCenterOpacity = this.overAndUnderCenterOpacity;
+        t1.itemExtent = this.itemExtent;
+        t1.squeeze = this.squeeze;
+        t1.renderChildrenOutsideViewport = this.renderChildrenOutsideViewport;
+        t1.clipBehavior = this.clipBehavior;
+        return t1;
+      })();
+    }
+  };
+  (list_wheel_scroll_view.ListWheelViewport.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let diameterRatio = opts && 'diameterRatio' in opts ? opts.diameterRatio : 2;
+    if (diameterRatio == null) dart.nullFailed(L0, 972, 10, "diameterRatio");
+    let perspective = opts && 'perspective' in opts ? opts.perspective : 0.003;
+    if (perspective == null) dart.nullFailed(L0, 973, 10, "perspective");
+    let offAxisFraction = opts && 'offAxisFraction' in opts ? opts.offAxisFraction : 0;
+    if (offAxisFraction == null) dart.nullFailed(L0, 974, 10, "offAxisFraction");
+    let useMagnifier = opts && 'useMagnifier' in opts ? opts.useMagnifier : false;
+    if (useMagnifier == null) dart.nullFailed(L0, 975, 10, "useMagnifier");
+    let magnification = opts && 'magnification' in opts ? opts.magnification : 1;
+    if (magnification == null) dart.nullFailed(L0, 976, 10, "magnification");
+    let overAndUnderCenterOpacity = opts && 'overAndUnderCenterOpacity' in opts ? opts.overAndUnderCenterOpacity : 1;
+    if (overAndUnderCenterOpacity == null) dart.nullFailed(L0, 977, 10, "overAndUnderCenterOpacity");
+    let itemExtent = opts && 'itemExtent' in opts ? opts.itemExtent : null;
+    if (itemExtent == null) dart.nullFailed(L0, 978, 19, "itemExtent");
+    let squeeze = opts && 'squeeze' in opts ? opts.squeeze : 1;
+    if (squeeze == null) dart.nullFailed(L0, 979, 10, "squeeze");
+    let renderChildrenOutsideViewport = opts && 'renderChildrenOutsideViewport' in opts ? opts.renderChildrenOutsideViewport : false;
+    if (renderChildrenOutsideViewport == null) dart.nullFailed(L0, 980, 10, "renderChildrenOutsideViewport");
+    let offset = opts && 'offset' in opts ? opts.offset : null;
+    if (offset == null) dart.nullFailed(L0, 981, 19, "offset");
+    let childDelegate = opts && 'childDelegate' in opts ? opts.childDelegate : null;
+    if (childDelegate == null) dart.nullFailed(L0, 982, 19, "childDelegate");
+    let clipBehavior = opts && 'clipBehavior' in opts ? opts.clipBehavior : C21 || CT.C21;
+    if (clipBehavior == null) dart.nullFailed(L0, 983, 10, "clipBehavior");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[diameterRatio$0] = diameterRatio;
+    this[perspective$0] = perspective;
+    this[offAxisFraction$0] = offAxisFraction;
+    this[useMagnifier$0] = useMagnifier;
+    this[magnification$0] = magnification;
+    this[overAndUnderCenterOpacity$0] = overAndUnderCenterOpacity;
+    this[itemExtent$1] = itemExtent;
+    this[squeeze$0] = squeeze;
+    this[renderChildrenOutsideViewport$0] = renderChildrenOutsideViewport;
+    this[offset$] = offset;
+    this[childDelegate$0] = childDelegate;
+    this[clipBehavior$0] = clipBehavior;
+    if (!(childDelegate != null)) dart.assertFailed(null, L0, 984, 15, "childDelegate != null");
+    if (!(offset != null)) dart.assertFailed(null, L0, 985, 15, "offset != null");
+    if (!(diameterRatio != null)) dart.assertFailed(null, L0, 986, 15, "diameterRatio != null");
+    if (!(dart.notNull(diameterRatio) > 0)) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.diameterRatioZeroMessage, L0, 987, 15, "diameterRatio > 0");
+    if (!(perspective != null)) dart.assertFailed(null, L0, 988, 15, "perspective != null");
+    if (!(dart.notNull(perspective) > 0)) dart.assertFailed(null, L0, 989, 15, "perspective > 0");
+    if (!(dart.notNull(perspective) <= 0.01)) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.perspectiveTooHighMessage, L0, 990, 15, "perspective <= 0.01");
+    if (!(overAndUnderCenterOpacity != null)) dart.assertFailed(null, L0, 991, 15, "overAndUnderCenterOpacity != null");
+    if (!(dart.notNull(overAndUnderCenterOpacity) >= 0 && dart.notNull(overAndUnderCenterOpacity) <= 1)) dart.assertFailed(null, L0, 992, 15, "overAndUnderCenterOpacity >= 0 && overAndUnderCenterOpacity <= 1");
+    if (!(itemExtent != null)) dart.assertFailed(null, L0, 993, 15, "itemExtent != null");
+    if (!(dart.notNull(itemExtent) > 0)) dart.assertFailed(null, L0, 994, 15, "itemExtent > 0");
+    if (!(squeeze != null)) dart.assertFailed(null, L0, 995, 15, "squeeze != null");
+    if (!(dart.notNull(squeeze) > 0)) dart.assertFailed(null, L0, 996, 15, "squeeze > 0");
+    if (!(renderChildrenOutsideViewport != null)) dart.assertFailed(null, L0, 997, 15, "renderChildrenOutsideViewport != null");
+    if (!(clipBehavior != null)) dart.assertFailed(null, L0, 998, 15, "clipBehavior != null");
+    if (!(!dart.test(renderChildrenOutsideViewport) || dart.equals(clipBehavior, ui.Clip.none))) dart.assertFailed(list_wheel_viewport.RenderListWheelViewport.clipBehaviorAndRenderChildrenOutsideViewportConflict, L0, 1000, 10, "!renderChildrenOutsideViewport || clipBehavior == Clip.none");
+    list_wheel_scroll_view.ListWheelViewport.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = list_wheel_scroll_view.ListWheelViewport.prototype;
+  dart.addTypeTests(list_wheel_scroll_view.ListWheelViewport);
+  dart.addTypeCaches(list_wheel_scroll_view.ListWheelViewport);
+  dart.setMethodSignature(list_wheel_scroll_view.ListWheelViewport, () => ({
+    __proto__: dart.getMethods(list_wheel_scroll_view.ListWheelViewport.__proto__),
+    createElement: dart.fnType(list_wheel_scroll_view.ListWheelElement, []),
+    createRenderObject: dart.fnType(list_wheel_viewport.RenderListWheelViewport, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(list_wheel_scroll_view.ListWheelViewport, L1);
+  dart.setFieldSignature(list_wheel_scroll_view.ListWheelViewport, () => ({
+    __proto__: dart.getFields(list_wheel_scroll_view.ListWheelViewport.__proto__),
+    diameterRatio: dart.finalFieldType(core.double),
+    perspective: dart.finalFieldType(core.double),
+    offAxisFraction: dart.finalFieldType(core.double),
+    useMagnifier: dart.finalFieldType(core.bool),
+    magnification: dart.finalFieldType(core.double),
+    overAndUnderCenterOpacity: dart.finalFieldType(core.double),
+    itemExtent: dart.finalFieldType(core.double),
+    squeeze: dart.finalFieldType(core.double),
+    renderChildrenOutsideViewport: dart.finalFieldType(core.bool),
+    offset: dart.finalFieldType(viewport_offset.ViewportOffset),
+    childDelegate: dart.finalFieldType(list_wheel_scroll_view.ListWheelChildDelegate),
+    clipBehavior: dart.finalFieldType(ui.Clip)
+  }));
+  list_wheel_scroll_view._getItemFromOffset = function _getItemFromOffset(opts) {
+    let offset = opts && 'offset' in opts ? opts.offset : null;
+    if (offset == null) dart.nullFailed(L0, 348, 19, "offset");
+    let itemExtent = opts && 'itemExtent' in opts ? opts.itemExtent : null;
+    if (itemExtent == null) dart.nullFailed(L0, 349, 19, "itemExtent");
+    let minScrollExtent = opts && 'minScrollExtent' in opts ? opts.minScrollExtent : null;
+    if (minScrollExtent == null) dart.nullFailed(L0, 350, 19, "minScrollExtent");
+    let maxScrollExtent = opts && 'maxScrollExtent' in opts ? opts.maxScrollExtent : null;
+    if (maxScrollExtent == null) dart.nullFailed(L0, 351, 19, "maxScrollExtent");
+    return (dart.notNull(list_wheel_scroll_view._clipOffsetToScrollableRange(offset, minScrollExtent, maxScrollExtent)) / dart.notNull(itemExtent))[$round]();
+  };
+  list_wheel_scroll_view._clipOffsetToScrollableRange = function _clipOffsetToScrollableRange(offset, minScrollExtent, maxScrollExtent) {
+    if (offset == null) dart.nullFailed(L0, 357, 10, "offset");
+    if (minScrollExtent == null) dart.nullFailed(L0, 358, 10, "minScrollExtent");
+    if (maxScrollExtent == null) dart.nullFailed(L0, 359, 10, "maxScrollExtent");
+    return math.min(core.double, math.max(core.double, offset, minScrollExtent), maxScrollExtent);
+  };
+  dart.trackLibraries("packages/flutter/src/widgets/list_wheel_scroll_view.dart", {
+    "package:flutter/src/widgets/list_wheel_scroll_view.dart": list_wheel_scroll_view
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["list_wheel_scroll_view.dart"],"names":[],"mappings":"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","file":"../../../../../../packages/flutter/src/widgets/list_wheel_scroll_view.dart.lib.js"}');
+  // Exports:
+  return {
+    src__widgets__list_wheel_scroll_view: list_wheel_scroll_view
+  };
+}));
+
+//# sourceMappingURL=list_wheel_scroll_view.dart.lib.js.map

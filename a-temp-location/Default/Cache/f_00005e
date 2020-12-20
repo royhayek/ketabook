@@ -1,0 +1,1279 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/foundation/print.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/will_pop_scope.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/animation/curves.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__progress_dialog__progress_dialog_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__foundation__print$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__will_pop_scope$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__animation__curves$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text$ = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const print = packages__flutter__src__foundation__print$46dart.src__foundation__print;
+  const dialog = packages__flutter__src__material__icon_button$46dart.src__material__dialog;
+  const will_pop_scope = packages__flutter__src__widgets__will_pop_scope$46dart.src__widgets__will_pop_scope;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var progress_dialog = Object.create(dart.library);
+  var $toString = dartx.toString;
+  var ProgressDialogTypeL = () => (ProgressDialogTypeL = dart.constFn(dart.legacy(progress_dialog.ProgressDialogType)))();
+  var ObjectL = () => (ObjectL = dart.constFn(dart.legacy(core.Object)))();
+  var boolL = () => (boolL = dart.constFn(dart.legacy(core.bool)))();
+  var FutureOfboolL = () => (FutureOfboolL = dart.constFn(async.Future$(boolL())))();
+  var _LocationL = () => (_LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))();
+  var FutureLOfboolL = () => (FutureLOfboolL = dart.constFn(dart.legacy(FutureOfboolL())))();
+  var VoidToFutureLOfboolL = () => (VoidToFutureLOfboolL = dart.constFn(dart.fnType(FutureLOfboolL(), [])))();
+  var WillPopScopeL = () => (WillPopScopeL = dart.constFn(dart.legacy(will_pop_scope.WillPopScope)))();
+  var BuildContextL = () => (BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))();
+  var BuildContextLToWillPopScopeL = () => (BuildContextLToWillPopScopeL = dart.constFn(dart.fnType(WillPopScopeL(), [BuildContextL()])))();
+  var VoidToNullN = () => (VoidToNullN = dart.constFn(dart.fnType(core.Null, [])))();
+  var WidgetL = () => (WidgetL = dart.constFn(dart.legacy(framework.Widget)))();
+  var JSArrayOfWidgetL = () => (JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(WidgetL())))();
+  const CT = Object.create(null);
+  var L0 = "package:progress_dialog/progress_dialog.dart";
+  dart.defineLazy(CT, {
+    get C0() {
+      return C0 = dart.const({
+        __proto__: progress_dialog.ProgressDialogType.prototype,
+        [_name$]: "ProgressDialogType.Normal",
+        index: 0
+      });
+    },
+    get C1() {
+      return C1 = dart.const({
+        __proto__: progress_dialog.ProgressDialogType.prototype,
+        [_name$]: "ProgressDialogType.Download",
+        index: 1
+      });
+    },
+    get C2() {
+      return C2 = dart.constList([C0 || CT.C0, C1 || CT.C1], ProgressDialogTypeL());
+    },
+    get C4() {
+      return C4 = dart.constList([], _LocationL());
+    },
+    get C3() {
+      return C3 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C4 || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 135,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C7() {
+      return C7 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 19,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C8 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "insetAnimationCurve",
+        [_Location_column]: 19,
+        [_Location_line]: 145,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C9 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "insetAnimationDuration",
+        [_Location_column]: 19,
+        [_Location_line]: 146,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C10 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 19,
+        [_Location_line]: 147,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C11 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 19,
+        [_Location_line]: 148,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C12 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 19,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C6 = dart.constList([C7 || CT.C7, C8 || CT.C8, C9 || CT.C9, C10 || CT.C10, C11 || CT.C11, C12 || CT.C12], _LocationL());
+    },
+    get C5() {
+      return C5 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C6 || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 143,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C15() {
+      return C15 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onWillPop",
+        [_Location_column]: 15,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C16 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C14 = dart.constList([C15 || CT.C15, C16 || CT.C16], _LocationL());
+    },
+    get C13() {
+      return C13 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C14 || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 141,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C19() {
+      return C19 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 9,
+        [_Location_line]: 205,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C20 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 206,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C21 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 207,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C18 = dart.constList([C19 || CT.C19, C20 || CT.C20, C21 || CT.C21], _LocationL());
+    },
+    get C17() {
+      return C17 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C18 || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 204,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C24() {
+      return C24 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 7,
+        [_Location_line]: 203,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C25 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 204,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C23 = dart.constList([C24 || CT.C24, C25 || CT.C25], _LocationL());
+    },
+    get C22() {
+      return C22 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C23 || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 202,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C28() {
+      return C28 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 9,
+        [_Location_line]: 214,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C29 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 9,
+        [_Location_line]: 215,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C30 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 216,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C31 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textDirection",
+        [_Location_column]: 9,
+        [_Location_line]: 217,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C27 = dart.constList([C28 || CT.C28, C29 || CT.C29, C30 || CT.C30, C31 || CT.C31], _LocationL());
+    },
+    get C26() {
+      return C26 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C27 || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 213,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C32() {
+      return C32 = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 8,
+        [EdgeInsets_right]: 8,
+        [EdgeInsets_top]: 8,
+        [EdgeInsets_left]: 8
+      });
+    },
+    get C35() {
+      return C35 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 22,
+        [_Location_line]: 224,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C34 = dart.constList([C35 || CT.C35], _LocationL());
+    },
+    get C33() {
+      return C33 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C34 || CT.C34,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 224,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C38() {
+      return C38 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 229,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C39 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 230,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C40 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textDirection",
+        [_Location_column]: 23,
+        [_Location_line]: 231,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C37 = dart.constList([C38 || CT.C38, C39 || CT.C39, C40 || CT.C40], _LocationL());
+    },
+    get C36() {
+      return C36 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C37 || CT.C37,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 228,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C43() {
+      return C43 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 228,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C42 = dart.constList([C43 || CT.C43], _LocationL());
+    },
+    get C41() {
+      return C41 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C42 || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 227,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C46() {
+      return C46 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 226,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C45 = dart.constList([C46 || CT.C46], _LocationL());
+    },
+    get C44() {
+      return C44 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C45 || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 225,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C49() {
+      return C49 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 22,
+        [_Location_line]: 235,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C48 = dart.constList([C49 || CT.C49], _LocationL());
+    },
+    get C47() {
+      return C47 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C48 || CT.C48,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 235,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C52() {
+      return C52 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 43,
+        [_Location_line]: 239,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C53 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 240,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C54 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textDirection",
+        [_Location_column]: 17,
+        [_Location_line]: 241,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C51 = dart.constList([C52 || CT.C52, C53 || CT.C53, C54 || CT.C54], _LocationL());
+    },
+    get C50() {
+      return C50 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C51 || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 238,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C57() {
+      return C57 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 15,
+        [_Location_line]: 237,
+        [_Location_file]: null
+      });
+    },
+    get C58() {
+      return C58 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 238,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C56 = dart.constList([C57 || CT.C57, C58 || CT.C58], _LocationL());
+    },
+    get C55() {
+      return C55 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C56 || CT.C56,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 236,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C61() {
+      return C61 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 11,
+        [_Location_line]: 222,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C62 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 223,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C60 = dart.constList([C61 || CT.C61, C62 || CT.C62], _LocationL());
+    },
+    get C59() {
+      return C59 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C60 || CT.C60,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 221,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C65() {
+      return C65 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 220,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C66 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 221,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C64 = dart.constList([C65 || CT.C65, C66 || CT.C66], _LocationL());
+    },
+    get C63() {
+      return C63 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C64 || CT.C64,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 219,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C69() {
+      return C69 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 212,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C68 = dart.constList([C69 || CT.C69], _LocationL());
+    },
+    get C67() {
+      return C67 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C68 || CT.C68,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 211,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C73() {
+      return C73 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 34,
+        [_Location_line]: 259,
+        [_Location_file]: null
+      });
+    },
+    get C72() {
+      return C72 = dart.constList([C73 || CT.C73], _LocationL());
+    },
+    get C71() {
+      return C71 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C72 || CT.C72,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 259,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C70() {
+      return C70 = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C71 || CT.C71,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 8
+      });
+    },
+    get C77() {
+      return C77 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 34,
+        [_Location_line]: 261,
+        [_Location_file]: null
+      });
+    },
+    get C76() {
+      return C76 = dart.constList([C77 || CT.C77], _LocationL());
+    },
+    get C75() {
+      return C75 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C76 || CT.C76,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 261,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C74() {
+      return C74 = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C75 || CT.C75,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 8
+      });
+    },
+    get C81() {
+      return C81 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 34,
+        [_Location_line]: 263,
+        [_Location_file]: null
+      });
+    },
+    get C80() {
+      return C80 = dart.constList([C81 || CT.C81], _LocationL());
+    },
+    get C79() {
+      return C79 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C80 || CT.C80,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 263,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C78() {
+      return C78 = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C79 || CT.C79,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: 8
+      });
+    },
+    get C84() {
+      return C84 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 17,
+        [_Location_line]: 257,
+        [_Location_file]: null
+      });
+    },
+    get C85() {
+      return C85 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 258,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C83 = dart.constList([C84 || CT.C84, C85 || CT.C85], _LocationL());
+    },
+    get C82() {
+      return C82 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C83 || CT.C83,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 256,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C88() {
+      return C88 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 13,
+        [_Location_line]: 253,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C89 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 254,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C87 = dart.constList([C88 || CT.C88, C89 || CT.C89], _LocationL());
+    },
+    get C86() {
+      return C86 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C87 || CT.C87,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 252,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C92() {
+      return C92 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 11,
+        [_Location_line]: 251,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C93 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 252,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C91 = dart.constList([C92 || CT.C92, C93 || CT.C93], _LocationL());
+    },
+    get C90() {
+      return C90 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C91 || CT.C91,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 250,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    },
+    get C96() {
+      return C96 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 3,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C97() {
+      return C97 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "package",
+        [_Location_column]: 3,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C95() {
+      return C95 = dart.constList([C96 || CT.C96, C97 || CT.C97], _LocationL());
+    },
+    get C94() {
+      return C94 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C95 || CT.C95,
+        [_Location_name]: null,
+        [_Location_column]: 32,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/progress_dialog-1.2.4/lib/progress_dialog.dart"
+      });
+    }
+  }, false);
+  var _name$ = dart.privateName(progress_dialog, "_name");
+  var C0;
+  var C1;
+  var C2;
+  progress_dialog.ProgressDialogType = class ProgressDialogType extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (progress_dialog.ProgressDialogType.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = progress_dialog.ProgressDialogType.prototype;
+  dart.addTypeTests(progress_dialog.ProgressDialogType);
+  dart.addTypeCaches(progress_dialog.ProgressDialogType);
+  dart.setMethodSignature(progress_dialog.ProgressDialogType, () => ({
+    __proto__: dart.getMethods(progress_dialog.ProgressDialogType.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(progress_dialog.ProgressDialogType, L0);
+  dart.setFieldSignature(progress_dialog.ProgressDialogType, () => ({
+    __proto__: dart.getFields(progress_dialog.ProgressDialogType.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(progress_dialog.ProgressDialogType, ['toString']);
+  progress_dialog.ProgressDialogType.Normal = C0 || CT.C0;
+  progress_dialog.ProgressDialogType.Download = C1 || CT.C1;
+  progress_dialog.ProgressDialogType.values = C2 || CT.C2;
+  var _dialog = dart.privateName(progress_dialog, "_dialog");
+  var C4;
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var C3;
+  var C7;
+  var C8;
+  var C9;
+  var C10;
+  var C11;
+  var C12;
+  var C6;
+  var C5;
+  var C15;
+  var C16;
+  var C14;
+  var C13;
+  progress_dialog.ProgressDialog = class ProgressDialog extends core.Object {
+    style(opts) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11;
+      let child = opts && 'child' in opts ? opts.child : null;
+      let progress = opts && 'progress' in opts ? opts.progress : null;
+      let maxProgress = opts && 'maxProgress' in opts ? opts.maxProgress : null;
+      let message = opts && 'message' in opts ? opts.message : null;
+      let progressWidget = opts && 'progressWidget' in opts ? opts.progressWidget : null;
+      let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
+      let progressTextStyle = opts && 'progressTextStyle' in opts ? opts.progressTextStyle : null;
+      let messageTextStyle = opts && 'messageTextStyle' in opts ? opts.messageTextStyle : null;
+      let elevation = opts && 'elevation' in opts ? opts.elevation : null;
+      let textAlign = opts && 'textAlign' in opts ? opts.textAlign : null;
+      let borderRadius = opts && 'borderRadius' in opts ? opts.borderRadius : null;
+      let insetAnimCurve = opts && 'insetAnimCurve' in opts ? opts.insetAnimCurve : null;
+      let padding = opts && 'padding' in opts ? opts.padding : null;
+      let progressWidgetAlignment = opts && 'progressWidgetAlignment' in opts ? opts.progressWidgetAlignment : null;
+      if (dart.test(progress_dialog._isShowing)) return;
+      if (progress_dialog._progressDialogType == progress_dialog.ProgressDialogType.Download) {
+        progress_dialog._progress = (t0 = progress, t0 == null ? progress_dialog._progress : t0);
+      }
+      progress_dialog._dialogMessage = (t0$ = message, t0$ == null ? progress_dialog._dialogMessage : t0$);
+      progress_dialog._maxProgress = (t0$0 = maxProgress, t0$0 == null ? progress_dialog._maxProgress : t0$0);
+      progress_dialog._progressWidget = (t0$1 = progressWidget, t0$1 == null ? progress_dialog._progressWidget : t0$1);
+      progress_dialog._backgroundColor = (t0$2 = backgroundColor, t0$2 == null ? progress_dialog._backgroundColor : t0$2);
+      progress_dialog._messageStyle = (t0$3 = messageTextStyle, t0$3 == null ? progress_dialog._messageStyle : t0$3);
+      progress_dialog._progressTextStyle = (t0$4 = progressTextStyle, t0$4 == null ? progress_dialog._progressTextStyle : t0$4);
+      progress_dialog._dialogElevation = (t0$5 = elevation, t0$5 == null ? progress_dialog._dialogElevation : t0$5);
+      progress_dialog._borderRadius = (t0$6 = borderRadius, t0$6 == null ? progress_dialog._borderRadius : t0$6);
+      progress_dialog._insetAnimCurve = (t0$7 = insetAnimCurve, t0$7 == null ? progress_dialog._insetAnimCurve : t0$7);
+      progress_dialog._textAlign = (t0$8 = textAlign, t0$8 == null ? progress_dialog._textAlign : t0$8);
+      progress_dialog._progressWidget = (t0$9 = child, t0$9 == null ? progress_dialog._progressWidget : t0$9);
+      progress_dialog._dialogPadding = (t0$10 = padding, t0$10 == null ? progress_dialog._dialogPadding : t0$10);
+      progress_dialog._progressWidgetAlignment = (t0$11 = progressWidgetAlignment, t0$11 == null ? progress_dialog._progressWidgetAlignment : t0$11);
+    }
+    update(opts) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3;
+      let progress = opts && 'progress' in opts ? opts.progress : null;
+      let maxProgress = opts && 'maxProgress' in opts ? opts.maxProgress : null;
+      let message = opts && 'message' in opts ? opts.message : null;
+      let progressWidget = opts && 'progressWidget' in opts ? opts.progressWidget : null;
+      let progressTextStyle = opts && 'progressTextStyle' in opts ? opts.progressTextStyle : null;
+      let messageTextStyle = opts && 'messageTextStyle' in opts ? opts.messageTextStyle : null;
+      if (progress_dialog._progressDialogType == progress_dialog.ProgressDialogType.Download) {
+        progress_dialog._progress = (t0 = progress, t0 == null ? progress_dialog._progress : t0);
+      }
+      progress_dialog._dialogMessage = (t0$ = message, t0$ == null ? progress_dialog._dialogMessage : t0$);
+      progress_dialog._maxProgress = (t0$0 = maxProgress, t0$0 == null ? progress_dialog._maxProgress : t0$0);
+      progress_dialog._progressWidget = (t0$1 = progressWidget, t0$1 == null ? progress_dialog._progressWidget : t0$1);
+      progress_dialog._messageStyle = (t0$2 = messageTextStyle, t0$2 == null ? progress_dialog._messageStyle : t0$2);
+      progress_dialog._progressTextStyle = (t0$3 = progressTextStyle, t0$3 == null ? progress_dialog._progressTextStyle : t0$3);
+      if (dart.test(progress_dialog._isShowing)) this[_dialog].update();
+    }
+    isShowing() {
+      return progress_dialog._isShowing;
+    }
+    hide() {
+      return async.async(boolL(), function* hide() {
+        try {
+          if (dart.test(progress_dialog._isShowing)) {
+            progress_dialog._isShowing = false;
+            navigator.Navigator.of(progress_dialog._dismissingContext).pop(ObjectL());
+            if (dart.test(progress_dialog._showLogs)) print.debugPrint("ProgressDialog dismissed");
+            return FutureOfboolL().value(true);
+          } else {
+            if (dart.test(progress_dialog._showLogs)) print.debugPrint("ProgressDialog already dismissed");
+            return FutureOfboolL().value(false);
+          }
+        } catch (e) {
+          let err = dart.getThrown(e);
+          print.debugPrint("Seems there is an issue hiding dialog");
+          print.debugPrint(dart.toString(err));
+          return FutureOfboolL().value(false);
+        }
+      });
+    }
+    show() {
+      return async.async(boolL(), (function* show() {
+        try {
+          if (!dart.test(progress_dialog._isShowing)) {
+            this[_dialog] = new progress_dialog._Body.new({$creationLocationd_0dea112b090073317d4: C3 || CT.C3});
+            dialog.showDialog(dart.dynamic, {context: progress_dialog._context, barrierDismissible: progress_dialog._barrierDismissible, builder: dart.fn(context => {
+                progress_dialog._dismissingContext = context;
+                return new will_pop_scope.WillPopScope.new({onWillPop: dart.fn(() => async.async(boolL(), function*() {
+                    return progress_dialog._barrierDismissible;
+                  }), VoidToFutureLOfboolL()), child: new dialog.Dialog.new({backgroundColor: progress_dialog._backgroundColor, insetAnimationCurve: progress_dialog._insetAnimCurve, insetAnimationDuration: new core.Duration.new({milliseconds: 100}), elevation: progress_dialog._dialogElevation, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(progress_dialog._borderRadius))}), child: this[_dialog], $creationLocationd_0dea112b090073317d4: C5 || CT.C5}), $creationLocationd_0dea112b090073317d4: C13 || CT.C13});
+              }, BuildContextLToWillPopScopeL())});
+            yield async.Future.delayed(new core.Duration.new({milliseconds: 200}));
+            if (dart.test(progress_dialog._showLogs)) print.debugPrint("ProgressDialog shown");
+            progress_dialog._isShowing = true;
+            return true;
+          } else {
+            if (dart.test(progress_dialog._showLogs)) print.debugPrint("ProgressDialog already shown/showing");
+            return false;
+          }
+        } catch (e) {
+          let err = dart.getThrown(e);
+          progress_dialog._isShowing = false;
+          print.debugPrint("Exception while showing the dialog");
+          print.debugPrint(dart.toString(err));
+          return false;
+        }
+      }).bind(this));
+    }
+  };
+  (progress_dialog.ProgressDialog.new = function(context, opts) {
+    let t0, t0$, t0$0, t0$1, t0$2;
+    let type = opts && 'type' in opts ? opts.type : null;
+    let isDismissible = opts && 'isDismissible' in opts ? opts.isDismissible : null;
+    let showLogs = opts && 'showLogs' in opts ? opts.showLogs : null;
+    let textDirection = opts && 'textDirection' in opts ? opts.textDirection : null;
+    let customBody = opts && 'customBody' in opts ? opts.customBody : null;
+    this[_dialog] = null;
+    progress_dialog._context = context;
+    progress_dialog._progressDialogType = (t0 = type, t0 == null ? progress_dialog.ProgressDialogType.Normal : t0);
+    progress_dialog._barrierDismissible = (t0$ = isDismissible, t0$ == null ? true : t0$);
+    progress_dialog._showLogs = (t0$0 = showLogs, t0$0 == null ? false : t0$0);
+    progress_dialog._customBody = (t0$1 = customBody, t0$1 == null ? null : t0$1);
+    progress_dialog._direction = (t0$2 = textDirection, t0$2 == null ? ui.TextDirection.ltr : t0$2);
+  }).prototype = progress_dialog.ProgressDialog.prototype;
+  dart.addTypeTests(progress_dialog.ProgressDialog);
+  dart.addTypeCaches(progress_dialog.ProgressDialog);
+  dart.setMethodSignature(progress_dialog.ProgressDialog, () => ({
+    __proto__: dart.getMethods(progress_dialog.ProgressDialog.__proto__),
+    style: dart.fnType(dart.void, [], {backgroundColor: dart.legacy(ui.Color), borderRadius: dart.legacy(core.double), child: dart.legacy(framework.Widget), elevation: dart.legacy(core.double), insetAnimCurve: dart.legacy(curves.Curve), maxProgress: dart.legacy(core.double), message: dart.legacy(core.String), messageTextStyle: dart.legacy(text_style.TextStyle), padding: dart.legacy(edge_insets.EdgeInsets), progress: dart.legacy(core.double), progressTextStyle: dart.legacy(text_style.TextStyle), progressWidget: dart.legacy(framework.Widget), progressWidgetAlignment: dart.legacy(alignment.Alignment), textAlign: dart.legacy(ui.TextAlign)}, {}),
+    update: dart.fnType(dart.void, [], {maxProgress: dart.legacy(core.double), message: dart.legacy(core.String), messageTextStyle: dart.legacy(text_style.TextStyle), progress: dart.legacy(core.double), progressTextStyle: dart.legacy(text_style.TextStyle), progressWidget: dart.legacy(framework.Widget)}, {}),
+    isShowing: dart.fnType(dart.legacy(core.bool), []),
+    hide: dart.fnType(dart.legacy(async.Future$(dart.legacy(core.bool))), []),
+    show: dart.fnType(dart.legacy(async.Future$(dart.legacy(core.bool))), [])
+  }));
+  dart.setLibraryUri(progress_dialog.ProgressDialog, L0);
+  dart.setFieldSignature(progress_dialog.ProgressDialog, () => ({
+    __proto__: dart.getFields(progress_dialog.ProgressDialog.__proto__),
+    [_dialog]: dart.fieldType(dart.legacy(progress_dialog._Body))
+  }));
+  progress_dialog._Body = class _Body extends framework.StatefulWidget {
+    update() {
+      this[_dialog].update();
+    }
+    createState() {
+      return this[_dialog];
+    }
+  };
+  (progress_dialog._Body.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[_dialog] = new progress_dialog._BodyState.new();
+    progress_dialog._Body.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = progress_dialog._Body.prototype;
+  dart.addTypeTests(progress_dialog._Body);
+  dart.addTypeCaches(progress_dialog._Body);
+  dart.setMethodSignature(progress_dialog._Body, () => ({
+    __proto__: dart.getMethods(progress_dialog._Body.__proto__),
+    update: dart.fnType(dart.dynamic, []),
+    createState: dart.fnType(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))), [])
+  }));
+  dart.setLibraryUri(progress_dialog._Body, L0);
+  dart.setFieldSignature(progress_dialog._Body, () => ({
+    __proto__: dart.getFields(progress_dialog._Body.__proto__),
+    [_dialog]: dart.fieldType(dart.legacy(progress_dialog._BodyState))
+  }));
+  var C19;
+  var C20;
+  var C21;
+  var C18;
+  var C17;
+  var C24;
+  var C25;
+  var C23;
+  var C22;
+  var C28;
+  var C29;
+  var C30;
+  var C31;
+  var C27;
+  var C26;
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var C32;
+  var C35;
+  var C34;
+  var C33;
+  var C38;
+  var C39;
+  var C40;
+  var C37;
+  var C36;
+  var C43;
+  var C42;
+  var C41;
+  var C46;
+  var C45;
+  var C44;
+  var C49;
+  var C48;
+  var C47;
+  var C52;
+  var C53;
+  var C54;
+  var C51;
+  var C50;
+  var C57;
+  var C58;
+  var C56;
+  var C55;
+  var C61;
+  var C62;
+  var C60;
+  var C59;
+  var C65;
+  var C66;
+  var C64;
+  var C63;
+  var C69;
+  var C68;
+  var C67;
+  var C73;
+  var C72;
+  var C71;
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var SingleChildRenderObjectWidget_child = dart.privateName(framework, "SingleChildRenderObjectWidget.child");
+  var SizedBox_height = dart.privateName(basic, "SizedBox.height");
+  var SizedBox_width = dart.privateName(basic, "SizedBox.width");
+  var C70;
+  var C77;
+  var C76;
+  var C75;
+  var C74;
+  var C81;
+  var C80;
+  var C79;
+  var C78;
+  var C84;
+  var C85;
+  var C83;
+  var C82;
+  var C88;
+  var C89;
+  var C87;
+  var C86;
+  var C92;
+  var C93;
+  var C91;
+  var C90;
+  progress_dialog._BodyState = class _BodyState extends framework.State$(dart.legacy(progress_dialog._Body)) {
+    update() {
+      this.setState(dart.fn(() => {
+      }, VoidToNullN()));
+    }
+    dispose() {
+      progress_dialog._isShowing = false;
+      if (dart.test(progress_dialog._showLogs)) print.debugPrint("ProgressDialog dismissed by back button");
+      super.dispose();
+    }
+    build(context) {
+      let t2;
+      let loader = new basic.Align.new({alignment: progress_dialog._progressWidgetAlignment, child: new basic.SizedBox.new({width: 60.0, height: 60.0, child: progress_dialog._progressWidget, $creationLocationd_0dea112b090073317d4: C17 || CT.C17}), $creationLocationd_0dea112b090073317d4: C22 || CT.C22});
+      let text = new basic.Expanded.new({child: progress_dialog._progressDialogType == progress_dialog.ProgressDialogType.Normal ? new text$.Text.new(progress_dialog._dialogMessage, {textAlign: progress_dialog._textAlign, style: progress_dialog._messageStyle, textDirection: progress_dialog._direction, $creationLocationd_0dea112b090073317d4: C26 || CT.C26}) : new basic.Padding.new({padding: C32 || CT.C32, child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: JSArrayOfWidgetL().of([new basic.SizedBox.new({height: 8.0, $creationLocationd_0dea112b090073317d4: C33 || CT.C33}), new basic.Row.new({children: JSArrayOfWidgetL().of([new basic.Expanded.new({child: new text$.Text.new(progress_dialog._dialogMessage, {style: progress_dialog._messageStyle, textDirection: progress_dialog._direction, $creationLocationd_0dea112b090073317d4: C36 || CT.C36}), $creationLocationd_0dea112b090073317d4: C41 || CT.C41})]), $creationLocationd_0dea112b090073317d4: C44 || CT.C44}), new basic.SizedBox.new({height: 4.0, $creationLocationd_0dea112b090073317d4: C47 || CT.C47}), new basic.Align.new({alignment: alignment.Alignment.bottomRight, child: new text$.Text.new(dart.str(progress_dialog._progress) + "/" + dart.str(progress_dialog._maxProgress), {style: progress_dialog._progressTextStyle, textDirection: progress_dialog._direction, $creationLocationd_0dea112b090073317d4: C50 || CT.C50}), $creationLocationd_0dea112b090073317d4: C55 || CT.C55})]), $creationLocationd_0dea112b090073317d4: C59 || CT.C59}), $creationLocationd_0dea112b090073317d4: C63 || CT.C63}), $creationLocationd_0dea112b090073317d4: C67 || CT.C67});
+      t2 = progress_dialog._customBody;
+      return t2 == null ? new container.Container.new({padding: progress_dialog._dialogPadding, child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: JSArrayOfWidgetL().of([new basic.Row.new({mainAxisSize: flex.MainAxisSize.min, children: JSArrayOfWidgetL().of([C70 || CT.C70, dart.equals(progress_dialog._direction, ui.TextDirection.ltr) ? loader : text, C74 || CT.C74, dart.equals(progress_dialog._direction, ui.TextDirection.rtl) ? loader : text, C78 || CT.C78]), $creationLocationd_0dea112b090073317d4: C82 || CT.C82})]), $creationLocationd_0dea112b090073317d4: C86 || CT.C86}), $creationLocationd_0dea112b090073317d4: C90 || CT.C90}) : t2;
+    }
+  };
+  (progress_dialog._BodyState.new = function() {
+    progress_dialog._BodyState.__proto__.new.call(this);
+    ;
+  }).prototype = progress_dialog._BodyState.prototype;
+  dart.addTypeTests(progress_dialog._BodyState);
+  dart.addTypeCaches(progress_dialog._BodyState);
+  dart.setMethodSignature(progress_dialog._BodyState, () => ({
+    __proto__: dart.getMethods(progress_dialog._BodyState.__proto__),
+    update: dart.fnType(dart.dynamic, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(progress_dialog._BodyState, L0);
+  var C96;
+  var C97;
+  var C95;
+  var C94;
+  dart.defineLazy(progress_dialog, {
+    /*progress_dialog._dialogMessage*/get _dialogMessage() {
+      return "Loading...";
+    },
+    set _dialogMessage(_) {},
+    /*progress_dialog._progress*/get _progress() {
+      return 0.0;
+    },
+    set _progress(_) {},
+    /*progress_dialog._maxProgress*/get _maxProgress() {
+      return 100.0;
+    },
+    set _maxProgress(_) {},
+    /*progress_dialog._customBody*/get _customBody() {
+      return null;
+    },
+    set _customBody(_) {},
+    /*progress_dialog._textAlign*/get _textAlign() {
+      return ui.TextAlign.left;
+    },
+    set _textAlign(_) {},
+    /*progress_dialog._progressWidgetAlignment*/get _progressWidgetAlignment() {
+      return alignment.Alignment.centerLeft;
+    },
+    set _progressWidgetAlignment(_) {},
+    /*progress_dialog._direction*/get _direction() {
+      return ui.TextDirection.ltr;
+    },
+    set _direction(_) {},
+    /*progress_dialog._isShowing*/get _isShowing() {
+      return false;
+    },
+    set _isShowing(_) {},
+    /*progress_dialog._context*/get _context() {
+      return null;
+    },
+    set _context(_) {},
+    /*progress_dialog._dismissingContext*/get _dismissingContext() {
+      return null;
+    },
+    set _dismissingContext(_) {},
+    /*progress_dialog._progressDialogType*/get _progressDialogType() {
+      return null;
+    },
+    set _progressDialogType(_) {},
+    /*progress_dialog._barrierDismissible*/get _barrierDismissible() {
+      return true;
+    },
+    set _barrierDismissible(_) {},
+    /*progress_dialog._showLogs*/get _showLogs() {
+      return false;
+    },
+    set _showLogs(_) {},
+    /*progress_dialog._progressTextStyle*/get _progressTextStyle() {
+      return new text_style.TextStyle.new({color: colors.Colors.black, fontSize: 12.0, fontWeight: ui.FontWeight.w400});
+    },
+    set _progressTextStyle(_) {},
+    /*progress_dialog._messageStyle*/get _messageStyle() {
+      return new text_style.TextStyle.new({color: colors.Colors.black, fontSize: 18.0, fontWeight: ui.FontWeight.w600});
+    },
+    set _messageStyle(_) {},
+    /*progress_dialog._dialogElevation*/get _dialogElevation() {
+      return 8.0;
+    },
+    set _dialogElevation(_) {},
+    /*progress_dialog._borderRadius*/get _borderRadius() {
+      return 8.0;
+    },
+    set _borderRadius(_) {},
+    /*progress_dialog._backgroundColor*/get _backgroundColor() {
+      return colors.Colors.white;
+    },
+    set _backgroundColor(_) {},
+    /*progress_dialog._insetAnimCurve*/get _insetAnimCurve() {
+      return curves.Curves.easeInOut;
+    },
+    set _insetAnimCurve(_) {},
+    /*progress_dialog._dialogPadding*/get _dialogPadding() {
+      return C32 || CT.C32;
+    },
+    set _dialogPadding(_) {},
+    /*progress_dialog._progressWidget*/get _progressWidget() {
+      return new image.Image.asset("assets/double_ring_loading_io.gif", {package: "progress_dialog", $creationLocationd_0dea112b090073317d4: C94 || CT.C94});
+    },
+    set _progressWidget(_) {}
+  }, true);
+  dart.trackLibraries("packages/progress_dialog/progress_dialog.dart", {
+    "package:progress_dialog/progress_dialog.dart": progress_dialog
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["progress_dialog.dart"],"names":[],"mappings":"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","file":"../../../../../../packages/progress_dialog/progress_dialog.dart.lib.js"}');
+  // Exports:
+  return {
+    progress_dialog: progress_dialog
+  };
+}));
+
+//# sourceMappingURL=progress_dialog.dart.lib.js.map

@@ -1,0 +1,3179 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/chewie_audio/src/utils.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/chewie_audio/src/material_progress_bar.dart', 'packages/chewie_audio/src/chewie_progress_colors.dart', 'packages/video_player/video_player.dart', 'packages/open_iconic_flutter/open_iconic_flutter.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/vector_math/vector_math_64.dart', 'packages/chewie_audio/src/cupertino_progress_bar.dart', 'packages/flutter/src/foundation/_platform_web.dart', 'packages/flutter/src/foundation/change_notifier.dart'], (function load__packages__chewie_audio__src__material_controls_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__chewie_audio__src__utils$46dart, packages__flutter__src__painting__strut_style$46dart, packages__chewie_audio__src__material_progress_bar$46dart, packages__chewie_audio__src__chewie_progress_colors$46dart, packages__video_player__video_player$46dart, packages__open_iconic_flutter__open_iconic_flutter$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__rendering__flex$46dart, packages__vector_math__vector_math_64$46dart, packages__chewie_audio__src__cupertino_progress_bar$46dart, packages__flutter__src__foundation___platform_web$46dart, packages__flutter__src__foundation__change_notifier$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const async = dart_sdk.async;
+  const ui = dart_sdk.ui;
+  const math = dart_sdk.math;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const utils = packages__chewie_audio__src__utils$46dart.src__utils;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const material_progress_bar = packages__chewie_audio__src__material_progress_bar$46dart.src__material_progress_bar;
+  const chewie_progress_colors = packages__chewie_audio__src__chewie_progress_colors$46dart.src__chewie_progress_colors;
+  const video_player = packages__video_player__video_player$46dart.video_player;
+  const open_iconic_flutter = packages__open_iconic_flutter__open_iconic_flutter$46dart.open_iconic_flutter;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const vector_math_64 = packages__vector_math__vector_math_64$46dart.vector_math_64;
+  const cupertino_progress_bar = packages__chewie_audio__src__cupertino_progress_bar$46dart.src__cupertino_progress_bar;
+  const platform = packages__flutter__src__foundation___platform_web$46dart.src__foundation__platform;
+  const change_notifier = packages__flutter__src__foundation__change_notifier$46dart.src__foundation__change_notifier;
+  var material_controls = Object.create(dart.library);
+  var cupertino_controls = Object.create(dart.library);
+  var player_with_controls = Object.create(dart.library);
+  var chewie_player = Object.create(dart.library);
+  var _LocationL = () => (_LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))();
+  var WidgetL = () => (WidgetL = dart.constFn(dart.legacy(framework.Widget)))();
+  var JSArrayOfWidgetL = () => (JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(WidgetL())))();
+  var VoidToNullN = () => (VoidToNullN = dart.constFn(dart.fnType(core.Null, [])))();
+  var voidToNullN = () => (voidToNullN = dart.constFn(dart.fnType(core.Null, [dart.void])))();
+  var intL = () => (intL = dart.constFn(dart.legacy(core.int)))();
+  var _ChewieAudioControllerProviderL = () => (_ChewieAudioControllerProviderL = dart.constFn(dart.legacy(chewie_player._ChewieAudioControllerProvider)))();
+  const CT = Object.create(null);
+  var L4 = "package:chewie_audio/src/chewie_player.dart";
+  var L3 = "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/chewie_player.dart";
+  var L0 = "package:chewie_audio/src/material_controls.dart";
+  var L1 = "package:chewie_audio/src/cupertino_controls.dart";
+  var L2 = "package:chewie_audio/src/player_with_controls.dart";
+  dart.defineLazy(CT, {
+    get C2() {
+      return C2 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C3 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 17,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C4 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C1 = dart.constList([C2 || CT.C2, C3 || CT.C3, C4 || CT.C4], _LocationL());
+    },
+    get C0() {
+      return C0 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C1 || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C7() {
+      return C7 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C6 = dart.constList([C7 || CT.C7], _LocationL());
+    },
+    get C5() {
+      return C5 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C6 || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C11() {
+      return C11 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 44,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C10 = dart.constList([C11 || CT.C11], _LocationL());
+    },
+    get C9() {
+      return C9 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C10 || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 39,
+        [_Location_line]: 90,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C8() {
+      return C8 = dart.const({
+        __proto__: text.Text.prototype,
+        [Widget__location]: C9 || CT.C9,
+        [Widget_key]: null,
+        [Text_textHeightBehavior]: null,
+        [Text_textWidthBasis]: null,
+        [Text_semanticsLabel]: null,
+        [Text_maxLines]: null,
+        [Text_textScaleFactor]: null,
+        [Text_overflow]: null,
+        [Text_softWrap]: null,
+        [Text_locale]: null,
+        [Text_textDirection]: null,
+        [Text_textAlign]: null,
+        [Text_strutStyle]: null,
+        [Text_style]: null,
+        [Text_textSpan]: null,
+        [Text_data]: "LIVE"
+      });
+    },
+    get C14() {
+      return C14 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 26,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C13 = dart.constList([C14 || CT.C14], _LocationL());
+    },
+    get C12() {
+      return C12 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C13 || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 90,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C17() {
+      return C17 = dart.constList([], _LocationL());
+    },
+    get C16() {
+      return C16 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C17 || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 43,
+        [_Location_line]: 92,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C15() {
+      return C15 = dart.const({
+        __proto__: basic.SizedBox.prototype,
+        [Widget__location]: C16 || CT.C16,
+        [Widget_key]: null,
+        [SingleChildRenderObjectWidget_child]: null,
+        [SizedBox_height]: null,
+        [SizedBox_width]: null
+      });
+    },
+    get C18() {
+      return C18 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C17 || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 95,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C21() {
+      return C21 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C20 = dart.constList([C21 || CT.C21], _LocationL());
+    },
+    get C19() {
+      return C19 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C20 || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 86,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C24() {
+      return C24 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 7,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C25 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 7,
+        [_Location_line]: 85,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C26 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C23 = dart.constList([C24 || CT.C24, C25 || CT.C25, C26 || CT.C26], _LocationL());
+    },
+    get C22() {
+      return C22 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C23 || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 83,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C29() {
+      return C29 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 19,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C28 = dart.constList([C29 || CT.C29], _LocationL());
+    },
+    get C27() {
+      return C27 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C28 || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 121,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C32() {
+      return C32 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 116,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C33 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 13,
+        [_Location_line]: 117,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C34 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C31 = dart.constList([C32 || CT.C32, C33 || CT.C33, C34 || CT.C34], _LocationL());
+    },
+    get C30() {
+      return C30 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C31 || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 115,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C37() {
+      return C37 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 115,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C36 = dart.constList([C37 || CT.C37], _LocationL());
+    },
+    get C35() {
+      return C35 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C36 || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 114,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C40() {
+      return C40 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 114,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C39 = dart.constList([C40 || CT.C40], _LocationL());
+    },
+    get C38() {
+      return C38 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C39 || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 113,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C43() {
+      return C43 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C44 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C42 = dart.constList([C43 || CT.C43, C44 || CT.C44], _LocationL());
+    },
+    get C41() {
+      return C41 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C42 || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 104,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C47() {
+      return C47 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 38,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C46 = dart.constList([C47 || CT.C47], _LocationL());
+    },
+    get C45() {
+      return C45 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C46 || CT.C46,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 143,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C50() {
+      return C50 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C51 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C52 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 9,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C53 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C54 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C49 = dart.constList([C50 || CT.C50, C51 || CT.C51, C52 || CT.C52, C53 || CT.C53, C54 || CT.C54], _LocationL());
+    },
+    get C48() {
+      return C48 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C49 || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 135,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C57() {
+      return C57 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 134,
+        [_Location_file]: null
+      });
+    },
+    get C58() {
+      return C58 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 135,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C56 = dart.constList([C57 || CT.C57, C58 || CT.C58], _LocationL());
+    },
+    get C55() {
+      return C55 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C56 || CT.C56,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 133,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C61() {
+      return C61 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 68,
+        [_Location_line]: 161,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C62 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 162,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C60 = dart.constList([C61 || CT.C61, C62 || CT.C62], _LocationL());
+    },
+    get C59() {
+      return C59 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C60 || CT.C60,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 160,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C65() {
+      return C65 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 159,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C66 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 160,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C64 = dart.constList([C65 || CT.C65, C66 || CT.C66], _LocationL());
+    },
+    get C63() {
+      return C63 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C64 || CT.C64,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 158,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C69() {
+      return C69 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 11,
+        [_Location_line]: 207,
+        [_Location_file]: null
+      });
+    },
+    get C70() {
+      return C70 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDragStart",
+        [_Location_column]: 11,
+        [_Location_line]: 208,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C71 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDragEnd",
+        [_Location_column]: 11,
+        [_Location_line]: 213,
+        [_Location_file]: null
+      });
+    },
+    get C72() {
+      return C72 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "colors",
+        [_Location_column]: 11,
+        [_Location_line]: 218,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C68 = dart.constList([C69 || CT.C69, C70 || CT.C70, C71 || CT.C71, C72 || CT.C72], _LocationL());
+    },
+    get C67() {
+      return C67 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C68 || CT.C68,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 206,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C75() {
+      return C75 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 205,
+        [_Location_file]: null
+      });
+    },
+    get C76() {
+      return C76 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 206,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C74 = dart.constList([C75 || CT.C75, C76 || CT.C76], _LocationL());
+    },
+    get C73() {
+      return C73 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C74 || CT.C74,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 204,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C79() {
+      return C79 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 204,
+        [_Location_file]: null
+      });
+    },
+    get C78() {
+      return C78 = dart.constList([C79 || CT.C79], _LocationL());
+    },
+    get C77() {
+      return C77 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C78 || CT.C78,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 203,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/material_controls.dart"
+      });
+    },
+    get C82() {
+      return C82 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 33,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C83 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 17,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C84() {
+      return C84 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 17,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C81() {
+      return C81 = dart.constList([C82 || CT.C82, C83 || CT.C83, C84 || CT.C84], _LocationL());
+    },
+    get C80() {
+      return C80 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C81 || CT.C81,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C87() {
+      return C87 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C86() {
+      return C86 = dart.constList([C87 || CT.C87], _LocationL());
+    },
+    get C85() {
+      return C85 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C86 || CT.C86,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C90() {
+      return C90 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 21,
+        [_Location_line]: 115,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C91 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 116,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C89 = dart.constList([C90 || CT.C90, C91 || CT.C91], _LocationL());
+    },
+    get C88() {
+      return C88 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C89 || CT.C89,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 114,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C94() {
+      return C94 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 21,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C93 = dart.constList([C94 || CT.C94], _LocationL());
+    },
+    get C92() {
+      return C92 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C93 || CT.C93,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 122,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C97() {
+      return C97 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 111,
+        [_Location_file]: null
+      });
+    },
+    get C98() {
+      return C98 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 13,
+        [_Location_line]: 112,
+        [_Location_file]: null
+      });
+    },
+    get C99() {
+      return C99 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C96() {
+      return C96 = dart.constList([C97 || CT.C97, C98 || CT.C98, C99 || CT.C99], _LocationL());
+    },
+    get C95() {
+      return C95 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C96 || CT.C96,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 110,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C102() {
+      return C102 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "filter",
+        [_Location_column]: 11,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C103() {
+      return C103 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C101() {
+      return C101 = dart.constList([C102 || CT.C102, C103 || CT.C103], _LocationL());
+    },
+    get C100() {
+      return C100 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C101 || CT.C101,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 105,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C106() {
+      return C106 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "borderRadius",
+        [_Location_column]: 9,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C107() {
+      return C107 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C105() {
+      return C105 = dart.constList([C106 || CT.C106, C107 || CT.C107], _LocationL());
+    },
+    get C104() {
+      return C104 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C105 || CT.C105,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 103,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C110() {
+      return C110 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 7,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C111() {
+      return C111 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 7,
+        [_Location_line]: 101,
+        [_Location_file]: null
+      });
+    },
+    get C112() {
+      return C112 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 7,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C113() {
+      return C113 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 103,
+        [_Location_file]: null
+      });
+    },
+    get C109() {
+      return C109 = dart.constList([C110 || CT.C110, C111 || CT.C111, C112 || CT.C112, C113 || CT.C113], _LocationL());
+    },
+    get C108() {
+      return C108 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C109 || CT.C109,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 99,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C116() {
+      return C116 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 9,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C117() {
+      return C117 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 144,
+        [_Location_file]: null
+      });
+    },
+    get C115() {
+      return C115 = dart.constList([C116 || CT.C116, C117 || CT.C117], _LocationL());
+    },
+    get C114() {
+      return C114 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C115 || CT.C115,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 142,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C120() {
+      return C120 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 141,
+        [_Location_file]: null
+      });
+    },
+    get C121() {
+      return C121 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C119() {
+      return C119 = dart.constList([C120 || CT.C120, C121 || CT.C121], _LocationL());
+    },
+    get C118() {
+      return C118 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C119 || CT.C119,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C122() {
+      return C122 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C17 || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 155,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C123() {
+      return C123 = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 12,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C126() {
+      return C126 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 17,
+        [_Location_line]: 173,
+        [_Location_file]: null
+      });
+    },
+    get C127() {
+      return C127 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 13,
+        [_Location_line]: 175,
+        [_Location_file]: null
+      });
+    },
+    get C128() {
+      return C128 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 13,
+        [_Location_line]: 176,
+        [_Location_file]: null
+      });
+    },
+    get C125() {
+      return C125 = dart.constList([C126 || CT.C126, C127 || CT.C127, C128 || CT.C128], _LocationL());
+    },
+    get C124() {
+      return C124 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C125 || CT.C125,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 171,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C131() {
+      return C131 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 11,
+        [_Location_line]: 170,
+        [_Location_file]: null
+      });
+    },
+    get C132() {
+      return C132 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 171,
+        [_Location_file]: null
+      });
+    },
+    get C130() {
+      return C130 = dart.constList([C131 || CT.C131, C132 || CT.C132], _LocationL());
+    },
+    get C129() {
+      return C129 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C130 || CT.C130,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 169,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C135() {
+      return C135 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 9,
+        [_Location_line]: 161,
+        [_Location_file]: null
+      });
+    },
+    get C136() {
+      return C136 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 169,
+        [_Location_file]: null
+      });
+    },
+    get C134() {
+      return C134 = dart.constList([C135 || CT.C135, C136 || CT.C136], _LocationL());
+    },
+    get C133() {
+      return C133 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C134 || CT.C134,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 160,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C137() {
+      return C137 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C64 || CT.C64,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 158,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C140() {
+      return C140 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 15,
+        [_Location_line]: 199,
+        [_Location_file]: null
+      });
+    },
+    get C141() {
+      return C141 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 201,
+        [_Location_file]: null
+      });
+    },
+    get C142() {
+      return C142 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 11,
+        [_Location_line]: 202,
+        [_Location_file]: null
+      });
+    },
+    get C139() {
+      return C139 = dart.constList([C140 || CT.C140, C141 || CT.C141, C142 || CT.C142], _LocationL());
+    },
+    get C138() {
+      return C138 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C139 || CT.C139,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 197,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C145() {
+      return C145 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 191,
+        [_Location_file]: null
+      });
+    },
+    get C146() {
+      return C146 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 192,
+        [_Location_file]: null
+      });
+    },
+    get C147() {
+      return C147 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 193,
+        [_Location_file]: null
+      });
+    },
+    get C148() {
+      return C148 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 197,
+        [_Location_file]: null
+      });
+    },
+    get C144() {
+      return C144 = dart.constList([C145 || CT.C145, C146 || CT.C146, C147 || CT.C147, C148 || CT.C148], _LocationL());
+    },
+    get C143() {
+      return C143 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C144 || CT.C144,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 190,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C151() {
+      return C151 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 189,
+        [_Location_file]: null
+      });
+    },
+    get C152() {
+      return C152 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 190,
+        [_Location_file]: null
+      });
+    },
+    get C150() {
+      return C150 = dart.constList([C151 || CT.C151, C152 || CT.C152], _LocationL());
+    },
+    get C149() {
+      return C149 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C150 || CT.C150,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 188,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C155() {
+      return C155 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 9,
+        [_Location_line]: 215,
+        [_Location_file]: null
+      });
+    },
+    get C156() {
+      return C156 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 216,
+        [_Location_file]: null
+      });
+    },
+    get C154() {
+      return C154 = dart.constList([C155 || CT.C155, C156 || CT.C156], _LocationL());
+    },
+    get C153() {
+      return C153 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C154 || CT.C154,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 214,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C159() {
+      return C159 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 213,
+        [_Location_file]: null
+      });
+    },
+    get C160() {
+      return C160 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 214,
+        [_Location_file]: null
+      });
+    },
+    get C158() {
+      return C158 = dart.constList([C159 || CT.C159, C160 || CT.C160], _LocationL());
+    },
+    get C157() {
+      return C157 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C158 || CT.C158,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 212,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C163() {
+      return C163 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 39,
+        [_Location_line]: 232,
+        [_Location_file]: null
+      });
+    },
+    get C164() {
+      return C164 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 233,
+        [_Location_file]: null
+      });
+    },
+    get C162() {
+      return C162 = dart.constList([C163 || CT.C163, C164 || CT.C164], _LocationL());
+    },
+    get C161() {
+      return C161 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C162 || CT.C162,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 231,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C167() {
+      return C167 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 7,
+        [_Location_line]: 230,
+        [_Location_file]: null
+      });
+    },
+    get C168() {
+      return C168 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 231,
+        [_Location_file]: null
+      });
+    },
+    get C166() {
+      return C166 = dart.constList([C167 || CT.C167, C168 || CT.C168], _LocationL());
+    },
+    get C165() {
+      return C165 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C166 || CT.C166,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 229,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C171() {
+      return C171 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 29,
+        [_Location_line]: 255,
+        [_Location_file]: null
+      });
+    },
+    get C172() {
+      return C172 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 13,
+        [_Location_line]: 256,
+        [_Location_file]: null
+      });
+    },
+    get C173() {
+      return C173 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 13,
+        [_Location_line]: 257,
+        [_Location_file]: null
+      });
+    },
+    get C170() {
+      return C170 = dart.constList([C171 || CT.C171, C172 || CT.C172, C173 || CT.C173], _LocationL());
+    },
+    get C169() {
+      return C169 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C170 || CT.C170,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 254,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C176() {
+      return C176 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 11,
+        [_Location_line]: 250,
+        [_Location_file]: null
+      });
+    },
+    get C177() {
+      return C177 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "transform",
+        [_Location_column]: 11,
+        [_Location_line]: 251,
+        [_Location_file]: null
+      });
+    },
+    get C178() {
+      return C178 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 254,
+        [_Location_file]: null
+      });
+    },
+    get C175() {
+      return C175 = dart.constList([C176 || CT.C176, C177 || CT.C177, C178 || CT.C178], _LocationL());
+    },
+    get C174() {
+      return C174 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C175 || CT.C175,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 249,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C181() {
+      return C181 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 242,
+        [_Location_file]: null
+      });
+    },
+    get C182() {
+      return C182 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 243,
+        [_Location_file]: null
+      });
+    },
+    get C183() {
+      return C183 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 9,
+        [_Location_line]: 244,
+        [_Location_file]: null
+      });
+    },
+    get C184() {
+      return C184 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 245,
+        [_Location_file]: null
+      });
+    },
+    get C185() {
+      return C185 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 249,
+        [_Location_file]: null
+      });
+    },
+    get C180() {
+      return C180 = dart.constList([C181 || CT.C181, C182 || CT.C182, C183 || CT.C183, C184 || CT.C184, C185 || CT.C185], _LocationL());
+    },
+    get C179() {
+      return C179 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C180 || CT.C180,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 241,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C188() {
+      return C188 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 240,
+        [_Location_file]: null
+      });
+    },
+    get C189() {
+      return C189 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 241,
+        [_Location_file]: null
+      });
+    },
+    get C187() {
+      return C187 = dart.constList([C188 || CT.C188, C189 || CT.C189], _LocationL());
+    },
+    get C186() {
+      return C186 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C187 || CT.C187,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 239,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C192() {
+      return C192 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 27,
+        [_Location_line]: 278,
+        [_Location_file]: null
+      });
+    },
+    get C193() {
+      return C193 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 11,
+        [_Location_line]: 279,
+        [_Location_file]: null
+      });
+    },
+    get C194() {
+      return C194 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 11,
+        [_Location_line]: 280,
+        [_Location_file]: null
+      });
+    },
+    get C191() {
+      return C191 = dart.constList([C192 || CT.C192, C193 || CT.C193, C194 || CT.C194], _LocationL());
+    },
+    get C190() {
+      return C190 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C191 || CT.C191,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 277,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C197() {
+      return C197 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 268,
+        [_Location_file]: null
+      });
+    },
+    get C198() {
+      return C198 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 269,
+        [_Location_file]: null
+      });
+    },
+    get C199() {
+      return C199 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 270,
+        [_Location_file]: null
+      });
+    },
+    get C200() {
+      return C200 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 9,
+        [_Location_line]: 274,
+        [_Location_file]: null
+      });
+    },
+    get C201() {
+      return C201 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 277,
+        [_Location_file]: null
+      });
+    },
+    get C196() {
+      return C196 = dart.constList([C197 || CT.C197, C198 || CT.C198, C199 || CT.C199, C200 || CT.C200, C201 || CT.C201], _LocationL());
+    },
+    get C195() {
+      return C195 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C196 || CT.C196,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 267,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C204() {
+      return C204 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 266,
+        [_Location_file]: null
+      });
+    },
+    get C205() {
+      return C205 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 267,
+        [_Location_file]: null
+      });
+    },
+    get C203() {
+      return C203 = dart.constList([C204 || CT.C204, C205 || CT.C205], _LocationL());
+    },
+    get C202() {
+      return C202 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C203 || CT.C203,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 265,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C208() {
+      return C208 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 11,
+        [_Location_line]: 297,
+        [_Location_file]: null
+      });
+    },
+    get C209() {
+      return C209 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDragStart",
+        [_Location_column]: 11,
+        [_Location_line]: 298,
+        [_Location_file]: null
+      });
+    },
+    get C210() {
+      return C210 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDragEnd",
+        [_Location_column]: 11,
+        [_Location_line]: 299,
+        [_Location_file]: null
+      });
+    },
+    get C211() {
+      return C211 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "colors",
+        [_Location_column]: 11,
+        [_Location_line]: 300,
+        [_Location_file]: null
+      });
+    },
+    get C207() {
+      return C207 = dart.constList([C208 || CT.C208, C209 || CT.C209, C210 || CT.C210, C211 || CT.C211], _LocationL());
+    },
+    get C206() {
+      return C206 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C207 || CT.C207,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 296,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C214() {
+      return C214 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 295,
+        [_Location_file]: null
+      });
+    },
+    get C215() {
+      return C215 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 296,
+        [_Location_file]: null
+      });
+    },
+    get C213() {
+      return C213 = dart.constList([C214 || CT.C214, C215 || CT.C215], _LocationL());
+    },
+    get C212() {
+      return C212 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C213 || CT.C213,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 294,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C218() {
+      return C218 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 294,
+        [_Location_file]: null
+      });
+    },
+    get C217() {
+      return C217 = dart.constList([C218 || CT.C218], _LocationL());
+    },
+    get C216() {
+      return C216 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C217 || CT.C217,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 293,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/cupertino_controls.dart"
+      });
+    },
+    get C221() {
+      return C221 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 9,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C222() {
+      return C222 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C220() {
+      return C220 = dart.constList([C221 || CT.C221, C222 || CT.C222], _LocationL());
+    },
+    get C219() {
+      return C219 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C220 || CT.C220,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C225() {
+      return C225 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 19,
+        [_Location_file]: null
+      });
+    },
+    get C224() {
+      return C224 = dart.constList([C225 || CT.C225], _LocationL());
+    },
+    get C223() {
+      return C223 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C224 || CT.C224,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 18,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C228() {
+      return C228 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 51,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C227() {
+      return C227 = dart.constList([C228 || CT.C228], _LocationL());
+    },
+    get C226() {
+      return C226 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C227 || CT.C227,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C231() {
+      return C231 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C232() {
+      return C232 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C233() {
+      return C233 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C230() {
+      return C230 = dart.constList([C231 || CT.C231, C232 || CT.C232, C233 || CT.C233], _LocationL());
+    },
+    get C229() {
+      return C229 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C230 || CT.C230,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C236() {
+      return C236 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "offstage",
+        [_Location_column]: 13,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C237() {
+      return C237 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C235() {
+      return C235 = dart.constList([C236 || CT.C236, C237 || CT.C237], _LocationL());
+    },
+    get C234() {
+      return C234 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C235 || CT.C235,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C240() {
+      return C240 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C239() {
+      return C239 = dart.constList([C240 || CT.C240], _LocationL());
+    },
+    get C238() {
+      return C238 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C239 || CT.C239,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C243() {
+      return C243 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C242() {
+      return C242 = dart.constList([C243 || CT.C243], _LocationL());
+    },
+    get C241() {
+      return C241 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C242 || CT.C242,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C244() {
+      return C244 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C17 || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C247() {
+      return C247 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 21,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C248() {
+      return C248 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "iconColor",
+        [_Location_column]: 21,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C246() {
+      return C246 = dart.constList([C247 || CT.C247, C248 || CT.C248], _LocationL());
+    },
+    get C245() {
+      return C245 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C246 || CT.C246,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C249() {
+      return C249 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C17 || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/player_with_controls.dart"
+      });
+    },
+    get C250() {
+      return C250 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C17 || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/chewie_player.dart"
+      });
+    },
+    get C253() {
+      return C253 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 7,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C254() {
+      return C254 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C252() {
+      return C252 = dart.constList([C253 || CT.C253, C254 || CT.C254], _LocationL());
+    },
+    get C251() {
+      return C251 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C252 || CT.C252,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/chewie_audio-1.0.0+1/lib/src/chewie_player.dart"
+      });
+    }
+  }, false);
+  material_controls.MaterialControls = class MaterialControls extends framework.StatefulWidget {
+    createState() {
+      return new material_controls._MaterialControlsState.new();
+    }
+  };
+  (material_controls.MaterialControls.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    material_controls.MaterialControls.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = material_controls.MaterialControls.prototype;
+  dart.addTypeTests(material_controls.MaterialControls);
+  dart.addTypeCaches(material_controls.MaterialControls);
+  dart.setMethodSignature(material_controls.MaterialControls, () => ({
+    __proto__: dart.getMethods(material_controls.MaterialControls.__proto__),
+    createState: dart.fnType(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))), [])
+  }));
+  dart.setLibraryUri(material_controls.MaterialControls, L0);
+  var _latestValue = dart.privateName(material_controls, "_latestValue");
+  var _latestVolume = dart.privateName(material_controls, "_latestVolume");
+  var _initTimer = dart.privateName(material_controls, "_initTimer");
+  var _showAfterExpandCollapseTimer = dart.privateName(material_controls, "_showAfterExpandCollapseTimer");
+  var _dragging = dart.privateName(material_controls, "_dragging");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var C2;
+  var C3;
+  var C4;
+  var C1;
+  var C0;
+  var C7;
+  var C6;
+  var C5;
+  var _buildBottomBar = dart.privateName(material_controls, "_buildBottomBar");
+  var _dispose = dart.privateName(material_controls, "_dispose");
+  var _updateState = dart.privateName(material_controls, "_updateState");
+  var _initialize = dart.privateName(material_controls, "_initialize");
+  var _buildPlayPause = dart.privateName(material_controls, "_buildPlayPause");
+  var C11;
+  var C10;
+  var C9;
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var Text_textHeightBehavior = dart.privateName(text, "Text.textHeightBehavior");
+  var Text_textWidthBasis = dart.privateName(text, "Text.textWidthBasis");
+  var Text_semanticsLabel = dart.privateName(text, "Text.semanticsLabel");
+  var Text_maxLines = dart.privateName(text, "Text.maxLines");
+  var Text_textScaleFactor = dart.privateName(text, "Text.textScaleFactor");
+  var Text_overflow = dart.privateName(text, "Text.overflow");
+  var Text_softWrap = dart.privateName(text, "Text.softWrap");
+  var Text_locale = dart.privateName(text, "Text.locale");
+  var Text_textDirection = dart.privateName(text, "Text.textDirection");
+  var Text_textAlign = dart.privateName(text, "Text.textAlign");
+  var Text_strutStyle = dart.privateName(text, "Text.strutStyle");
+  var Text_style = dart.privateName(text, "Text.style");
+  var Text_textSpan = dart.privateName(text, "Text.textSpan");
+  var Text_data = dart.privateName(text, "Text.data");
+  var C8;
+  var C14;
+  var C13;
+  var C12;
+  var _buildPosition = dart.privateName(material_controls, "_buildPosition");
+  var C17;
+  var C16;
+  var SingleChildRenderObjectWidget_child = dart.privateName(framework, "SingleChildRenderObjectWidget.child");
+  var SizedBox_height = dart.privateName(basic, "SizedBox.height");
+  var SizedBox_width = dart.privateName(basic, "SizedBox.width");
+  var C15;
+  var _buildProgressBar = dart.privateName(material_controls, "_buildProgressBar");
+  var _buildMuteButton = dart.privateName(material_controls, "_buildMuteButton");
+  var C18;
+  var C21;
+  var C20;
+  var C19;
+  var C24;
+  var C25;
+  var C26;
+  var C23;
+  var C22;
+  var C29;
+  var C28;
+  var C27;
+  var C32;
+  var C33;
+  var C34;
+  var C31;
+  var C30;
+  var C37;
+  var C36;
+  var C35;
+  var C40;
+  var C39;
+  var C38;
+  var C43;
+  var C44;
+  var C42;
+  var C41;
+  var _playPause = dart.privateName(material_controls, "_playPause");
+  var C47;
+  var C46;
+  var C45;
+  var C50;
+  var C51;
+  var C52;
+  var C53;
+  var C54;
+  var C49;
+  var C48;
+  var C57;
+  var C58;
+  var C56;
+  var C55;
+  var C61;
+  var C62;
+  var C60;
+  var C59;
+  var C65;
+  var C66;
+  var C64;
+  var C63;
+  var C69;
+  var C70;
+  var C71;
+  var C72;
+  var C68;
+  var C67;
+  var C75;
+  var C76;
+  var C74;
+  var C73;
+  var C79;
+  var C78;
+  var C77;
+  material_controls._MaterialControlsState = class _MaterialControlsState extends framework.State$(dart.legacy(material_controls.MaterialControls)) {
+    build(context) {
+      let t2, t1, t0;
+      if (dart.test(this[_latestValue].hasError)) {
+        return this.chewieController.errorBuilder != null ? (t0 = this.chewieController, t1 = context, t2 = this.chewieController.videoPlayerController.value.errorDescription, t0.errorBuilder(t1, t2)) : new basic.Center.new({child: new icon.Icon.new(icons.Icons.error, {color: colors.Colors.white, size: 42.0, $creationLocationd_0dea112b090073317d4: C0 || CT.C0}), $creationLocationd_0dea112b090073317d4: C5 || CT.C5});
+      }
+      return this[_buildBottomBar](context);
+    }
+    dispose() {
+      this[_dispose]();
+      super.dispose();
+    }
+    [_dispose]() {
+      let t0, t0$;
+      this.controller.removeListener(dart.bind(this, _updateState));
+      t0 = this[_initTimer];
+      t0 == null ? null : t0.cancel();
+      t0$ = this[_showAfterExpandCollapseTimer];
+      t0$ == null ? null : t0$.cancel();
+    }
+    didChangeDependencies() {
+      let _oldController = this.chewieController;
+      this.chewieController = chewie_player.ChewieAudioController.of(this.context);
+      this.controller = this.chewieController.videoPlayerController;
+      if (!dart.equals(_oldController, this.chewieController)) {
+        this[_dispose]();
+        this[_initialize]();
+      }
+      super.didChangeDependencies();
+    }
+    [_buildBottomBar](context) {
+      let iconColor = theme.Theme.of(context).textTheme.button.color;
+      return new container.Container.new({height: this.barHeight, color: theme.Theme.of(context).dialogBackgroundColor, child: new basic.Row.new({children: JSArrayOfWidgetL().of([this[_buildPlayPause](this.controller), dart.test(this.chewieController.isLive) ? new basic.Expanded.new({child: C8 || CT.C8, $creationLocationd_0dea112b090073317d4: C12 || CT.C12}) : this[_buildPosition](iconColor), dart.test(this.chewieController.isLive) ? C15 || CT.C15 : this[_buildProgressBar](), dart.test(this.chewieController.allowMuting) ? this[_buildMuteButton](this.controller) : new container.Container.new({$creationLocationd_0dea112b090073317d4: C18 || CT.C18})]), $creationLocationd_0dea112b090073317d4: C19 || CT.C19}), $creationLocationd_0dea112b090073317d4: C22 || CT.C22});
+    }
+    [_buildMuteButton](controller) {
+      return new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+          let t0;
+          if (this[_latestValue].volume === 0) {
+            controller.setVolume((t0 = this[_latestVolume], t0 == null ? 0.5 : t0));
+          } else {
+            this[_latestVolume] = controller.value.volume;
+            controller.setVolume(0.0);
+          }
+        }, VoidToNullN()), child: new basic.ClipRect.new({child: new container.Container.new({child: new container.Container.new({height: this.barHeight, padding: new edge_insets.EdgeInsets.only({left: 8.0, right: 8.0}), child: new icon.Icon.new(this[_latestValue] != null && dart.notNull(this[_latestValue].volume) > 0 ? icons.Icons.volume_up : icons.Icons.volume_off, {$creationLocationd_0dea112b090073317d4: C27 || CT.C27}), $creationLocationd_0dea112b090073317d4: C30 || CT.C30}), $creationLocationd_0dea112b090073317d4: C35 || CT.C35}), $creationLocationd_0dea112b090073317d4: C38 || CT.C38}), $creationLocationd_0dea112b090073317d4: C41 || CT.C41});
+    }
+    [_buildPlayPause](controller) {
+      return new gesture_detector.GestureDetector.new({onTap: dart.bind(this, _playPause), child: new container.Container.new({height: this.barHeight, color: colors.Colors.transparent, margin: new edge_insets.EdgeInsets.only({left: 8.0, right: 4.0}), padding: new edge_insets.EdgeInsets.only({left: 12.0, right: 12.0}), child: new icon.Icon.new(dart.test(controller.value.isPlaying) ? icons.Icons.pause : icons.Icons.play_arrow, {$creationLocationd_0dea112b090073317d4: C45 || CT.C45}), $creationLocationd_0dea112b090073317d4: C48 || CT.C48}), $creationLocationd_0dea112b090073317d4: C55 || CT.C55});
+    }
+    [_buildPosition](iconColor) {
+      let position = this[_latestValue] != null && this[_latestValue].position != null ? this[_latestValue].position : core.Duration.zero;
+      let duration = this[_latestValue] != null && this[_latestValue].duration != null ? this[_latestValue].duration : core.Duration.zero;
+      return new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 24.0}), child: new text.Text.new(dart.str(utils.formatDuration(position)) + " / " + dart.str(utils.formatDuration(duration)), {style: new text_style.TextStyle.new({fontSize: 14.0}), $creationLocationd_0dea112b090073317d4: C59 || CT.C59}), $creationLocationd_0dea112b090073317d4: C63 || CT.C63});
+    }
+    [_initialize]() {
+      return async.async(core.Null, (function* _initialize() {
+        this.controller.addListener(dart.bind(this, _updateState));
+        this[_updateState]();
+      }).bind(this));
+    }
+    [_playPause]() {
+      let isFinished = this[_latestValue].position['>='](this[_latestValue].duration);
+      this.setState(dart.fn(() => {
+        if (dart.test(this.controller.value.isPlaying)) {
+          this.controller.pause();
+        } else {
+          if (!dart.test(this.controller.value.initialized)) {
+            this.controller.initialize().then(core.Null, dart.fn(_ => {
+              this.controller.play();
+            }, voidToNullN()));
+          } else {
+            if (dart.test(isFinished)) {
+              this.controller.seekTo(new core.Duration.new({seconds: 0}));
+            }
+            this.controller.play();
+          }
+        }
+      }, VoidToNullN()));
+    }
+    [_updateState]() {
+      this.setState(dart.fn(() => {
+        this[_latestValue] = this.controller.value;
+      }, VoidToNullN()));
+    }
+    [_buildProgressBar]() {
+      let t0;
+      return new basic.Expanded.new({child: new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 20.0}), child: new material_progress_bar.MaterialVideoProgressBar.new(this.controller, {onDragStart: dart.fn(() => {
+              this.setState(dart.fn(() => {
+                this[_dragging] = true;
+              }, VoidToNullN()));
+            }, VoidToNullN()), onDragEnd: dart.fn(() => {
+              this.setState(dart.fn(() => {
+                this[_dragging] = false;
+              }, VoidToNullN()));
+            }, VoidToNullN()), colors: (t0 = this.chewieController.materialProgressColors, t0 == null ? new chewie_progress_colors.ChewieProgressColors.new({playedColor: theme.Theme.of(this.context).accentColor, handleColor: theme.Theme.of(this.context).accentColor, bufferedColor: theme.Theme.of(this.context).backgroundColor, backgroundColor: theme.Theme.of(this.context).disabledColor}) : t0), $creationLocationd_0dea112b090073317d4: C67 || CT.C67}), $creationLocationd_0dea112b090073317d4: C73 || CT.C73}), $creationLocationd_0dea112b090073317d4: C77 || CT.C77});
+    }
+  };
+  (material_controls._MaterialControlsState.new = function() {
+    this[_latestValue] = null;
+    this[_latestVolume] = null;
+    this[_initTimer] = null;
+    this[_showAfterExpandCollapseTimer] = null;
+    this[_dragging] = false;
+    this.barHeight = 48.0;
+    this.marginSize = 5.0;
+    this.controller = null;
+    this.chewieController = null;
+    material_controls._MaterialControlsState.__proto__.new.call(this);
+    ;
+  }).prototype = material_controls._MaterialControlsState.prototype;
+  dart.addTypeTests(material_controls._MaterialControlsState);
+  dart.addTypeCaches(material_controls._MaterialControlsState);
+  dart.setMethodSignature(material_controls._MaterialControlsState, () => ({
+    __proto__: dart.getMethods(material_controls._MaterialControlsState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_dispose]: dart.fnType(dart.void, []),
+    [_buildBottomBar]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_buildMuteButton]: dart.fnType(dart.legacy(gesture_detector.GestureDetector), [dart.legacy(video_player.VideoPlayerController)]),
+    [_buildPlayPause]: dart.fnType(dart.legacy(gesture_detector.GestureDetector), [dart.legacy(video_player.VideoPlayerController)]),
+    [_buildPosition]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(ui.Color)]),
+    [_initialize]: dart.fnType(dart.legacy(async.Future$(core.Null)), []),
+    [_playPause]: dart.fnType(dart.void, []),
+    [_updateState]: dart.fnType(dart.void, []),
+    [_buildProgressBar]: dart.fnType(dart.legacy(framework.Widget), [])
+  }));
+  dart.setLibraryUri(material_controls._MaterialControlsState, L0);
+  dart.setFieldSignature(material_controls._MaterialControlsState, () => ({
+    __proto__: dart.getFields(material_controls._MaterialControlsState.__proto__),
+    [_latestValue]: dart.fieldType(dart.legacy(video_player.VideoPlayerValue)),
+    [_latestVolume]: dart.fieldType(dart.legacy(core.double)),
+    [_initTimer]: dart.fieldType(dart.legacy(async.Timer)),
+    [_showAfterExpandCollapseTimer]: dart.fieldType(dart.legacy(async.Timer)),
+    [_dragging]: dart.fieldType(dart.legacy(core.bool)),
+    barHeight: dart.finalFieldType(dart.legacy(core.double)),
+    marginSize: dart.finalFieldType(dart.legacy(core.double)),
+    controller: dart.fieldType(dart.legacy(video_player.VideoPlayerController)),
+    chewieController: dart.fieldType(dart.legacy(chewie_player.ChewieAudioController))
+  }));
+  var backgroundColor$ = dart.privateName(cupertino_controls, "CupertinoControls.backgroundColor");
+  var iconColor$ = dart.privateName(cupertino_controls, "CupertinoControls.iconColor");
+  cupertino_controls.CupertinoControls = class CupertinoControls extends framework.StatefulWidget {
+    get backgroundColor() {
+      return this[backgroundColor$];
+    }
+    set backgroundColor(value) {
+      super.backgroundColor = value;
+    }
+    get iconColor() {
+      return this[iconColor$];
+    }
+    set iconColor(value) {
+      super.iconColor = value;
+    }
+    createState() {
+      return new cupertino_controls._CupertinoControlsState.new();
+    }
+  };
+  (cupertino_controls.CupertinoControls.new = function(opts) {
+    let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
+    let iconColor = opts && 'iconColor' in opts ? opts.iconColor : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[backgroundColor$] = backgroundColor;
+    this[iconColor$] = iconColor;
+    cupertino_controls.CupertinoControls.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = cupertino_controls.CupertinoControls.prototype;
+  dart.addTypeTests(cupertino_controls.CupertinoControls);
+  dart.addTypeCaches(cupertino_controls.CupertinoControls);
+  dart.setMethodSignature(cupertino_controls.CupertinoControls, () => ({
+    __proto__: dart.getMethods(cupertino_controls.CupertinoControls.__proto__),
+    createState: dart.fnType(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))), [])
+  }));
+  dart.setLibraryUri(cupertino_controls.CupertinoControls, L1);
+  dart.setFieldSignature(cupertino_controls.CupertinoControls, () => ({
+    __proto__: dart.getFields(cupertino_controls.CupertinoControls.__proto__),
+    backgroundColor: dart.finalFieldType(dart.legacy(ui.Color)),
+    iconColor: dart.finalFieldType(dart.legacy(ui.Color))
+  }));
+  var _latestValue$ = dart.privateName(cupertino_controls, "_latestValue");
+  var _latestVolume$ = dart.privateName(cupertino_controls, "_latestVolume");
+  var _expandCollapseTimer = dart.privateName(cupertino_controls, "_expandCollapseTimer");
+  var _initTimer$ = dart.privateName(cupertino_controls, "_initTimer");
+  var C82;
+  var C83;
+  var C84;
+  var C81;
+  var C80;
+  var C87;
+  var C86;
+  var C85;
+  var _buildBottomBar$ = dart.privateName(cupertino_controls, "_buildBottomBar");
+  var _dispose$ = dart.privateName(cupertino_controls, "_dispose");
+  var _updateState$ = dart.privateName(cupertino_controls, "_updateState");
+  var _initialize$ = dart.privateName(cupertino_controls, "_initialize");
+  var _buildPlayPause$ = dart.privateName(cupertino_controls, "_buildPlayPause");
+  var _buildLive = dart.privateName(cupertino_controls, "_buildLive");
+  var _buildMuteButton$ = dart.privateName(cupertino_controls, "_buildMuteButton");
+  var C90;
+  var C91;
+  var C89;
+  var C88;
+  var _buildSkipBack = dart.privateName(cupertino_controls, "_buildSkipBack");
+  var _buildSkipForward = dart.privateName(cupertino_controls, "_buildSkipForward");
+  var _buildPosition$ = dart.privateName(cupertino_controls, "_buildPosition");
+  var _buildProgressBar$ = dart.privateName(cupertino_controls, "_buildProgressBar");
+  var _buildRemaining = dart.privateName(cupertino_controls, "_buildRemaining");
+  var C94;
+  var C93;
+  var C92;
+  var C97;
+  var C98;
+  var C99;
+  var C96;
+  var C95;
+  var C102;
+  var C103;
+  var C101;
+  var C100;
+  var C106;
+  var C107;
+  var C105;
+  var C104;
+  var C110;
+  var C111;
+  var C112;
+  var C113;
+  var C109;
+  var C108;
+  var C116;
+  var C117;
+  var C115;
+  var C114;
+  var C120;
+  var C121;
+  var C119;
+  var C118;
+  var C122;
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var C123;
+  var C126;
+  var C127;
+  var C128;
+  var C125;
+  var C124;
+  var C131;
+  var C132;
+  var C130;
+  var C129;
+  var C135;
+  var C136;
+  var C134;
+  var C133;
+  var C137;
+  var _playPause$ = dart.privateName(cupertino_controls, "_playPause");
+  var C140;
+  var C141;
+  var C142;
+  var C139;
+  var C138;
+  var C145;
+  var C146;
+  var C147;
+  var C148;
+  var C144;
+  var C143;
+  var C151;
+  var C152;
+  var C150;
+  var C149;
+  var C155;
+  var C156;
+  var C154;
+  var C153;
+  var C159;
+  var C160;
+  var C158;
+  var C157;
+  var C163;
+  var C164;
+  var C162;
+  var C161;
+  var C167;
+  var C168;
+  var C166;
+  var C165;
+  var _skipBack = dart.privateName(cupertino_controls, "_skipBack");
+  var C171;
+  var C172;
+  var C173;
+  var C170;
+  var C169;
+  var C176;
+  var C177;
+  var C178;
+  var C175;
+  var C174;
+  var C181;
+  var C182;
+  var C183;
+  var C184;
+  var C185;
+  var C180;
+  var C179;
+  var C188;
+  var C189;
+  var C187;
+  var C186;
+  var _skipForward = dart.privateName(cupertino_controls, "_skipForward");
+  var C192;
+  var C193;
+  var C194;
+  var C191;
+  var C190;
+  var C197;
+  var C198;
+  var C199;
+  var C200;
+  var C201;
+  var C196;
+  var C195;
+  var C204;
+  var C205;
+  var C203;
+  var C202;
+  var C208;
+  var C209;
+  var C210;
+  var C211;
+  var C207;
+  var C206;
+  var C214;
+  var C215;
+  var C213;
+  var C212;
+  var C218;
+  var C217;
+  var C216;
+  cupertino_controls._CupertinoControlsState = class _CupertinoControlsState extends framework.State$(dart.legacy(cupertino_controls.CupertinoControls)) {
+    build(context) {
+      let t2, t1, t0;
+      this.chewieController = chewie_player.ChewieAudioController.of(context);
+      if (dart.test(this[_latestValue$].hasError)) {
+        return this.chewieController.errorBuilder != null ? (t0 = this.chewieController, t1 = context, t2 = this.chewieController.videoPlayerController.value.errorDescription, t0.errorBuilder(t1, t2)) : new basic.Center.new({child: new icon.Icon.new(open_iconic_flutter.OpenIconicIcons.ban, {color: colors.Colors.white, size: 42.0, $creationLocationd_0dea112b090073317d4: C80 || CT.C80}), $creationLocationd_0dea112b090073317d4: C85 || CT.C85});
+      }
+      let backgroundColor = this.widget.backgroundColor;
+      let iconColor = this.widget.iconColor;
+      this.chewieController = chewie_player.ChewieAudioController.of(context);
+      this.controller = this.chewieController.videoPlayerController;
+      let orientation = media_query.MediaQuery.of(context).orientation;
+      let barHeight = dart.equals(orientation, media_query.Orientation.portrait) ? 30.0 : 47.0;
+      return this[_buildBottomBar$](backgroundColor, iconColor, barHeight);
+    }
+    dispose() {
+      this[_dispose$]();
+      super.dispose();
+    }
+    [_dispose$]() {
+      let t0, t0$;
+      this.controller.removeListener(dart.bind(this, _updateState$));
+      t0 = this[_expandCollapseTimer];
+      t0 == null ? null : t0.cancel();
+      t0$ = this[_initTimer$];
+      t0$ == null ? null : t0$.cancel();
+    }
+    didChangeDependencies() {
+      let _oldController = this.chewieController;
+      this.chewieController = chewie_player.ChewieAudioController.of(this.context);
+      this.controller = this.chewieController.videoPlayerController;
+      if (!dart.equals(_oldController, this.chewieController)) {
+        this[_dispose$]();
+        this[_initialize$]();
+      }
+      super.didChangeDependencies();
+    }
+    [_buildBottomBar$](backgroundColor, iconColor, barHeight) {
+      return new container.Container.new({color: colors.Colors.transparent, alignment: alignment.Alignment.bottomCenter, margin: new edge_insets.EdgeInsets.all(this.marginSize), child: new basic.ClipRRect.new({borderRadius: new border_radius.BorderRadius.circular(10.0), child: new basic.BackdropFilter.new({filter: ui.ImageFilter.blur({sigmaX: 10.0, sigmaY: 10.0}), child: new container.Container.new({height: barHeight, color: backgroundColor, child: dart.test(this.chewieController.isLive) ? new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: JSArrayOfWidgetL().of([this[_buildPlayPause$](this.controller, iconColor, barHeight), this[_buildLive](iconColor), this[_buildMuteButton$](this.controller, iconColor, barHeight)]), $creationLocationd_0dea112b090073317d4: C88 || CT.C88}) : new basic.Row.new({children: JSArrayOfWidgetL().of([this[_buildSkipBack](iconColor, barHeight), this[_buildPlayPause$](this.controller, iconColor, barHeight), this[_buildSkipForward](iconColor, barHeight), this[_buildPosition$](iconColor), this[_buildProgressBar$](), this[_buildRemaining](iconColor), this[_buildMuteButton$](this.controller, iconColor, barHeight)]), $creationLocationd_0dea112b090073317d4: C92 || CT.C92}), $creationLocationd_0dea112b090073317d4: C95 || CT.C95}), $creationLocationd_0dea112b090073317d4: C100 || CT.C100}), $creationLocationd_0dea112b090073317d4: C104 || CT.C104}), $creationLocationd_0dea112b090073317d4: C108 || CT.C108});
+    }
+    [_buildLive](iconColor) {
+      return new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 12.0}), child: new text.Text.new("LIVE", {style: new text_style.TextStyle.new({color: iconColor, fontSize: 12.0}), $creationLocationd_0dea112b090073317d4: C114 || CT.C114}), $creationLocationd_0dea112b090073317d4: C118 || CT.C118});
+    }
+    [_buildMuteButton$](controller, iconColor, barHeight) {
+      if (!dart.test(this.chewieController.allowMuting)) {
+        return new container.Container.new({$creationLocationd_0dea112b090073317d4: C122 || CT.C122});
+      }
+      return new basic.Padding.new({padding: C123 || CT.C123, child: new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+            let t0;
+            if (this[_latestValue$].volume === 0) {
+              controller.setVolume((t0 = this[_latestVolume$], t0 == null ? 0.5 : t0));
+            } else {
+              this[_latestVolume$] = controller.value.volume;
+              controller.setVolume(0.0);
+            }
+          }, VoidToNullN()), child: new container.Container.new({height: barHeight, child: new icon.Icon.new(this[_latestValue$] != null && dart.notNull(this[_latestValue$].volume) > 0 ? icons.Icons.volume_up : icons.Icons.volume_off, {color: iconColor, size: 16.0, $creationLocationd_0dea112b090073317d4: C124 || CT.C124}), $creationLocationd_0dea112b090073317d4: C129 || CT.C129}), $creationLocationd_0dea112b090073317d4: C133 || CT.C133}), $creationLocationd_0dea112b090073317d4: C137 || CT.C137});
+    }
+    [_buildPlayPause$](controller, iconColor, barHeight) {
+      return new gesture_detector.GestureDetector.new({onTap: dart.bind(this, _playPause$), child: new container.Container.new({height: barHeight, color: colors.Colors.transparent, padding: new edge_insets.EdgeInsets.only({left: 6.0, right: 6.0}), child: new icon.Icon.new(dart.test(controller.value.isPlaying) ? open_iconic_flutter.OpenIconicIcons.mediaPause : open_iconic_flutter.OpenIconicIcons.mediaPlay, {color: iconColor, size: 16.0, $creationLocationd_0dea112b090073317d4: C138 || CT.C138}), $creationLocationd_0dea112b090073317d4: C143 || CT.C143}), $creationLocationd_0dea112b090073317d4: C149 || CT.C149});
+    }
+    [_buildPosition$](iconColor) {
+      let position = this[_latestValue$] != null ? this[_latestValue$].position : new core.Duration.new({seconds: 0});
+      return new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 12.0}), child: new text.Text.new(utils.formatDuration(position), {style: new text_style.TextStyle.new({color: iconColor, fontSize: 12.0}), $creationLocationd_0dea112b090073317d4: C153 || CT.C153}), $creationLocationd_0dea112b090073317d4: C157 || CT.C157});
+    }
+    [_buildRemaining](iconColor) {
+      let position = this[_latestValue$] != null && this[_latestValue$].duration != null ? this[_latestValue$].duration['-'](this[_latestValue$].position) : new core.Duration.new({seconds: 0});
+      return new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 12.0}), child: new text.Text.new("-" + dart.str(utils.formatDuration(position)), {style: new text_style.TextStyle.new({color: iconColor, fontSize: 12.0}), $creationLocationd_0dea112b090073317d4: C161 || CT.C161}), $creationLocationd_0dea112b090073317d4: C165 || CT.C165});
+    }
+    [_buildSkipBack](iconColor, barHeight) {
+      let t0;
+      return new gesture_detector.GestureDetector.new({onTap: dart.bind(this, _skipBack), child: new container.Container.new({height: barHeight, color: colors.Colors.transparent, margin: new edge_insets.EdgeInsets.only({left: 10.0}), padding: new edge_insets.EdgeInsets.only({left: 6.0, right: 6.0}), child: new basic.Transform.new({alignment: alignment.Alignment.center, transform: (t0 = vector_math_64.Matrix4.skewY(0.0), (() => {
+              t0.rotateX(3.141592653589793);
+              t0.rotateZ(3.141592653589793);
+              return t0;
+            })()), child: new icon.Icon.new(open_iconic_flutter.OpenIconicIcons.reload, {color: iconColor, size: 12.0, $creationLocationd_0dea112b090073317d4: C169 || CT.C169}), $creationLocationd_0dea112b090073317d4: C174 || CT.C174}), $creationLocationd_0dea112b090073317d4: C179 || CT.C179}), $creationLocationd_0dea112b090073317d4: C186 || CT.C186});
+    }
+    [_buildSkipForward](iconColor, barHeight) {
+      return new gesture_detector.GestureDetector.new({onTap: dart.bind(this, _skipForward), child: new container.Container.new({height: barHeight, color: colors.Colors.transparent, padding: new edge_insets.EdgeInsets.only({left: 6.0, right: 8.0}), margin: new edge_insets.EdgeInsets.only({right: 8.0}), child: new icon.Icon.new(open_iconic_flutter.OpenIconicIcons.reload, {color: iconColor, size: 12.0, $creationLocationd_0dea112b090073317d4: C190 || CT.C190}), $creationLocationd_0dea112b090073317d4: C195 || CT.C195}), $creationLocationd_0dea112b090073317d4: C202 || CT.C202});
+    }
+    [_initialize$]() {
+      return async.async(core.Null, (function* _initialize() {
+        this.controller.addListener(dart.bind(this, _updateState$));
+        this[_updateState$]();
+      }).bind(this));
+    }
+    [_buildProgressBar$]() {
+      let t0;
+      return new basic.Expanded.new({child: new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 12.0}), child: new cupertino_progress_bar.CupertinoVideoProgressBar.new(this.controller, {onDragStart: dart.fn(() => {
+            }, VoidToNullN()), onDragEnd: dart.fn(() => {
+            }, VoidToNullN()), colors: (t0 = this.chewieController.cupertinoProgressColors, t0 == null ? new chewie_progress_colors.ChewieProgressColors.new({playedColor: new ui.Color.fromARGB(120, 255, 255, 255), handleColor: new ui.Color.fromARGB(255, 255, 255, 255), bufferedColor: new ui.Color.fromARGB(60, 255, 255, 255), backgroundColor: new ui.Color.fromARGB(20, 255, 255, 255)}) : t0), $creationLocationd_0dea112b090073317d4: C206 || CT.C206}), $creationLocationd_0dea112b090073317d4: C212 || CT.C212}), $creationLocationd_0dea112b090073317d4: C216 || CT.C216});
+    }
+    [_playPause$]() {
+      let isFinished = this[_latestValue$].position['>='](this[_latestValue$].duration);
+      this.setState(dart.fn(() => {
+        if (dart.test(this.controller.value.isPlaying)) {
+          this.controller.pause();
+        } else {
+          if (!dart.test(this.controller.value.initialized)) {
+            this.controller.initialize().then(core.Null, dart.fn(_ => {
+              this.controller.play();
+            }, voidToNullN()));
+          } else {
+            if (dart.test(isFinished)) {
+              this.controller.seekTo(new core.Duration.new({seconds: 0}));
+            }
+            this.controller.play();
+          }
+        }
+      }, VoidToNullN()));
+    }
+    [_skipBack]() {
+      let beginning = new core.Duration.new({seconds: 0}).inMilliseconds;
+      let skip = this[_latestValue$].position['-'](new core.Duration.new({seconds: 15})).inMilliseconds;
+      this.controller.seekTo(new core.Duration.new({milliseconds: math.max(intL(), skip, beginning)}));
+    }
+    [_skipForward]() {
+      let end = this[_latestValue$].duration.inMilliseconds;
+      let skip = this[_latestValue$].position['+'](new core.Duration.new({seconds: 15})).inMilliseconds;
+      this.controller.seekTo(new core.Duration.new({milliseconds: math.min(intL(), skip, end)}));
+    }
+    [_updateState$]() {
+      this.setState(dart.fn(() => {
+        this[_latestValue$] = this.controller.value;
+      }, VoidToNullN()));
+    }
+  };
+  (cupertino_controls._CupertinoControlsState.new = function() {
+    this[_latestValue$] = null;
+    this[_latestVolume$] = null;
+    this.marginSize = 5.0;
+    this[_expandCollapseTimer] = null;
+    this[_initTimer$] = null;
+    this.controller = null;
+    this.chewieController = null;
+    cupertino_controls._CupertinoControlsState.__proto__.new.call(this);
+    ;
+  }).prototype = cupertino_controls._CupertinoControlsState.prototype;
+  dart.addTypeTests(cupertino_controls._CupertinoControlsState);
+  dart.addTypeCaches(cupertino_controls._CupertinoControlsState);
+  dart.setMethodSignature(cupertino_controls._CupertinoControlsState, () => ({
+    __proto__: dart.getMethods(cupertino_controls._CupertinoControlsState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_dispose$]: dart.fnType(dart.void, []),
+    [_buildBottomBar$]: dart.fnType(dart.legacy(container.Container), [dart.legacy(ui.Color), dart.legacy(ui.Color), dart.legacy(core.double)]),
+    [_buildLive]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(ui.Color)]),
+    [_buildMuteButton$]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(video_player.VideoPlayerController), dart.legacy(ui.Color), dart.legacy(core.double)]),
+    [_buildPlayPause$]: dart.fnType(dart.legacy(gesture_detector.GestureDetector), [dart.legacy(video_player.VideoPlayerController), dart.legacy(ui.Color), dart.legacy(core.double)]),
+    [_buildPosition$]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(ui.Color)]),
+    [_buildRemaining]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(ui.Color)]),
+    [_buildSkipBack]: dart.fnType(dart.legacy(gesture_detector.GestureDetector), [dart.legacy(ui.Color), dart.legacy(core.double)]),
+    [_buildSkipForward]: dart.fnType(dart.legacy(gesture_detector.GestureDetector), [dart.legacy(ui.Color), dart.legacy(core.double)]),
+    [_initialize$]: dart.fnType(dart.legacy(async.Future$(core.Null)), []),
+    [_buildProgressBar$]: dart.fnType(dart.legacy(framework.Widget), []),
+    [_playPause$]: dart.fnType(dart.void, []),
+    [_skipBack]: dart.fnType(dart.void, []),
+    [_skipForward]: dart.fnType(dart.void, []),
+    [_updateState$]: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(cupertino_controls._CupertinoControlsState, L1);
+  dart.setFieldSignature(cupertino_controls._CupertinoControlsState, () => ({
+    __proto__: dart.getFields(cupertino_controls._CupertinoControlsState.__proto__),
+    [_latestValue$]: dart.fieldType(dart.legacy(video_player.VideoPlayerValue)),
+    [_latestVolume$]: dart.fieldType(dart.legacy(core.double)),
+    marginSize: dart.finalFieldType(dart.legacy(core.double)),
+    [_expandCollapseTimer]: dart.fieldType(dart.legacy(async.Timer)),
+    [_initTimer$]: dart.fieldType(dart.legacy(async.Timer)),
+    controller: dart.fieldType(dart.legacy(video_player.VideoPlayerController)),
+    chewieController: dart.fieldType(dart.legacy(chewie_player.ChewieAudioController))
+  }));
+  var _buildPlayerWithControls = dart.privateName(player_with_controls, "_buildPlayerWithControls");
+  var C221;
+  var C222;
+  var C220;
+  var C219;
+  var C225;
+  var C224;
+  var C223;
+  var C228;
+  var C227;
+  var C226;
+  var C231;
+  var C232;
+  var C233;
+  var C230;
+  var C229;
+  var C236;
+  var C237;
+  var C235;
+  var C234;
+  var _buildControls = dart.privateName(player_with_controls, "_buildControls");
+  var C240;
+  var C239;
+  var C238;
+  var C243;
+  var C242;
+  var C241;
+  var C244;
+  var C247;
+  var C248;
+  var C246;
+  var C245;
+  var C249;
+  player_with_controls.PlayerWithControls = class PlayerWithControls extends framework.StatelessWidget {
+    build(context) {
+      let chewieController = chewie_player.ChewieAudioController.of(context);
+      return new basic.Center.new({child: new container.Container.new({width: media_query.MediaQuery.of(context).size.width, child: this[_buildPlayerWithControls](chewieController, context), $creationLocationd_0dea112b090073317d4: C219 || CT.C219}), $creationLocationd_0dea112b090073317d4: C223 || CT.C223});
+    }
+    [_buildPlayerWithControls](chewieController, context) {
+      return new container.Container.new({child: new basic.Stack.new({children: JSArrayOfWidgetL().of([new basic.Offstage.new({offstage: true, child: new container.Container.new({width: 3.0, height: 1.0, child: new video_player.VideoPlayer.new(chewieController.videoPlayerController, {$creationLocationd_0dea112b090073317d4: C226 || CT.C226}), $creationLocationd_0dea112b090073317d4: C229 || CT.C229}), $creationLocationd_0dea112b090073317d4: C234 || CT.C234}), this[_buildControls](context, chewieController)]), $creationLocationd_0dea112b090073317d4: C238 || CT.C238}), $creationLocationd_0dea112b090073317d4: C241 || CT.C241});
+    }
+    [_buildControls](context, chewieController) {
+      return dart.test(chewieController.showControls) ? chewieController.customControls != null ? chewieController.customControls : dart.equals(theme.Theme.of(context).platform, platform.TargetPlatform.android) ? new material_controls.MaterialControls.new({$creationLocationd_0dea112b090073317d4: C244 || CT.C244}) : new cupertino_controls.CupertinoControls.new({backgroundColor: new ui.Color.fromRGBO(41, 41, 41, 0.7), iconColor: new ui.Color.fromARGB(255, 200, 200, 200), $creationLocationd_0dea112b090073317d4: C245 || CT.C245}) : new container.Container.new({$creationLocationd_0dea112b090073317d4: C249 || CT.C249});
+    }
+  };
+  (player_with_controls.PlayerWithControls.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    player_with_controls.PlayerWithControls.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = player_with_controls.PlayerWithControls.prototype;
+  dart.addTypeTests(player_with_controls.PlayerWithControls);
+  dart.addTypeCaches(player_with_controls.PlayerWithControls);
+  dart.setMethodSignature(player_with_controls.PlayerWithControls, () => ({
+    __proto__: dart.getMethods(player_with_controls.PlayerWithControls.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_buildPlayerWithControls]: dart.fnType(dart.legacy(container.Container), [dart.legacy(chewie_player.ChewieAudioController), dart.legacy(framework.BuildContext)]),
+    [_buildControls]: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(chewie_player.ChewieAudioController)])
+  }));
+  dart.setLibraryUri(player_with_controls.PlayerWithControls, L2);
+  var C250;
+  var C253;
+  var C254;
+  var C252;
+  var C251;
+  var controller$ = dart.privateName(chewie_player, "ChewieAudio.controller");
+  chewie_player.ChewieAudio = class ChewieAudio extends framework.StatelessWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    build(context) {
+      return new chewie_player._ChewieAudioControllerProvider.new({controller: this.controller, child: new player_with_controls.PlayerWithControls.new({$creationLocationd_0dea112b090073317d4: C250 || CT.C250}), $creationLocationd_0dea112b090073317d4: C251 || CT.C251});
+    }
+  };
+  (chewie_player.ChewieAudio.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    if (!(controller != null)) dart.assertFailed("You must provide a chewie audio controller", L3, 18, 13, "controller != null");
+    chewie_player.ChewieAudio.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = chewie_player.ChewieAudio.prototype;
+  dart.addTypeTests(chewie_player.ChewieAudio);
+  dart.addTypeCaches(chewie_player.ChewieAudio);
+  dart.setMethodSignature(chewie_player.ChewieAudio, () => ({
+    __proto__: dart.getMethods(chewie_player.ChewieAudio.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(chewie_player.ChewieAudio, L4);
+  dart.setFieldSignature(chewie_player.ChewieAudio, () => ({
+    __proto__: dart.getFields(chewie_player.ChewieAudio.__proto__),
+    controller: dart.finalFieldType(dart.legacy(chewie_player.ChewieAudioController))
+  }));
+  var _initialize$0 = dart.privateName(chewie_player, "_initialize");
+  var videoPlayerController$ = dart.privateName(chewie_player, "ChewieAudioController.videoPlayerController");
+  var autoInitialize$ = dart.privateName(chewie_player, "ChewieAudioController.autoInitialize");
+  var autoPlay$ = dart.privateName(chewie_player, "ChewieAudioController.autoPlay");
+  var startAt$ = dart.privateName(chewie_player, "ChewieAudioController.startAt");
+  var looping$ = dart.privateName(chewie_player, "ChewieAudioController.looping");
+  var showControls$ = dart.privateName(chewie_player, "ChewieAudioController.showControls");
+  var customControls$ = dart.privateName(chewie_player, "ChewieAudioController.customControls");
+  var errorBuilder$ = dart.privateName(chewie_player, "ChewieAudioController.errorBuilder");
+  var cupertinoProgressColors$ = dart.privateName(chewie_player, "ChewieAudioController.cupertinoProgressColors");
+  var materialProgressColors$ = dart.privateName(chewie_player, "ChewieAudioController.materialProgressColors");
+  var isLive$ = dart.privateName(chewie_player, "ChewieAudioController.isLive");
+  var allowMuting$ = dart.privateName(chewie_player, "ChewieAudioController.allowMuting");
+  chewie_player.ChewieAudioController = class ChewieAudioController extends change_notifier.ChangeNotifier {
+    get videoPlayerController() {
+      return this[videoPlayerController$];
+    }
+    set videoPlayerController(value) {
+      super.videoPlayerController = value;
+    }
+    get autoInitialize() {
+      return this[autoInitialize$];
+    }
+    set autoInitialize(value) {
+      super.autoInitialize = value;
+    }
+    get autoPlay() {
+      return this[autoPlay$];
+    }
+    set autoPlay(value) {
+      super.autoPlay = value;
+    }
+    get startAt() {
+      return this[startAt$];
+    }
+    set startAt(value) {
+      super.startAt = value;
+    }
+    get looping() {
+      return this[looping$];
+    }
+    set looping(value) {
+      super.looping = value;
+    }
+    get showControls() {
+      return this[showControls$];
+    }
+    set showControls(value) {
+      super.showControls = value;
+    }
+    get customControls() {
+      return this[customControls$];
+    }
+    set customControls(value) {
+      super.customControls = value;
+    }
+    get errorBuilder() {
+      return this[errorBuilder$];
+    }
+    set errorBuilder(value) {
+      super.errorBuilder = value;
+    }
+    get cupertinoProgressColors() {
+      return this[cupertinoProgressColors$];
+    }
+    set cupertinoProgressColors(value) {
+      super.cupertinoProgressColors = value;
+    }
+    get materialProgressColors() {
+      return this[materialProgressColors$];
+    }
+    set materialProgressColors(value) {
+      super.materialProgressColors = value;
+    }
+    get isLive() {
+      return this[isLive$];
+    }
+    set isLive(value) {
+      super.isLive = value;
+    }
+    get allowMuting() {
+      return this[allowMuting$];
+    }
+    set allowMuting(value) {
+      super.allowMuting = value;
+    }
+    static of(context) {
+      let chewieAudioControllerProvider = _ChewieAudioControllerProviderL().as(context.inheritFromWidgetOfExactType(dart.wrapType(_ChewieAudioControllerProviderL())));
+      return chewieAudioControllerProvider.controller;
+    }
+    [_initialize$0]() {
+      return async.async(dart.dynamic, (function* _initialize() {
+        yield this.videoPlayerController.setLooping(this.looping);
+        if ((dart.test(this.autoInitialize) || dart.test(this.autoPlay)) && !dart.test(this.videoPlayerController.value.initialized)) {
+          yield this.videoPlayerController.initialize();
+        }
+        if (dart.test(this.autoPlay)) {
+          yield this.videoPlayerController.play();
+        }
+        if (this.startAt != null) {
+          yield this.videoPlayerController.seekTo(this.startAt);
+        }
+      }).bind(this));
+    }
+    play() {
+      return async.async(dart.void, (function* play() {
+        yield this.videoPlayerController.play();
+      }).bind(this));
+    }
+    setLooping(looping) {
+      return async.async(dart.void, (function* setLooping() {
+        yield this.videoPlayerController.setLooping(looping);
+      }).bind(this));
+    }
+    pause() {
+      return async.async(dart.void, (function* pause() {
+        yield this.videoPlayerController.pause();
+      }).bind(this));
+    }
+    seekTo(moment) {
+      return async.async(dart.void, (function* seekTo() {
+        yield this.videoPlayerController.seekTo(moment);
+      }).bind(this));
+    }
+    setVolume(volume) {
+      return async.async(dart.void, (function* setVolume() {
+        yield this.videoPlayerController.setVolume(volume);
+      }).bind(this));
+    }
+  };
+  (chewie_player.ChewieAudioController.new = function(opts) {
+    let videoPlayerController = opts && 'videoPlayerController' in opts ? opts.videoPlayerController : null;
+    let autoInitialize = opts && 'autoInitialize' in opts ? opts.autoInitialize : false;
+    let autoPlay = opts && 'autoPlay' in opts ? opts.autoPlay : false;
+    let startAt = opts && 'startAt' in opts ? opts.startAt : null;
+    let looping = opts && 'looping' in opts ? opts.looping : false;
+    let cupertinoProgressColors = opts && 'cupertinoProgressColors' in opts ? opts.cupertinoProgressColors : null;
+    let materialProgressColors = opts && 'materialProgressColors' in opts ? opts.materialProgressColors : null;
+    let showControls = opts && 'showControls' in opts ? opts.showControls : true;
+    let customControls = opts && 'customControls' in opts ? opts.customControls : null;
+    let errorBuilder = opts && 'errorBuilder' in opts ? opts.errorBuilder : null;
+    let isLive = opts && 'isLive' in opts ? opts.isLive : false;
+    let allowMuting = opts && 'allowMuting' in opts ? opts.allowMuting : true;
+    this[videoPlayerController$] = videoPlayerController;
+    this[autoInitialize$] = autoInitialize;
+    this[autoPlay$] = autoPlay;
+    this[startAt$] = startAt;
+    this[looping$] = looping;
+    this[cupertinoProgressColors$] = cupertinoProgressColors;
+    this[materialProgressColors$] = materialProgressColors;
+    this[showControls$] = showControls;
+    this[customControls$] = customControls;
+    this[errorBuilder$] = errorBuilder;
+    this[isLive$] = isLive;
+    this[allowMuting$] = allowMuting;
+    if (!(videoPlayerController != null)) dart.assertFailed("You must provide a controller to play a video", L3, 54, 15, "videoPlayerController != null");
+    chewie_player.ChewieAudioController.__proto__.new.call(this);
+    this[_initialize$0]();
+  }).prototype = chewie_player.ChewieAudioController.prototype;
+  dart.addTypeTests(chewie_player.ChewieAudioController);
+  dart.addTypeCaches(chewie_player.ChewieAudioController);
+  dart.setMethodSignature(chewie_player.ChewieAudioController, () => ({
+    __proto__: dart.getMethods(chewie_player.ChewieAudioController.__proto__),
+    [_initialize$0]: dart.fnType(dart.legacy(async.Future), []),
+    play: dart.fnType(dart.legacy(async.Future$(dart.void)), []),
+    setLooping: dart.fnType(dart.legacy(async.Future$(dart.void)), [dart.legacy(core.bool)]),
+    pause: dart.fnType(dart.legacy(async.Future$(dart.void)), []),
+    seekTo: dart.fnType(dart.legacy(async.Future$(dart.void)), [dart.legacy(core.Duration)]),
+    setVolume: dart.fnType(dart.legacy(async.Future$(dart.void)), [dart.legacy(core.double)])
+  }));
+  dart.setLibraryUri(chewie_player.ChewieAudioController, L4);
+  dart.setFieldSignature(chewie_player.ChewieAudioController, () => ({
+    __proto__: dart.getFields(chewie_player.ChewieAudioController.__proto__),
+    videoPlayerController: dart.finalFieldType(dart.legacy(video_player.VideoPlayerController)),
+    autoInitialize: dart.finalFieldType(dart.legacy(core.bool)),
+    autoPlay: dart.finalFieldType(dart.legacy(core.bool)),
+    startAt: dart.finalFieldType(dart.legacy(core.Duration)),
+    looping: dart.finalFieldType(dart.legacy(core.bool)),
+    showControls: dart.finalFieldType(dart.legacy(core.bool)),
+    customControls: dart.finalFieldType(dart.legacy(framework.Widget)),
+    errorBuilder: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext), dart.legacy(core.String)]))),
+    cupertinoProgressColors: dart.finalFieldType(dart.legacy(chewie_progress_colors.ChewieProgressColors)),
+    materialProgressColors: dart.finalFieldType(dart.legacy(chewie_progress_colors.ChewieProgressColors)),
+    isLive: dart.finalFieldType(dart.legacy(core.bool)),
+    allowMuting: dart.finalFieldType(dart.legacy(core.bool))
+  }));
+  var controller$0 = dart.privateName(chewie_player, "_ChewieAudioControllerProvider.controller");
+  chewie_player._ChewieAudioControllerProvider = class _ChewieAudioControllerProvider extends framework.InheritedWidget {
+    get controller() {
+      return this[controller$0];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    updateShouldNotify(old) {
+      _ChewieAudioControllerProviderL().as(old);
+      return !dart.equals(this.controller, old.controller);
+    }
+  };
+  (chewie_player._ChewieAudioControllerProvider.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let child = opts && 'child' in opts ? opts.child : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$0] = controller;
+    if (!(controller != null)) dart.assertFailed(null, L3, 150, 16, "controller != null");
+    if (!(child != null)) dart.assertFailed(null, L3, 151, 16, "child != null");
+    chewie_player._ChewieAudioControllerProvider.__proto__.new.call(this, {key: key, child: child, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = chewie_player._ChewieAudioControllerProvider.prototype;
+  dart.addTypeTests(chewie_player._ChewieAudioControllerProvider);
+  dart.addTypeCaches(chewie_player._ChewieAudioControllerProvider);
+  dart.setMethodSignature(chewie_player._ChewieAudioControllerProvider, () => ({
+    __proto__: dart.getMethods(chewie_player._ChewieAudioControllerProvider.__proto__),
+    updateShouldNotify: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.Object)])
+  }));
+  dart.setLibraryUri(chewie_player._ChewieAudioControllerProvider, L4);
+  dart.setFieldSignature(chewie_player._ChewieAudioControllerProvider, () => ({
+    __proto__: dart.getFields(chewie_player._ChewieAudioControllerProvider.__proto__),
+    controller: dart.finalFieldType(dart.legacy(chewie_player.ChewieAudioController))
+  }));
+  dart.trackLibraries("packages/chewie_audio/src/material_controls.dart", {
+    "package:chewie_audio/src/material_controls.dart": material_controls,
+    "package:chewie_audio/src/cupertino_controls.dart": cupertino_controls,
+    "package:chewie_audio/src/player_with_controls.dart": player_with_controls,
+    "package:chewie_audio/src/chewie_player.dart": chewie_player
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["material_controls.dart","cupertino_controls.dart","player_with_controls.dart","chewie_player.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;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","file":"../../../../../../../packages/chewie_audio/src/material_controls.dart.lib.js"}');
+  // Exports:
+  return {
+    src__material_controls: material_controls,
+    src__cupertino_controls: cupertino_controls,
+    src__player_with_controls: player_with_controls,
+    src__chewie_player: chewie_player
+  };
+}));
+
+//# sourceMappingURL=material_controls.dart.lib.js.map

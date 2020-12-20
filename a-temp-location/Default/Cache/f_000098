@@ -1,0 +1,462 @@
+define(['dart_sdk', 'packages/html/src/query_selector.dart', 'packages/flutter_html/style.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__flutter_html__src__styled_element_dart(dart_sdk, packages__html__src__query_selector$46dart, packages__flutter_html__style$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const query_selector = packages__html__src__query_selector$46dart.src__query_selector;
+  const dom = packages__html__src__query_selector$46dart.dom;
+  const style = packages__flutter_html__style$46dart.style;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var styled_element = Object.create(dart.library);
+  var $map = dartx.map;
+  var $length = dartx.length;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $toString = dartx.toString;
+  var $replaceAll = dartx.replaceAll;
+  var $forEach = dartx.forEach;
+  var $_get = dartx._get;
+  var StringL = () => (StringL = dart.constFn(dart.legacy(core.String)))();
+  var MapEntryOfStringL$StringL = () => (MapEntryOfStringL$StringL = dart.constFn(core.MapEntry$(StringL(), StringL())))();
+  var MapEntryLOfStringL$StringL = () => (MapEntryLOfStringL$StringL = dart.constFn(dart.legacy(MapEntryOfStringL$StringL())))();
+  var dynamicAndStringLToMapEntryLOfStringL$StringL = () => (dynamicAndStringLToMapEntryLOfStringL$StringL = dart.constFn(dart.fnType(MapEntryLOfStringL$StringL(), [dart.dynamic, StringL()])))();
+  var ElementL = () => (ElementL = dart.constFn(dart.legacy(dom.Element)))();
+  var StyledElementL = () => (StyledElementL = dart.constFn(dart.legacy(styled_element.StyledElement)))();
+  var StyledElementLToNullN = () => (StyledElementLToNullN = dart.constFn(dart.fnType(core.Null, [StyledElementL()])))();
+  const CT = Object.create(null);
+  var L0 = "package:flutter_html/src/styled_element.dart";
+  dart.defineLazy(CT, {
+    get C0() {
+      return C0 = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 14,
+        [EdgeInsets_right]: 40,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 40
+      });
+    },
+    get C1() {
+      return C1 = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 14,
+        [EdgeInsets_right]: 40,
+        [EdgeInsets_top]: 14,
+        [EdgeInsets_left]: 40
+      });
+    }
+  }, false);
+  var _node = dart.privateName(styled_element, "_node");
+  var name$ = dart.privateName(styled_element, "StyledElement.name");
+  var elementId$ = dart.privateName(styled_element, "StyledElement.elementId");
+  var elementClasses$ = dart.privateName(styled_element, "StyledElement.elementClasses");
+  var children$ = dart.privateName(styled_element, "StyledElement.children");
+  var style$ = dart.privateName(styled_element, "StyledElement.style");
+  styled_element.StyledElement = class StyledElement extends core.Object {
+    get name() {
+      return this[name$];
+    }
+    set name(value) {
+      super.name = value;
+    }
+    get elementId() {
+      return this[elementId$];
+    }
+    set elementId(value) {
+      super.elementId = value;
+    }
+    get elementClasses() {
+      return this[elementClasses$];
+    }
+    set elementClasses(value) {
+      super.elementClasses = value;
+    }
+    get children() {
+      return this[children$];
+    }
+    set children(value) {
+      this[children$] = value;
+    }
+    get style() {
+      return this[style$];
+    }
+    set style(value) {
+      this[style$] = value;
+    }
+    matchesSelector(selector) {
+      return this[_node] != null && dart.test(query_selector.matches(this[_node], selector));
+    }
+    get attributes() {
+      return this[_node].attributes[$map](StringL(), StringL(), dart.fn((key, value) => new (MapEntryOfStringL$StringL()).__(StringL().as(key), value), dynamicAndStringLToMapEntryLOfStringL$StringL()));
+    }
+    get element() {
+      return ElementL().as(this[_node]);
+    }
+    toString() {
+      let t0, t0$, t0$0, t0$1, t0$2;
+      let selfData = "[" + dart.str(this.name) + "] " + dart.str((t0$ = (t0 = this.children, t0 == null ? null : t0[$length]), t0$ == null ? 0 : t0$)) + " " + (dart.equals((t0$0 = this.elementClasses, t0$0 == null ? null : t0$0[$isNotEmpty]), true) ? "C:" + dart.str(dart.toString(this.elementClasses)) : "") + (dart.equals((t0$1 = this.elementId, t0$1 == null ? null : t0$1[$isNotEmpty]), true) ? "ID: " + dart.str(this.elementId) : "");
+      t0$2 = this.children;
+      t0$2 == null ? null : t0$2[$forEach](dart.fn(child => {
+        selfData = selfData + ("\n" + dart.str(dart.toString(child)))[$replaceAll](core.RegExp.new("^", {multiLine: true}), "-");
+      }, StyledElementLToNullN()));
+      return selfData;
+    }
+  };
+  (styled_element.StyledElement.new = function(opts) {
+    let name = opts && 'name' in opts ? opts.name : "[[No name]]";
+    let elementId = opts && 'elementId' in opts ? opts.elementId : null;
+    let elementClasses = opts && 'elementClasses' in opts ? opts.elementClasses : null;
+    let children = opts && 'children' in opts ? opts.children : null;
+    let style = opts && 'style' in opts ? opts.style : null;
+    let node = opts && 'node' in opts ? opts.node : null;
+    this[name$] = name;
+    this[elementId$] = elementId;
+    this[elementClasses$] = elementClasses;
+    this[children$] = children;
+    this[style$] = style;
+    this[_node] = node;
+    ;
+  }).prototype = styled_element.StyledElement.prototype;
+  dart.addTypeTests(styled_element.StyledElement);
+  dart.addTypeCaches(styled_element.StyledElement);
+  dart.setMethodSignature(styled_element.StyledElement, () => ({
+    __proto__: dart.getMethods(styled_element.StyledElement.__proto__),
+    matchesSelector: dart.fnType(dart.legacy(core.bool), [dart.legacy(core.String)]),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setGetterSignature(styled_element.StyledElement, () => ({
+    __proto__: dart.getGetters(styled_element.StyledElement.__proto__),
+    attributes: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))),
+    element: dart.legacy(dom.Element)
+  }));
+  dart.setLibraryUri(styled_element.StyledElement, L0);
+  dart.setFieldSignature(styled_element.StyledElement, () => ({
+    __proto__: dart.getFields(styled_element.StyledElement.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String)),
+    elementId: dart.finalFieldType(dart.legacy(core.String)),
+    elementClasses: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(core.String)))),
+    children: dart.fieldType(dart.legacy(core.List$(dart.legacy(styled_element.StyledElement)))),
+    style: dart.fieldType(dart.legacy(style.Style)),
+    [_node]: dart.finalFieldType(dart.legacy(dom.Node))
+  }));
+  dart.defineExtensionMethods(styled_element.StyledElement, ['toString']);
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var C0;
+  var C1;
+  styled_element.parseStyledElement = function parseStyledElement(element, children) {
+    let t0;
+    let styledElement = new styled_element.StyledElement.new({name: element.localName, elementId: element.id, elementClasses: element.classes.toList(), children: children, node: element});
+    let labelState = element.localName;
+    SL0:
+      while (true) {
+        switch (labelState) {
+          case "abbr":
+          case "acronym":
+          {
+            styledElement.style = new style.Style.new({textDecoration: ui.TextDecoration.underline, textDecorationStyle: ui.TextDecorationStyle.dotted});
+            break SL0;
+          }
+          case "address":
+          {
+            labelState = "i";
+            continue SL0;
+          }
+          case "article":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "aside":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "b":
+          {
+            styledElement.style = new style.Style.new({fontWeight: ui.FontWeight.bold});
+            break SL0;
+          }
+          case "bdo":
+          {
+            let textDirection = (t0 = element.attributes[$_get]("dir"), t0 == null ? "ltr" : t0) === "rtl" ? ui.TextDirection.rtl : ui.TextDirection.ltr;
+            styledElement.style = new style.Style.new({direction: textDirection});
+            break SL0;
+          }
+          case "big":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.larger});
+            break SL0;
+          }
+          case "blockquote":
+          {
+            if (element.parent.localName === "blockquote") {
+              styledElement.style = new style.Style.new({margin: C0 || CT.C0, display: style.Display.BLOCK});
+            } else {
+              styledElement.style = new style.Style.new({margin: C1 || CT.C1, display: style.Display.BLOCK});
+            }
+            break SL0;
+          }
+          case "body":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.all(8.0), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "center":
+          {
+            styledElement.style = new style.Style.new({alignment: alignment.Alignment.center, display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "cite":
+          {
+            labelState = "i";
+            continue SL0;
+          }
+          case "code":
+          {
+            styledElement.style = new style.Style.new({fontFamily: "Monospace"});
+            break SL0;
+          }
+          case "dd":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.only({left: 40.0}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "del":
+          {
+            styledElement.style = new style.Style.new({textDecoration: ui.TextDecoration.lineThrough});
+            break SL0;
+          }
+          case "dfn":
+          {
+            labelState = "i";
+            continue SL0;
+          }
+          case "div":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.all(0.0), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "dl":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.symmetric({vertical: 14.0}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "dt":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "em":
+          {
+            labelState = "i";
+            continue SL0;
+          }
+          case "figcaption":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "figure":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.symmetric({vertical: 14.0, horizontal: 40.0}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "footer":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "h1":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.xxLarge, fontWeight: ui.FontWeight.bold, margin: new edge_insets.EdgeInsets.symmetric({vertical: 18.67}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "h2":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.xLarge, fontWeight: ui.FontWeight.bold, margin: new edge_insets.EdgeInsets.symmetric({vertical: 17.5}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "h3":
+          {
+            styledElement.style = new style.Style.new({fontSize: new style.FontSize.new(16.38), fontWeight: ui.FontWeight.bold, margin: new edge_insets.EdgeInsets.symmetric({vertical: 16.5}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "h4":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.medium, fontWeight: ui.FontWeight.bold, margin: new edge_insets.EdgeInsets.symmetric({vertical: 18.5}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "h5":
+          {
+            styledElement.style = new style.Style.new({fontSize: new style.FontSize.new(11.62), fontWeight: ui.FontWeight.bold, margin: new edge_insets.EdgeInsets.symmetric({vertical: 19.25}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "h6":
+          {
+            styledElement.style = new style.Style.new({fontSize: new style.FontSize.new(9.38), fontWeight: ui.FontWeight.bold, margin: new edge_insets.EdgeInsets.symmetric({vertical: 22.0}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "header":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "hr":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.symmetric({vertical: 7.0}), width: 1 / 0, border: new box_border.Border.new({bottom: new borders.BorderSide.new({width: 1.0})}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "html":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "i":
+          {
+            styledElement.style = new style.Style.new({fontStyle: ui.FontStyle.italic});
+            break SL0;
+          }
+          case "ins":
+          {
+            labelState = "u";
+            continue SL0;
+          }
+          case "kbd":
+          {
+            labelState = "code";
+            continue SL0;
+          }
+          case "li":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.LIST_ITEM});
+            break SL0;
+          }
+          case "main":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "mark":
+          {
+            styledElement.style = new style.Style.new({color: colors.Colors.black, backgroundColor: colors.Colors.yellow});
+            break SL0;
+          }
+          case "nav":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "noscript":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "ol":
+          case "ul":
+          {
+            if (element.parent.localName === "li") {
+              styledElement.style = new style.Style.new({display: style.Display.BLOCK, listStyleType: element.localName === "ol" ? style.ListStyleType.DECIMAL : style.ListStyleType.DISC});
+            } else {
+              styledElement.style = new style.Style.new({display: style.Display.BLOCK, listStyleType: element.localName === "ol" ? style.ListStyleType.DECIMAL : style.ListStyleType.DISC});
+            }
+            break SL0;
+          }
+          case "p":
+          {
+            styledElement.style = new style.Style.new({margin: new edge_insets.EdgeInsets.symmetric({vertical: 14.0}), display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "pre":
+          {
+            styledElement.style = new style.Style.new({fontFamily: "monospace", margin: new edge_insets.EdgeInsets.symmetric({vertical: 14.0}), whiteSpace: style.WhiteSpace.PRE, display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "q":
+          {
+            styledElement.style = new style.Style.new({before: "\"", after: "\""});
+            break SL0;
+          }
+          case "s":
+          {
+            labelState = "del";
+            continue SL0;
+          }
+          case "samp":
+          {
+            labelState = "code";
+            continue SL0;
+          }
+          case "section":
+          {
+            styledElement.style = new style.Style.new({display: style.Display.BLOCK});
+            break SL0;
+          }
+          case "small":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.smaller});
+            break SL0;
+          }
+          case "strike":
+          {
+            labelState = "del";
+            continue SL0;
+          }
+          case "strong":
+          {
+            labelState = "b";
+            continue SL0;
+          }
+          case "sub":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.smaller, verticalAlign: style.VerticalAlign.SUB});
+            break SL0;
+          }
+          case "sup":
+          {
+            styledElement.style = new style.Style.new({fontSize: style.FontSize.smaller, verticalAlign: style.VerticalAlign.SUPER});
+            break SL0;
+          }
+          case "th":
+          {
+            labelState = "b";
+            continue SL0;
+          }
+          case "tt":
+          {
+            labelState = "code";
+            continue SL0;
+          }
+          case "u":
+          {
+            styledElement.style = new style.Style.new({textDecoration: ui.TextDecoration.underline});
+            break SL0;
+          }
+          case "var":
+          {
+            labelState = "i";
+            continue SL0;
+            break SL0;
+          }
+        }
+        break;
+      }
+    return styledElement;
+  };
+  dart.trackLibraries("packages/flutter_html/src/styled_element.dart", {
+    "package:flutter_html/src/styled_element.dart": styled_element
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["styled_element.dart"],"names":[],"mappings":"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","file":"../../../../../../../packages/flutter_html/src/styled_element.dart.lib.js"}');
+  // Exports:
+  return {
+    src__styled_element: styled_element
+  };
+}));
+
+//# sourceMappingURL=styled_element.dart.lib.js.map

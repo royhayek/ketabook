@@ -1,0 +1,356 @@
+define(['dart_sdk', 'packages/collection/src/utils.dart'], (function load__packages__collection__src__canonicalized_map_dart(dart_sdk, packages__collection__src__utils$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const utils = packages__collection__src__utils$46dart.src__utils;
+  var canonicalized_map = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $_set = dartx._set;
+  var $forEach = dartx.forEach;
+  var $map = dartx.map;
+  var $addEntries = dartx.addEntries;
+  var $cast = dartx.cast;
+  var $clear = dartx.clear;
+  var $containsKey = dartx.containsKey;
+  var $values = dartx.values;
+  var $any = dartx.any;
+  var $entries = dartx.entries;
+  var $isEmpty = dartx.isEmpty;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $length = dartx.length;
+  var $putIfAbsent = dartx.putIfAbsent;
+  var $remove = dartx.remove;
+  var $removeWhere = dartx.removeWhere;
+  var $update = dartx.update;
+  var $updateAll = dartx.updateAll;
+  var $add = dartx.add;
+  var $last = dartx.last;
+  var $removeLast = dartx.removeLast;
+  var $addAll = dartx.addAll;
+  var $containsValue = dartx.containsValue;
+  var $keys = dartx.keys;
+  var dynamicTobool = () => (dynamicTobool = dart.constFn(dart.fnType(core.bool, [dart.dynamic])))();
+  const CT = Object.create(null);
+  var L1 = "package:collection/src/canonicalized_map.dart";
+  var L0 = "file:///D:/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0-nullsafety.3/lib/src/canonicalized_map.dart";
+  var _base = dart.privateName(canonicalized_map, "_base");
+  var _canonicalize = dart.privateName(canonicalized_map, "_canonicalize");
+  var _isValidKeyFn = dart.privateName(canonicalized_map, "_isValidKeyFn");
+  var _isValidKey = dart.privateName(canonicalized_map, "_isValidKey");
+  const _is_CanonicalizedMap_default = Symbol('_is_CanonicalizedMap_default');
+  canonicalized_map.CanonicalizedMap$ = dart.generic((C, K, V) => {
+    var LinkedMapOfC$PairOfK$V = () => (LinkedMapOfC$PairOfK$V = dart.constFn(_js_helper.LinkedMap$(C, PairOfK$V())))();
+    var MapEntryOfC$PairOfK$V = () => (MapEntryOfC$PairOfK$V = dart.constFn(core.MapEntry$(C, PairOfK$V())))();
+    var MapEntryOfK$VToMapEntryOfC$PairOfK$V = () => (MapEntryOfK$VToMapEntryOfC$PairOfK$V = dart.constFn(dart.fnType(MapEntryOfC$PairOfK$V(), [MapEntryOfK$V()])))();
+    var MapEntryOfC$PairOfK$VToMapEntryOfK$V = () => (MapEntryOfC$PairOfK$VToMapEntryOfK$V = dart.constFn(dart.fnType(MapEntryOfK$V(), [MapEntryOfC$PairOfK$V()])))();
+    var CAndPairOfK$VTovoid = () => (CAndPairOfK$VTovoid = dart.constFn(dart.fnType(dart.void, [C, PairOfK$V()])))();
+    var CAndPairOfK$VTobool = () => (CAndPairOfK$VTobool = dart.constFn(dart.fnType(core.bool, [C, PairOfK$V()])))();
+    var CAndPairOfK$VToPairOfK$V = () => (CAndPairOfK$VToPairOfK$V = dart.constFn(dart.fnType(PairOfK$V(), [C, PairOfK$V()])))();
+    var PairOfK$V = () => (PairOfK$V = dart.constFn(utils.Pair$(K, V)))();
+    var MapOfK$V = () => (MapOfK$V = dart.constFn(core.Map$(K, V)))();
+    var KAndVToV = () => (KAndVToV = dart.constFn(dart.fnType(V, [K, V])))();
+    var MapEntryOfK$V = () => (MapEntryOfK$V = dart.constFn(core.MapEntry$(K, V)))();
+    var IterableOfMapEntryOfK$V = () => (IterableOfMapEntryOfK$V = dart.constFn(core.Iterable$(MapEntryOfK$V())))();
+    var PairOfK$VTobool = () => (PairOfK$VTobool = dart.constFn(dart.fnType(core.bool, [PairOfK$V()])))();
+    var PairOfK$VToK = () => (PairOfK$VToK = dart.constFn(dart.fnType(K, [PairOfK$V()])))();
+    var VoidToPairOfK$V = () => (VoidToPairOfK$V = dart.constFn(dart.fnType(PairOfK$V(), [])))();
+    var PairOfK$VToPairOfK$V = () => (PairOfK$VToPairOfK$V = dart.constFn(dart.fnType(PairOfK$V(), [PairOfK$V()])))();
+    var PairOfK$VToV = () => (PairOfK$VToV = dart.constFn(dart.fnType(V, [PairOfK$V()])))();
+    var KAndVToNullN = () => (KAndVToNullN = dart.constFn(dart.fnType(core.Null, [K, V])))();
+    var VoidToV = () => (VoidToV = dart.constFn(dart.fnType(V, [])))();
+    var VToV = () => (VToV = dart.constFn(dart.fnType(V, [V])))();
+    var VoidToNV = () => (VoidToNV = dart.constFn(dart.nullable(VoidToV())))();
+    class CanonicalizedMap extends core.Object {
+      _get(key) {
+        let t0;
+        if (!dart.test(this[_isValidKey](key))) return null;
+        let pair = this[_base][$_get]((t0 = K.as(key), this[_canonicalize](t0)));
+        return pair == null ? null : pair.last;
+      }
+      _set(key, value$) {
+        let value = value$;
+        let t0;
+        K.as(key);
+        V.as(value);
+        if (!dart.test(this[_isValidKey](key))) return value$;
+        this[_base][$_set]((t0 = key, this[_canonicalize](t0)), new (PairOfK$V()).new(key, value));
+        return value$;
+      }
+      addAll(other) {
+        MapOfK$V().as(other);
+        if (other == null) dart.nullFailed(L0, 65, 25, "other");
+        other[$forEach](dart.fn((key, value) => {
+          let t1, t0;
+          t0 = key;
+          t1 = value;
+          this._set(t0, t1);
+          return t1;
+        }, KAndVToV()));
+      }
+      addEntries(entries) {
+        IterableOfMapEntryOfK$V().as(entries);
+        if (entries == null) dart.nullFailed(L0, 70, 44, "entries");
+        return this[_base][$addEntries](entries[$map](MapEntryOfC$PairOfK$V(), dart.fn(e => {
+          let t0;
+          if (e == null) dart.nullFailed(L0, 71, 20, "e");
+          return new (MapEntryOfC$PairOfK$V()).__((t0 = e.key, this[_canonicalize](t0)), new (PairOfK$V()).new(e.key, e.value));
+        }, MapEntryOfK$VToMapEntryOfC$PairOfK$V())));
+      }
+      cast(K2, V2) {
+        return this[_base][$cast](K2, V2);
+      }
+      clear() {
+        this[_base][$clear]();
+      }
+      containsKey(key) {
+        let t0;
+        if (!dart.test(this[_isValidKey](key))) return false;
+        return this[_base][$containsKey]((t0 = K.as(key), this[_canonicalize](t0)));
+      }
+      containsValue(value) {
+        return this[_base][$values][$any](dart.fn(pair => {
+          if (pair == null) dart.nullFailed(L0, 89, 25, "pair");
+          return dart.equals(pair.last, value);
+        }, PairOfK$VTobool()));
+      }
+      get entries() {
+        return this[_base][$entries][$map](MapEntryOfK$V(), dart.fn(e => {
+          if (e == null) dart.nullFailed(L0, 93, 26, "e");
+          return new (MapEntryOfK$V()).__(e.value.first, e.value.last);
+        }, MapEntryOfC$PairOfK$VToMapEntryOfK$V()));
+      }
+      forEach(f) {
+        if (f == null) dart.nullFailed(L0, 96, 36, "f");
+        this[_base][$forEach](dart.fn((key, pair) => {
+          if (pair == null) dart.nullFailed(L0, 97, 25, "pair");
+          return f(pair.first, pair.last);
+        }, CAndPairOfK$VTovoid()));
+      }
+      get isEmpty() {
+        return this[_base][$isEmpty];
+      }
+      get isNotEmpty() {
+        return this[_base][$isNotEmpty];
+      }
+      get keys() {
+        return this[_base][$values][$map](K, dart.fn(pair => {
+          if (pair == null) dart.nullFailed(L0, 107, 45, "pair");
+          return pair.first;
+        }, PairOfK$VToK()));
+      }
+      get length() {
+        return this[_base][$length];
+      }
+      map(K2, V2, transform) {
+        if (transform == null) dart.nullFailed(L0, 113, 59, "transform");
+        return this[_base][$map](K2, V2, dart.fn((_, pair) => {
+          if (pair == null) dart.nullFailed(L0, 114, 21, "pair");
+          return transform(pair.first, pair.last);
+        }, dart.fnType(core.MapEntry$(K2, V2), [C, PairOfK$V()])));
+      }
+      putIfAbsent(key, ifAbsent) {
+        let t0;
+        K.as(key);
+        VoidToV().as(ifAbsent);
+        if (ifAbsent == null) dart.nullFailed(L0, 117, 37, "ifAbsent");
+        return this[_base][$putIfAbsent]((t0 = key, this[_canonicalize](t0)), dart.fn(() => new (PairOfK$V()).new(key, ifAbsent()), VoidToPairOfK$V())).last;
+      }
+      remove(key) {
+        let t0;
+        if (!dart.test(this[_isValidKey](key))) return null;
+        let pair = this[_base][$remove]((t0 = K.as(key), this[_canonicalize](t0)));
+        return pair == null ? null : pair.last;
+      }
+      removeWhere(test) {
+        if (test == null) dart.nullFailed(L0, 131, 50, "test");
+        return this[_base][$removeWhere](dart.fn((_, pair) => {
+          if (pair == null) dart.nullFailed(L0, 132, 29, "pair");
+          return test(pair.first, pair.last);
+        }, CAndPairOfK$VTobool()));
+      }
+      retype(K2, V2) {
+        return this.cast(K2, V2);
+      }
+      update(key, update, opts) {
+        let t0;
+        K.as(key);
+        VToV().as(update);
+        if (update == null) dart.nullFailed(L0, 138, 33, "update");
+        let ifAbsent = opts && 'ifAbsent' in opts ? opts.ifAbsent : null;
+        VoidToNV().as(ifAbsent);
+        return this[_base][$update]((t0 = key, this[_canonicalize](t0)), dart.fn(pair => {
+          if (pair == null) dart.nullFailed(L0, 139, 36, "pair");
+          return new (PairOfK$V()).new(key, update(pair.last));
+        }, PairOfK$VToPairOfK$V()), {ifAbsent: ifAbsent == null ? null : dart.fn(() => new (PairOfK$V()).new(key, ifAbsent()), VoidToPairOfK$V())}).last;
+      }
+      updateAll(update) {
+        KAndVToV().as(update);
+        if (update == null) dart.nullFailed(L0, 144, 45, "update");
+        return this[_base][$updateAll](dart.fn((_, pair) => {
+          if (pair == null) dart.nullFailed(L0, 145, 22, "pair");
+          return new (PairOfK$V()).new(pair.first, update(pair.first, pair.last));
+        }, CAndPairOfK$VToPairOfK$V()));
+      }
+      get values() {
+        return this[_base][$values][$map](V, dart.fn(pair => {
+          if (pair == null) dart.nullFailed(L0, 148, 47, "pair");
+          return pair.last;
+        }, PairOfK$VToV()));
+      }
+      toString() {
+        if (dart.test(canonicalized_map._isToStringVisiting(this))) {
+          return "{...}";
+        }
+        let result = new core.StringBuffer.new();
+        try {
+          canonicalized_map._toStringVisiting[$add](this);
+          result.write("{");
+          let first = true;
+          this.forEach(dart.fn((k, v) => {
+            if (!first) {
+              result.write(", ");
+            }
+            first = false;
+            result.write(dart.str(k) + dart.str(": ") + dart.str(v));
+          }, KAndVToNullN()));
+          result.write("}");
+        } finally {
+          if (!(canonicalized_map._toStringVisiting[$last] === this)) dart.assertFailed(null, L0, 171, 14, "identical(_toStringVisiting.last, this)");
+          canonicalized_map._toStringVisiting[$removeLast]();
+        }
+        return result.toString();
+      }
+      [_isValidKey](key) {
+        return K.is(key) && (this[_isValidKeyFn] == null || dart.test(dart.nullCheck(this[_isValidKeyFn])(key)));
+      }
+    }
+    (CanonicalizedMap.new = function(canonicalize, opts) {
+      if (canonicalize == null) dart.nullFailed(L0, 30, 38, "canonicalize");
+      let isValidKey = opts && 'isValidKey' in opts ? opts.isValidKey : null;
+      this[_base] = new (LinkedMapOfC$PairOfK$V()).new();
+      this[_canonicalize] = canonicalize;
+      this[_isValidKeyFn] = isValidKey;
+      ;
+    }).prototype = CanonicalizedMap.prototype;
+    (CanonicalizedMap.from = function(other, canonicalize, opts) {
+      if (other == null) dart.nullFailed(L0, 44, 35, "other");
+      if (canonicalize == null) dart.nullFailed(L0, 44, 60, "canonicalize");
+      let isValidKey = opts && 'isValidKey' in opts ? opts.isValidKey : null;
+      this[_base] = new (LinkedMapOfC$PairOfK$V()).new();
+      this[_canonicalize] = canonicalize;
+      this[_isValidKeyFn] = isValidKey;
+      this.addAll(other);
+    }).prototype = CanonicalizedMap.prototype;
+    CanonicalizedMap.prototype[dart.isMap] = true;
+    dart.addTypeTests(CanonicalizedMap);
+    CanonicalizedMap.prototype[_is_CanonicalizedMap_default] = true;
+    dart.addTypeCaches(CanonicalizedMap);
+    CanonicalizedMap[dart.implements] = () => [core.Map$(K, V)];
+    dart.setMethodSignature(CanonicalizedMap, () => ({
+      __proto__: dart.getMethods(CanonicalizedMap.__proto__),
+      _get: dart.fnType(dart.nullable(V), [dart.nullable(core.Object)]),
+      [$_get]: dart.fnType(dart.nullable(V), [dart.nullable(core.Object)]),
+      _set: dart.fnType(dart.void, [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      [$_set]: dart.fnType(dart.void, [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      addAll: dart.fnType(dart.void, [dart.nullable(core.Object)]),
+      [$addAll]: dart.fnType(dart.void, [dart.nullable(core.Object)]),
+      addEntries: dart.fnType(dart.void, [dart.nullable(core.Object)]),
+      [$addEntries]: dart.fnType(dart.void, [dart.nullable(core.Object)]),
+      cast: dart.gFnType((K2, V2) => [core.Map$(K2, V2), []], (K2, V2) => [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      [$cast]: dart.gFnType((K2, V2) => [core.Map$(K2, V2), []], (K2, V2) => [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      clear: dart.fnType(dart.void, []),
+      [$clear]: dart.fnType(dart.void, []),
+      containsKey: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+      [$containsKey]: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+      containsValue: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+      [$containsValue]: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+      forEach: dart.fnType(dart.void, [dart.fnType(dart.void, [K, V])]),
+      [$forEach]: dart.fnType(dart.void, [dart.fnType(dart.void, [K, V])]),
+      map: dart.gFnType((K2, V2) => [core.Map$(K2, V2), [dart.fnType(core.MapEntry$(K2, V2), [K, V])]], (K2, V2) => [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      [$map]: dart.gFnType((K2, V2) => [core.Map$(K2, V2), [dart.fnType(core.MapEntry$(K2, V2), [K, V])]], (K2, V2) => [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      putIfAbsent: dart.fnType(V, [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      [$putIfAbsent]: dart.fnType(V, [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      remove: dart.fnType(dart.nullable(V), [dart.nullable(core.Object)]),
+      [$remove]: dart.fnType(dart.nullable(V), [dart.nullable(core.Object)]),
+      removeWhere: dart.fnType(dart.void, [dart.fnType(core.bool, [K, V])]),
+      [$removeWhere]: dart.fnType(dart.void, [dart.fnType(core.bool, [K, V])]),
+      retype: dart.gFnType((K2, V2) => [core.Map$(K2, V2), []], (K2, V2) => [dart.nullable(core.Object), dart.nullable(core.Object)]),
+      update: dart.fnType(V, [dart.nullable(core.Object), dart.nullable(core.Object)], {ifAbsent: dart.nullable(core.Object)}, {}),
+      [$update]: dart.fnType(V, [dart.nullable(core.Object), dart.nullable(core.Object)], {ifAbsent: dart.nullable(core.Object)}, {}),
+      updateAll: dart.fnType(dart.void, [dart.nullable(core.Object)]),
+      [$updateAll]: dart.fnType(dart.void, [dart.nullable(core.Object)]),
+      [_isValidKey]: dart.fnType(core.bool, [dart.nullable(core.Object)])
+    }));
+    dart.setGetterSignature(CanonicalizedMap, () => ({
+      __proto__: dart.getGetters(CanonicalizedMap.__proto__),
+      entries: core.Iterable$(core.MapEntry$(K, V)),
+      [$entries]: core.Iterable$(core.MapEntry$(K, V)),
+      isEmpty: core.bool,
+      [$isEmpty]: core.bool,
+      isNotEmpty: core.bool,
+      [$isNotEmpty]: core.bool,
+      keys: core.Iterable$(K),
+      [$keys]: core.Iterable$(K),
+      length: core.int,
+      [$length]: core.int,
+      values: core.Iterable$(V),
+      [$values]: core.Iterable$(V)
+    }));
+    dart.setLibraryUri(CanonicalizedMap, L1);
+    dart.setFieldSignature(CanonicalizedMap, () => ({
+      __proto__: dart.getFields(CanonicalizedMap.__proto__),
+      [_canonicalize]: dart.finalFieldType(dart.fnType(C, [K])),
+      [_isValidKeyFn]: dart.finalFieldType(dart.nullable(dart.fnType(core.bool, [K]))),
+      [_base]: dart.finalFieldType(core.Map$(C, utils.Pair$(K, V)))
+    }));
+    dart.defineExtensionMethods(CanonicalizedMap, [
+      '_get',
+      '_set',
+      'addAll',
+      'addEntries',
+      'cast',
+      'clear',
+      'containsKey',
+      'containsValue',
+      'forEach',
+      'map',
+      'putIfAbsent',
+      'remove',
+      'removeWhere',
+      'update',
+      'updateAll',
+      'toString'
+    ]);
+    dart.defineExtensionAccessors(CanonicalizedMap, [
+      'entries',
+      'isEmpty',
+      'isNotEmpty',
+      'keys',
+      'length',
+      'values'
+    ]);
+    return CanonicalizedMap;
+  });
+  canonicalized_map.CanonicalizedMap = canonicalized_map.CanonicalizedMap$();
+  dart.addTypeTests(canonicalized_map.CanonicalizedMap, _is_CanonicalizedMap_default);
+  canonicalized_map._isToStringVisiting = function _isToStringVisiting(o) {
+    return canonicalized_map._toStringVisiting[$any](dart.fn(e => core.identical(o, e), dynamicTobool()));
+  };
+  dart.defineLazy(canonicalized_map, {
+    /*canonicalized_map._toStringVisiting*/get _toStringVisiting() {
+      return [];
+    }
+  }, false);
+  dart.trackLibraries("packages/collection/src/canonicalized_map.dart", {
+    "package:collection/src/canonicalized_map.dart": canonicalized_map
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["canonicalized_map.dart"],"names":[],"mappings":"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","file":"../../../../../../../packages/collection/src/canonicalized_map.dart.lib.js"}');
+  // Exports:
+  return {
+    src__canonicalized_map: canonicalized_map
+  };
+}));
+
+//# sourceMappingURL=canonicalized_map.dart.lib.js.map

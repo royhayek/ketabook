@@ -1,0 +1,778 @@
+define(['dart_sdk', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/edge_insets.dart'], (function load__packages__flutter_html__style_dart(dart_sdk, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__edge_insets$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const alignment$ = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  var style = Object.create(dart.library);
+  var $toString = dartx.toString;
+  var $toDouble = dartx.toDouble;
+  var DisplayL = () => (DisplayL = dart.constFn(dart.legacy(style.Display)))();
+  var ListStyleTypeL = () => (ListStyleTypeL = dart.constFn(dart.legacy(style.ListStyleType)))();
+  var VerticalAlignL = () => (VerticalAlignL = dart.constFn(dart.legacy(style.VerticalAlign)))();
+  var WhiteSpaceL = () => (WhiteSpaceL = dart.constFn(dart.legacy(style.WhiteSpace)))();
+  const CT = Object.create(null);
+  var L0 = "package:flutter_html/style.dart";
+  dart.defineLazy(CT, {
+    get C0() {
+      return C0 = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 0
+      });
+    },
+    get C1() {
+      return C1 = dart.const({
+        __proto__: style.Display.prototype,
+        [_name$]: "Display.BLOCK",
+        index: 0
+      });
+    },
+    get C2() {
+      return C2 = dart.const({
+        __proto__: style.Display.prototype,
+        [_name$]: "Display.INLINE",
+        index: 1
+      });
+    },
+    get C3() {
+      return C3 = dart.const({
+        __proto__: style.Display.prototype,
+        [_name$]: "Display.INLINE_BLOCK",
+        index: 2
+      });
+    },
+    get C4() {
+      return C4 = dart.const({
+        __proto__: style.Display.prototype,
+        [_name$]: "Display.LIST_ITEM",
+        index: 3
+      });
+    },
+    get C5() {
+      return C5 = dart.constList([C1 || CT.C1, C2 || CT.C2, C3 || CT.C3, C4 || CT.C4], DisplayL());
+    },
+    get C6() {
+      return C6 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 7.875
+      });
+    },
+    get C7() {
+      return C7 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 8.75
+      });
+    },
+    get C8() {
+      return C8 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 11.375
+      });
+    },
+    get C9() {
+      return C9 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 14
+      });
+    },
+    get C10() {
+      return C10 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 15.75
+      });
+    },
+    get C11() {
+      return C11 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 21
+      });
+    },
+    get C12() {
+      return C12 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: 28
+      });
+    },
+    get C13() {
+      return C13 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: -0.83
+      });
+    },
+    get C14() {
+      return C14 = dart.const({
+        __proto__: style.FontSize.prototype,
+        [size$]: -1.2
+      });
+    },
+    get C15() {
+      return C15 = dart.const({
+        __proto__: style.ListStyleType.prototype,
+        [_name$]: "ListStyleType.DISC",
+        index: 0
+      });
+    },
+    get C16() {
+      return C16 = dart.const({
+        __proto__: style.ListStyleType.prototype,
+        [_name$]: "ListStyleType.DECIMAL",
+        index: 1
+      });
+    },
+    get C17() {
+      return C17 = dart.constList([C15 || CT.C15, C16 || CT.C16], ListStyleTypeL());
+    },
+    get C18() {
+      return C18 = dart.const({
+        __proto__: style.VerticalAlign.prototype,
+        [_name$]: "VerticalAlign.BASELINE",
+        index: 0
+      });
+    },
+    get C19() {
+      return C19 = dart.const({
+        __proto__: style.VerticalAlign.prototype,
+        [_name$]: "VerticalAlign.SUB",
+        index: 1
+      });
+    },
+    get C20() {
+      return C20 = dart.const({
+        __proto__: style.VerticalAlign.prototype,
+        [_name$]: "VerticalAlign.SUPER",
+        index: 2
+      });
+    },
+    get C21() {
+      return C21 = dart.constList([C18 || CT.C18, C19 || CT.C19, C20 || CT.C20], VerticalAlignL());
+    },
+    get C22() {
+      return C22 = dart.const({
+        __proto__: style.WhiteSpace.prototype,
+        [_name$]: "WhiteSpace.NORMAL",
+        index: 0
+      });
+    },
+    get C23() {
+      return C23 = dart.const({
+        __proto__: style.WhiteSpace.prototype,
+        [_name$]: "WhiteSpace.PRE",
+        index: 1
+      });
+    },
+    get C24() {
+      return C24 = dart.constList([C22 || CT.C22, C23 || CT.C23], WhiteSpaceL());
+    }
+  }, false);
+  var Color_value = dart.privateName(ui, "Color.value");
+  var C0;
+  var backgroundColor$ = dart.privateName(style, "Style.backgroundColor");
+  var color$ = dart.privateName(style, "Style.color");
+  var direction$ = dart.privateName(style, "Style.direction");
+  var display$ = dart.privateName(style, "Style.display");
+  var fontFamily$ = dart.privateName(style, "Style.fontFamily");
+  var fontFeatureSettings$ = dart.privateName(style, "Style.fontFeatureSettings");
+  var fontSize$ = dart.privateName(style, "Style.fontSize");
+  var fontStyle$ = dart.privateName(style, "Style.fontStyle");
+  var fontWeight$ = dart.privateName(style, "Style.fontWeight");
+  var height$ = dart.privateName(style, "Style.height");
+  var letterSpacing$ = dart.privateName(style, "Style.letterSpacing");
+  var listStyleType$ = dart.privateName(style, "Style.listStyleType");
+  var padding$ = dart.privateName(style, "Style.padding");
+  var margin$ = dart.privateName(style, "Style.margin");
+  var textAlign$ = dart.privateName(style, "Style.textAlign");
+  var textDecoration$ = dart.privateName(style, "Style.textDecoration");
+  var textDecorationColor$ = dart.privateName(style, "Style.textDecorationColor");
+  var textDecorationStyle$ = dart.privateName(style, "Style.textDecorationStyle");
+  var textDecorationThickness$ = dart.privateName(style, "Style.textDecorationThickness");
+  var textShadow$ = dart.privateName(style, "Style.textShadow");
+  var verticalAlign$ = dart.privateName(style, "Style.verticalAlign");
+  var whiteSpace$ = dart.privateName(style, "Style.whiteSpace");
+  var width$ = dart.privateName(style, "Style.width");
+  var wordSpacing$ = dart.privateName(style, "Style.wordSpacing");
+  var before$ = dart.privateName(style, "Style.before");
+  var after$ = dart.privateName(style, "Style.after");
+  var border$ = dart.privateName(style, "Style.border");
+  var alignment$0 = dart.privateName(style, "Style.alignment");
+  var markerContent$ = dart.privateName(style, "Style.markerContent");
+  style.Style = class Style extends core.Object {
+    get backgroundColor() {
+      return this[backgroundColor$];
+    }
+    set backgroundColor(value) {
+      this[backgroundColor$] = value;
+    }
+    get color() {
+      return this[color$];
+    }
+    set color(value) {
+      this[color$] = value;
+    }
+    get direction() {
+      return this[direction$];
+    }
+    set direction(value) {
+      this[direction$] = value;
+    }
+    get display() {
+      return this[display$];
+    }
+    set display(value) {
+      this[display$] = value;
+    }
+    get fontFamily() {
+      return this[fontFamily$];
+    }
+    set fontFamily(value) {
+      this[fontFamily$] = value;
+    }
+    get fontFeatureSettings() {
+      return this[fontFeatureSettings$];
+    }
+    set fontFeatureSettings(value) {
+      this[fontFeatureSettings$] = value;
+    }
+    get fontSize() {
+      return this[fontSize$];
+    }
+    set fontSize(value) {
+      this[fontSize$] = value;
+    }
+    get fontStyle() {
+      return this[fontStyle$];
+    }
+    set fontStyle(value) {
+      this[fontStyle$] = value;
+    }
+    get fontWeight() {
+      return this[fontWeight$];
+    }
+    set fontWeight(value) {
+      this[fontWeight$] = value;
+    }
+    get height() {
+      return this[height$];
+    }
+    set height(value) {
+      this[height$] = value;
+    }
+    get letterSpacing() {
+      return this[letterSpacing$];
+    }
+    set letterSpacing(value) {
+      this[letterSpacing$] = value;
+    }
+    get listStyleType() {
+      return this[listStyleType$];
+    }
+    set listStyleType(value) {
+      this[listStyleType$] = value;
+    }
+    get padding() {
+      return this[padding$];
+    }
+    set padding(value) {
+      this[padding$] = value;
+    }
+    get margin() {
+      return this[margin$];
+    }
+    set margin(value) {
+      this[margin$] = value;
+    }
+    get textAlign() {
+      return this[textAlign$];
+    }
+    set textAlign(value) {
+      this[textAlign$] = value;
+    }
+    get textDecoration() {
+      return this[textDecoration$];
+    }
+    set textDecoration(value) {
+      this[textDecoration$] = value;
+    }
+    get textDecorationColor() {
+      return this[textDecorationColor$];
+    }
+    set textDecorationColor(value) {
+      this[textDecorationColor$] = value;
+    }
+    get textDecorationStyle() {
+      return this[textDecorationStyle$];
+    }
+    set textDecorationStyle(value) {
+      this[textDecorationStyle$] = value;
+    }
+    get textDecorationThickness() {
+      return this[textDecorationThickness$];
+    }
+    set textDecorationThickness(value) {
+      this[textDecorationThickness$] = value;
+    }
+    get textShadow() {
+      return this[textShadow$];
+    }
+    set textShadow(value) {
+      this[textShadow$] = value;
+    }
+    get verticalAlign() {
+      return this[verticalAlign$];
+    }
+    set verticalAlign(value) {
+      this[verticalAlign$] = value;
+    }
+    get whiteSpace() {
+      return this[whiteSpace$];
+    }
+    set whiteSpace(value) {
+      this[whiteSpace$] = value;
+    }
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      this[width$] = value;
+    }
+    get wordSpacing() {
+      return this[wordSpacing$];
+    }
+    set wordSpacing(value) {
+      this[wordSpacing$] = value;
+    }
+    get before() {
+      return this[before$];
+    }
+    set before(value) {
+      this[before$] = value;
+    }
+    get after() {
+      return this[after$];
+    }
+    set after(value) {
+      this[after$] = value;
+    }
+    get border() {
+      return this[border$];
+    }
+    set border(value) {
+      this[border$] = value;
+    }
+    get alignment() {
+      return this[alignment$0];
+    }
+    set alignment(value) {
+      this[alignment$0] = value;
+    }
+    get markerContent() {
+      return this[markerContent$];
+    }
+    set markerContent(value) {
+      this[markerContent$] = value;
+    }
+    generateTextStyle() {
+      let t0;
+      return new text_style.TextStyle.new({backgroundColor: this.backgroundColor, color: this.color, decoration: this.textDecoration, decorationColor: this.textDecorationColor, decorationStyle: this.textDecorationStyle, decorationThickness: this.textDecorationThickness, fontFamily: this.fontFamily, fontFeatures: this.fontFeatureSettings, fontSize: (t0 = this.fontSize, t0 == null ? null : t0.size), fontStyle: this.fontStyle, fontWeight: this.fontWeight, letterSpacing: this.letterSpacing, shadows: this.textShadow, wordSpacing: this.wordSpacing});
+    }
+    toString() {
+      return "Style";
+    }
+    merge(other) {
+      if (other == null) return this;
+      return this.copyWith({backgroundColor: other.backgroundColor, color: other.color, direction: other.direction, display: other.display, fontFamily: other.fontFamily, fontFeatureSettings: other.fontFeatureSettings, fontSize: other.fontSize, fontStyle: other.fontStyle, fontWeight: other.fontWeight, height: other.height, letterSpacing: other.letterSpacing, listStyleType: other.listStyleType, padding: other.padding, margin: other.margin, textAlign: other.textAlign, textDecoration: other.textDecoration, textDecorationColor: other.textDecorationColor, textDecorationStyle: other.textDecorationStyle, textDecorationThickness: other.textDecorationThickness, textShadow: other.textShadow, verticalAlign: other.verticalAlign, whiteSpace: other.whiteSpace, width: other.width, wordSpacing: other.wordSpacing, before: other.before, after: other.after, border: other.border, alignment: other.alignment, markerContent: other.markerContent});
+    }
+    copyOnlyInherited(child) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10;
+      if (child == null) return this;
+      return child.copyWith({color: (t0 = child.color, t0 == null ? this.color : t0), direction: (t0$ = child.direction, t0$ == null ? this.direction : t0$), fontFamily: (t0$0 = child.fontFamily, t0$0 == null ? this.fontFamily : t0$0), fontFeatureSettings: (t0$1 = child.fontFeatureSettings, t0$1 == null ? this.fontFeatureSettings : t0$1), fontSize: (t0$2 = child.fontSize, t0$2 == null ? this.fontSize : t0$2), fontStyle: (t0$3 = child.fontStyle, t0$3 == null ? this.fontStyle : t0$3), fontWeight: (t0$4 = child.fontWeight, t0$4 == null ? this.fontWeight : t0$4), letterSpacing: (t0$5 = child.letterSpacing, t0$5 == null ? this.letterSpacing : t0$5), listStyleType: (t0$6 = child.listStyleType, t0$6 == null ? this.listStyleType : t0$6), textAlign: (t0$7 = child.textAlign, t0$7 == null ? this.textAlign : t0$7), textShadow: (t0$8 = child.textShadow, t0$8 == null ? this.textShadow : t0$8), whiteSpace: (t0$9 = child.whiteSpace, t0$9 == null ? this.whiteSpace : t0$9), wordSpacing: (t0$10 = child.wordSpacing, t0$10 == null ? this.wordSpacing : t0$10)});
+    }
+    copyWith(opts) {
+      let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18, t0$19, t0$20, t0$21, t0$22, t0$23, t0$24, t0$25, t0$26;
+      let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : null;
+      let color = opts && 'color' in opts ? opts.color : null;
+      let direction = opts && 'direction' in opts ? opts.direction : null;
+      let display = opts && 'display' in opts ? opts.display : null;
+      let fontFamily = opts && 'fontFamily' in opts ? opts.fontFamily : null;
+      let fontFeatureSettings = opts && 'fontFeatureSettings' in opts ? opts.fontFeatureSettings : null;
+      let fontSize = opts && 'fontSize' in opts ? opts.fontSize : null;
+      let fontStyle = opts && 'fontStyle' in opts ? opts.fontStyle : null;
+      let fontWeight = opts && 'fontWeight' in opts ? opts.fontWeight : null;
+      let height = opts && 'height' in opts ? opts.height : null;
+      let letterSpacing = opts && 'letterSpacing' in opts ? opts.letterSpacing : null;
+      let listStyleType = opts && 'listStyleType' in opts ? opts.listStyleType : null;
+      let padding = opts && 'padding' in opts ? opts.padding : null;
+      let margin = opts && 'margin' in opts ? opts.margin : null;
+      let textAlign = opts && 'textAlign' in opts ? opts.textAlign : null;
+      let textDecoration = opts && 'textDecoration' in opts ? opts.textDecoration : null;
+      let textDecorationColor = opts && 'textDecorationColor' in opts ? opts.textDecorationColor : null;
+      let textDecorationStyle = opts && 'textDecorationStyle' in opts ? opts.textDecorationStyle : null;
+      let textDecorationThickness = opts && 'textDecorationThickness' in opts ? opts.textDecorationThickness : null;
+      let textShadow = opts && 'textShadow' in opts ? opts.textShadow : null;
+      let verticalAlign = opts && 'verticalAlign' in opts ? opts.verticalAlign : null;
+      let whiteSpace = opts && 'whiteSpace' in opts ? opts.whiteSpace : null;
+      let width = opts && 'width' in opts ? opts.width : null;
+      let wordSpacing = opts && 'wordSpacing' in opts ? opts.wordSpacing : null;
+      let before = opts && 'before' in opts ? opts.before : null;
+      let after = opts && 'after' in opts ? opts.after : null;
+      let border = opts && 'border' in opts ? opts.border : null;
+      let alignment = opts && 'alignment' in opts ? opts.alignment : null;
+      let markerContent = opts && 'markerContent' in opts ? opts.markerContent : null;
+      return new style.Style.new({backgroundColor: (t0 = backgroundColor, t0 == null ? this.backgroundColor : t0), color: (t0$ = color, t0$ == null ? this.color : t0$), direction: (t0$0 = direction, t0$0 == null ? this.direction : t0$0), display: (t0$1 = display, t0$1 == null ? this.display : t0$1), fontFamily: (t0$2 = fontFamily, t0$2 == null ? this.fontFamily : t0$2), fontFeatureSettings: (t0$3 = fontFeatureSettings, t0$3 == null ? this.fontFeatureSettings : t0$3), fontSize: (t0$4 = fontSize, t0$4 == null ? this.fontSize : t0$4), fontStyle: (t0$5 = fontStyle, t0$5 == null ? this.fontStyle : t0$5), fontWeight: (t0$6 = fontWeight, t0$6 == null ? this.fontWeight : t0$6), height: (t0$7 = height, t0$7 == null ? this.height : t0$7), letterSpacing: (t0$8 = letterSpacing, t0$8 == null ? this.letterSpacing : t0$8), listStyleType: (t0$9 = listStyleType, t0$9 == null ? this.listStyleType : t0$9), padding: (t0$10 = padding, t0$10 == null ? this.padding : t0$10), margin: (t0$11 = margin, t0$11 == null ? this.margin : t0$11), textAlign: (t0$12 = textAlign, t0$12 == null ? this.textAlign : t0$12), textDecoration: (t0$13 = textDecoration, t0$13 == null ? this.textDecoration : t0$13), textDecorationColor: (t0$14 = textDecorationColor, t0$14 == null ? this.textDecorationColor : t0$14), textDecorationStyle: (t0$15 = textDecorationStyle, t0$15 == null ? this.textDecorationStyle : t0$15), textDecorationThickness: (t0$16 = textDecorationThickness, t0$16 == null ? this.textDecorationThickness : t0$16), textShadow: (t0$17 = textShadow, t0$17 == null ? this.textShadow : t0$17), verticalAlign: (t0$18 = verticalAlign, t0$18 == null ? this.verticalAlign : t0$18), whiteSpace: (t0$19 = whiteSpace, t0$19 == null ? this.whiteSpace : t0$19), width: (t0$20 = width, t0$20 == null ? this.width : t0$20), wordSpacing: (t0$21 = wordSpacing, t0$21 == null ? this.wordSpacing : t0$21), before: (t0$22 = before, t0$22 == null ? this.before : t0$22), after: (t0$23 = after, t0$23 == null ? this.after : t0$23), border: (t0$24 = border, t0$24 == null ? this.border : t0$24), alignment: (t0$25 = alignment, t0$25 == null ? this.alignment : t0$25), markerContent: (t0$26 = markerContent, t0$26 == null ? this.markerContent : t0$26)});
+    }
+  };
+  (style.Style.new = function(opts) {
+    let backgroundColor = opts && 'backgroundColor' in opts ? opts.backgroundColor : C0 || CT.C0;
+    let color = opts && 'color' in opts ? opts.color : null;
+    let direction = opts && 'direction' in opts ? opts.direction : null;
+    let display = opts && 'display' in opts ? opts.display : null;
+    let fontFamily = opts && 'fontFamily' in opts ? opts.fontFamily : null;
+    let fontFeatureSettings = opts && 'fontFeatureSettings' in opts ? opts.fontFeatureSettings : null;
+    let fontSize = opts && 'fontSize' in opts ? opts.fontSize : null;
+    let fontStyle = opts && 'fontStyle' in opts ? opts.fontStyle : null;
+    let fontWeight = opts && 'fontWeight' in opts ? opts.fontWeight : null;
+    let height = opts && 'height' in opts ? opts.height : null;
+    let letterSpacing = opts && 'letterSpacing' in opts ? opts.letterSpacing : null;
+    let listStyleType = opts && 'listStyleType' in opts ? opts.listStyleType : null;
+    let padding = opts && 'padding' in opts ? opts.padding : null;
+    let margin = opts && 'margin' in opts ? opts.margin : null;
+    let textAlign = opts && 'textAlign' in opts ? opts.textAlign : null;
+    let textDecoration = opts && 'textDecoration' in opts ? opts.textDecoration : null;
+    let textDecorationColor = opts && 'textDecorationColor' in opts ? opts.textDecorationColor : null;
+    let textDecorationStyle = opts && 'textDecorationStyle' in opts ? opts.textDecorationStyle : null;
+    let textDecorationThickness = opts && 'textDecorationThickness' in opts ? opts.textDecorationThickness : null;
+    let textShadow = opts && 'textShadow' in opts ? opts.textShadow : null;
+    let verticalAlign = opts && 'verticalAlign' in opts ? opts.verticalAlign : null;
+    let whiteSpace = opts && 'whiteSpace' in opts ? opts.whiteSpace : null;
+    let width = opts && 'width' in opts ? opts.width : null;
+    let wordSpacing = opts && 'wordSpacing' in opts ? opts.wordSpacing : null;
+    let before = opts && 'before' in opts ? opts.before : null;
+    let after = opts && 'after' in opts ? opts.after : null;
+    let border = opts && 'border' in opts ? opts.border : null;
+    let alignment = opts && 'alignment' in opts ? opts.alignment : null;
+    let markerContent = opts && 'markerContent' in opts ? opts.markerContent : null;
+    this[backgroundColor$] = backgroundColor;
+    this[color$] = color;
+    this[direction$] = direction;
+    this[display$] = display;
+    this[fontFamily$] = fontFamily;
+    this[fontFeatureSettings$] = fontFeatureSettings;
+    this[fontSize$] = fontSize;
+    this[fontStyle$] = fontStyle;
+    this[fontWeight$] = fontWeight;
+    this[height$] = height;
+    this[letterSpacing$] = letterSpacing;
+    this[listStyleType$] = listStyleType;
+    this[padding$] = padding;
+    this[margin$] = margin;
+    this[textAlign$] = textAlign;
+    this[textDecoration$] = textDecoration;
+    this[textDecorationColor$] = textDecorationColor;
+    this[textDecorationStyle$] = textDecorationStyle;
+    this[textDecorationThickness$] = textDecorationThickness;
+    this[textShadow$] = textShadow;
+    this[verticalAlign$] = verticalAlign;
+    this[whiteSpace$] = whiteSpace;
+    this[width$] = width;
+    this[wordSpacing$] = wordSpacing;
+    this[before$] = before;
+    this[after$] = after;
+    this[border$] = border;
+    this[alignment$0] = alignment;
+    this[markerContent$] = markerContent;
+    if (this.alignment == null && (this.display == style.Display.BLOCK || this.display == style.Display.LIST_ITEM)) {
+      this.alignment = alignment$.Alignment.centerLeft;
+    }
+  }).prototype = style.Style.prototype;
+  (style.Style.fromTextStyle = function(textStyle) {
+    this[markerContent$] = null;
+    this[alignment$0] = null;
+    this[border$] = null;
+    this[after$] = null;
+    this[before$] = null;
+    this[wordSpacing$] = null;
+    this[width$] = null;
+    this[whiteSpace$] = null;
+    this[verticalAlign$] = null;
+    this[textShadow$] = null;
+    this[textDecorationThickness$] = null;
+    this[textDecorationStyle$] = null;
+    this[textDecorationColor$] = null;
+    this[textDecoration$] = null;
+    this[textAlign$] = null;
+    this[margin$] = null;
+    this[padding$] = null;
+    this[listStyleType$] = null;
+    this[letterSpacing$] = null;
+    this[height$] = null;
+    this[fontWeight$] = null;
+    this[fontStyle$] = null;
+    this[fontSize$] = null;
+    this[fontFeatureSettings$] = null;
+    this[fontFamily$] = null;
+    this[display$] = null;
+    this[direction$] = null;
+    this[color$] = null;
+    this[backgroundColor$] = null;
+    this.backgroundColor = textStyle.backgroundColor;
+    this.color = textStyle.color;
+    this.textDecoration = textStyle.decoration;
+    this.textDecorationColor = textStyle.decorationColor;
+    this.textDecorationStyle = textStyle.decorationStyle;
+    this.textDecorationThickness = textStyle.decorationThickness;
+    this.fontFamily = textStyle.fontFamily;
+    this.fontFeatureSettings = textStyle.fontFeatures;
+    this.fontSize = new style.FontSize.new(textStyle.fontSize);
+    this.fontStyle = textStyle.fontStyle;
+    this.fontWeight = textStyle.fontWeight;
+    this.letterSpacing = textStyle.letterSpacing;
+    this.textShadow = textStyle.shadows;
+    this.wordSpacing = textStyle.wordSpacing;
+  }).prototype = style.Style.prototype;
+  dart.addTypeTests(style.Style);
+  dart.addTypeCaches(style.Style);
+  dart.setMethodSignature(style.Style, () => ({
+    __proto__: dart.getMethods(style.Style.__proto__),
+    generateTextStyle: dart.fnType(dart.legacy(text_style.TextStyle), []),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), []),
+    merge: dart.fnType(dart.legacy(style.Style), [dart.legacy(style.Style)]),
+    copyOnlyInherited: dart.fnType(dart.legacy(style.Style), [dart.legacy(style.Style)]),
+    copyWith: dart.fnType(dart.legacy(style.Style), [], {after: dart.legacy(core.String), alignment: dart.legacy(alignment$.Alignment), backgroundColor: dart.legacy(ui.Color), before: dart.legacy(core.String), border: dart.legacy(box_border.Border), color: dart.legacy(ui.Color), direction: dart.legacy(ui.TextDirection), display: dart.legacy(style.Display), fontFamily: dart.legacy(core.String), fontFeatureSettings: dart.legacy(core.List$(dart.legacy(ui.FontFeature))), fontSize: dart.legacy(style.FontSize), fontStyle: dart.legacy(ui.FontStyle), fontWeight: dart.legacy(ui.FontWeight), height: dart.legacy(core.double), letterSpacing: dart.legacy(core.double), listStyleType: dart.legacy(style.ListStyleType), margin: dart.legacy(edge_insets.EdgeInsets), markerContent: dart.legacy(core.String), padding: dart.legacy(edge_insets.EdgeInsets), textAlign: dart.legacy(ui.TextAlign), textDecoration: dart.legacy(ui.TextDecoration), textDecorationColor: dart.legacy(ui.Color), textDecorationStyle: dart.legacy(ui.TextDecorationStyle), textDecorationThickness: dart.legacy(core.double), textShadow: dart.legacy(core.List$(dart.legacy(ui.Shadow))), verticalAlign: dart.legacy(style.VerticalAlign), whiteSpace: dart.legacy(style.WhiteSpace), width: dart.legacy(core.double), wordSpacing: dart.legacy(core.double)}, {})
+  }));
+  dart.setLibraryUri(style.Style, L0);
+  dart.setFieldSignature(style.Style, () => ({
+    __proto__: dart.getFields(style.Style.__proto__),
+    backgroundColor: dart.fieldType(dart.legacy(ui.Color)),
+    color: dart.fieldType(dart.legacy(ui.Color)),
+    direction: dart.fieldType(dart.legacy(ui.TextDirection)),
+    display: dart.fieldType(dart.legacy(style.Display)),
+    fontFamily: dart.fieldType(dart.legacy(core.String)),
+    fontFeatureSettings: dart.fieldType(dart.legacy(core.List$(dart.legacy(ui.FontFeature)))),
+    fontSize: dart.fieldType(dart.legacy(style.FontSize)),
+    fontStyle: dart.fieldType(dart.legacy(ui.FontStyle)),
+    fontWeight: dart.fieldType(dart.legacy(ui.FontWeight)),
+    height: dart.fieldType(dart.legacy(core.double)),
+    letterSpacing: dart.fieldType(dart.legacy(core.double)),
+    listStyleType: dart.fieldType(dart.legacy(style.ListStyleType)),
+    padding: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    margin: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    textAlign: dart.fieldType(dart.legacy(ui.TextAlign)),
+    textDecoration: dart.fieldType(dart.legacy(ui.TextDecoration)),
+    textDecorationColor: dart.fieldType(dart.legacy(ui.Color)),
+    textDecorationStyle: dart.fieldType(dart.legacy(ui.TextDecorationStyle)),
+    textDecorationThickness: dart.fieldType(dart.legacy(core.double)),
+    textShadow: dart.fieldType(dart.legacy(core.List$(dart.legacy(ui.Shadow)))),
+    verticalAlign: dart.fieldType(dart.legacy(style.VerticalAlign)),
+    whiteSpace: dart.fieldType(dart.legacy(style.WhiteSpace)),
+    width: dart.fieldType(dart.legacy(core.double)),
+    wordSpacing: dart.fieldType(dart.legacy(core.double)),
+    before: dart.fieldType(dart.legacy(core.String)),
+    after: dart.fieldType(dart.legacy(core.String)),
+    border: dart.fieldType(dart.legacy(box_border.Border)),
+    alignment: dart.fieldType(dart.legacy(alignment$.Alignment)),
+    markerContent: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(style.Style, ['toString']);
+  var _name$ = dart.privateName(style, "_name");
+  var C1;
+  var C2;
+  var C3;
+  var C4;
+  var C5;
+  style.Display = class Display extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (style.Display.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = style.Display.prototype;
+  dart.addTypeTests(style.Display);
+  dart.addTypeCaches(style.Display);
+  dart.setMethodSignature(style.Display, () => ({
+    __proto__: dart.getMethods(style.Display.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(style.Display, L0);
+  dart.setFieldSignature(style.Display, () => ({
+    __proto__: dart.getFields(style.Display.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(style.Display, ['toString']);
+  style.Display.BLOCK = C1 || CT.C1;
+  style.Display.INLINE = C2 || CT.C2;
+  style.Display.INLINE_BLOCK = C3 || CT.C3;
+  style.Display.LIST_ITEM = C4 || CT.C4;
+  style.Display.values = C5 || CT.C5;
+  var size$ = dart.privateName(style, "FontSize.size");
+  var C6;
+  var C7;
+  var C8;
+  var C9;
+  var C10;
+  var C11;
+  var C12;
+  var C13;
+  var C14;
+  style.FontSize = class FontSize extends core.Object {
+    get size() {
+      return this[size$];
+    }
+    set size(value) {
+      super.size = value;
+    }
+    static percent(percent) {
+      return new style.FontSize.new(percent[$toDouble]() / -100.0);
+    }
+  };
+  (style.FontSize.new = function(size) {
+    this[size$] = size;
+    ;
+  }).prototype = style.FontSize.prototype;
+  dart.addTypeTests(style.FontSize);
+  dart.addTypeCaches(style.FontSize);
+  dart.setLibraryUri(style.FontSize, L0);
+  dart.setFieldSignature(style.FontSize, () => ({
+    __proto__: dart.getFields(style.FontSize.__proto__),
+    size: dart.finalFieldType(dart.legacy(core.double))
+  }));
+  dart.defineLazy(style.FontSize, {
+    /*style.FontSize.xxSmall*/get xxSmall() {
+      return C6 || CT.C6;
+    },
+    /*style.FontSize.xSmall*/get xSmall() {
+      return C7 || CT.C7;
+    },
+    /*style.FontSize.small*/get small() {
+      return C8 || CT.C8;
+    },
+    /*style.FontSize.medium*/get medium() {
+      return C9 || CT.C9;
+    },
+    /*style.FontSize.large*/get large() {
+      return C10 || CT.C10;
+    },
+    /*style.FontSize.xLarge*/get xLarge() {
+      return C11 || CT.C11;
+    },
+    /*style.FontSize.xxLarge*/get xxLarge() {
+      return C12 || CT.C12;
+    },
+    /*style.FontSize.smaller*/get smaller() {
+      return C13 || CT.C13;
+    },
+    /*style.FontSize.larger*/get larger() {
+      return C14 || CT.C14;
+    }
+  }, true);
+  var C15;
+  var C16;
+  var C17;
+  style.ListStyleType = class ListStyleType extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (style.ListStyleType.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = style.ListStyleType.prototype;
+  dart.addTypeTests(style.ListStyleType);
+  dart.addTypeCaches(style.ListStyleType);
+  dart.setMethodSignature(style.ListStyleType, () => ({
+    __proto__: dart.getMethods(style.ListStyleType.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(style.ListStyleType, L0);
+  dart.setFieldSignature(style.ListStyleType, () => ({
+    __proto__: dart.getFields(style.ListStyleType.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(style.ListStyleType, ['toString']);
+  style.ListStyleType.DISC = C15 || CT.C15;
+  style.ListStyleType.DECIMAL = C16 || CT.C16;
+  style.ListStyleType.values = C17 || CT.C17;
+  var C18;
+  var C19;
+  var C20;
+  var C21;
+  style.VerticalAlign = class VerticalAlign extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (style.VerticalAlign.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = style.VerticalAlign.prototype;
+  dart.addTypeTests(style.VerticalAlign);
+  dart.addTypeCaches(style.VerticalAlign);
+  dart.setMethodSignature(style.VerticalAlign, () => ({
+    __proto__: dart.getMethods(style.VerticalAlign.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(style.VerticalAlign, L0);
+  dart.setFieldSignature(style.VerticalAlign, () => ({
+    __proto__: dart.getFields(style.VerticalAlign.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(style.VerticalAlign, ['toString']);
+  style.VerticalAlign.BASELINE = C18 || CT.C18;
+  style.VerticalAlign.SUB = C19 || CT.C19;
+  style.VerticalAlign.SUPER = C20 || CT.C20;
+  style.VerticalAlign.values = C21 || CT.C21;
+  var C22;
+  var C23;
+  var C24;
+  style.WhiteSpace = class WhiteSpace extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (style.WhiteSpace.new = function(index, _name) {
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = style.WhiteSpace.prototype;
+  dart.addTypeTests(style.WhiteSpace);
+  dart.addTypeCaches(style.WhiteSpace);
+  dart.setMethodSignature(style.WhiteSpace, () => ({
+    __proto__: dart.getMethods(style.WhiteSpace.__proto__),
+    toString: dart.fnType(dart.legacy(core.String), []),
+    [$toString]: dart.fnType(dart.legacy(core.String), [])
+  }));
+  dart.setLibraryUri(style.WhiteSpace, L0);
+  dart.setFieldSignature(style.WhiteSpace, () => ({
+    __proto__: dart.getFields(style.WhiteSpace.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    [_name$]: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  dart.defineExtensionMethods(style.WhiteSpace, ['toString']);
+  style.WhiteSpace.NORMAL = C22 || CT.C22;
+  style.WhiteSpace.PRE = C23 || CT.C23;
+  style.WhiteSpace.values = C24 || CT.C24;
+  dart.trackLibraries("packages/flutter_html/style.dart", {
+    "package:flutter_html/style.dart": style
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["style.dart"],"names":[],"mappings":"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","file":"../../../../../../packages/flutter_html/style.dart.lib.js"}');
+  // Exports:
+  return {
+    style: style
+  };
+}));
+
+//# sourceMappingURL=style.dart.lib.js.map

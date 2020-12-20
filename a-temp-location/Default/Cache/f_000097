@@ -1,0 +1,985 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/ketabook/size_config.dart', 'packages/flutter/src/material/card.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/ketabook/utils/utils.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/ketabook/constants.dart'], (function load__packages__ketabook__screens__orders_history_screen__widgets__order_list_item_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__rendering__flex$46dart, packages__ketabook__size_config$46dart, packages__flutter__src__material__card$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__border_radius$46dart, packages__ketabook__utils__utils$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__ketabook__constants$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const size_config = packages__ketabook__size_config$46dart.size_config;
+  const card = packages__flutter__src__material__card$46dart.src__material__card;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const utils = packages__ketabook__utils__utils$46dart.utils__utils;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const divider = packages__flutter__src__material__icon_button$46dart.src__material__divider;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const constants = packages__ketabook__constants$46dart.constants;
+  var order_list_item = Object.create(dart.library);
+  var VoidToNullN = () => (VoidToNullN = dart.constFn(dart.fnType(core.Null, [])))();
+  var _LocationL = () => (_LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))();
+  var WidgetL = () => (WidgetL = dart.constFn(dart.legacy(framework.Widget)))();
+  var JSArrayOfWidgetL = () => (JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(WidgetL())))();
+  const CT = Object.create(null);
+  var L0 = "package:ketabook/screens/orders_history_screen/widgets/order_list_item.dart";
+  dart.defineLazy(CT, {
+    get C2() {
+      return C2 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 19,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C3 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 19,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C4 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 19,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C5 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "clipBehavior",
+        [_Location_column]: 19,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C6 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "shape",
+        [_Location_column]: 19,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C1 = dart.constList([C2 || CT.C2, C3 || CT.C3, C4 || CT.C4, C5 || CT.C5, C6 || CT.C6], _LocationL());
+    },
+    get C0() {
+      return C0 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C1 || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C9() {
+      return C9 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 17,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C10 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 17,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C11 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C8 = dart.constList([C9 || CT.C9, C10 || CT.C10, C11 || CT.C11], _LocationL());
+    },
+    get C7() {
+      return C7 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C8 || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 19,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C14() {
+      return C14 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 24,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C13 = dart.constList([C14 || CT.C14], _LocationL());
+    },
+    get C12() {
+      return C12 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C13 || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C17() {
+      return C17 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C18 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C16 = dart.constList([C17 || CT.C17, C18 || CT.C18], _LocationL());
+    },
+    get C15() {
+      return C15 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C16 || CT.C16,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C21() {
+      return C21 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C22 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 31,
+        [_Location_line]: 75,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C20 = dart.constList([C21 || CT.C21, C22 || CT.C22], _LocationL());
+    },
+    get C19() {
+      return C19 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C20 || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C25() {
+      return C25 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 29,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C26 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 29,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C27 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 29,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C24 = dart.constList([C25 || CT.C25, C26 || CT.C26, C27 || CT.C27], _LocationL());
+    },
+    get C23() {
+      return C23 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C24 || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 66,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C30() {
+      return C30 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 25,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C31 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 25,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C29 = dart.constList([C30 || CT.C30, C31 || CT.C31], _LocationL());
+    },
+    get C28() {
+      return C28 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C29 || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 30,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C34() {
+      return C34 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 23,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C35 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 23,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C33 = dart.constList([C34 || CT.C34, C35 || CT.C35], _LocationL());
+    },
+    get C32() {
+      return C32 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C33 || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C38() {
+      return C38 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 30,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C37 = dart.constList([C38 || CT.C38], _LocationL());
+    },
+    get C36() {
+      return C36 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C37 || CT.C37,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 89,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C41() {
+      return C41 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 91,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C42 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C40 = dart.constList([C41 || CT.C41, C42 || CT.C42], _LocationL());
+    },
+    get C39() {
+      return C39 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C40 || CT.C40,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 90,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C45() {
+      return C45 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 30,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C44 = dart.constList([C45 || CT.C45], _LocationL());
+    },
+    get C43() {
+      return C43 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C44 || CT.C44,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 99,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C48() {
+      return C48 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 55,
+        [_Location_line]: 104,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C49 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 27,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C47 = dart.constList([C48 || CT.C48, C49 || CT.C49], _LocationL());
+    },
+    get C46() {
+      return C46 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C47 || CT.C47,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 103,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C52() {
+      return C52 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 34,
+        [_Location_line]: 112,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C51 = dart.constList([C52 || CT.C52], _LocationL());
+    },
+    get C50() {
+      return C50 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C51 || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 112,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C55() {
+      return C55 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 117,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C56 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 29,
+        [_Location_line]: 118,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C57 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 29,
+        [_Location_line]: 119,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C54 = dart.constList([C55 || CT.C55, C56 || CT.C56, C57 || CT.C57], _LocationL());
+    },
+    get C53() {
+      return C53 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C54 || CT.C54,
+        [_Location_name]: null,
+        [_Location_column]: 34,
+        [_Location_line]: 116,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C60() {
+      return C60 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 27,
+        [_Location_line]: 114,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C61 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 27,
+        [_Location_line]: 115,
+        [_Location_file]: null
+      });
+    },
+    get C62() {
+      return C62 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 116,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C59 = dart.constList([C60 || CT.C60, C61 || CT.C61, C62 || CT.C62], _LocationL());
+    },
+    get C58() {
+      return C58 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C59 || CT.C59,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 113,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C65() {
+      return C65 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 23,
+        [_Location_line]: 101,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C66 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 23,
+        [_Location_line]: 102,
+        [_Location_file]: null
+      });
+    },
+    get C64() {
+      return C64 = dart.constList([C65 || CT.C65, C66 || CT.C66], _LocationL());
+    },
+    get C63() {
+      return C63 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C64 || CT.C64,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 100,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C69() {
+      return C69 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 19,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C70() {
+      return C70 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 19,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C71 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 19,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C72() {
+      return C72 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C68 = dart.constList([C69 || CT.C69, C70 || CT.C70, C71 || CT.C71, C72 || CT.C72], _LocationL());
+    },
+    get C67() {
+      return C67 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C68 || CT.C68,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C75() {
+      return C75 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C74 = dart.constList([C75 || CT.C75], _LocationL());
+    },
+    get C73() {
+      return C73 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C74 || CT.C74,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C78() {
+      return C78 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 16,
+        [_Location_file]: null
+      });
+    },
+    get C79() {
+      return C79 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 17,
+        [_Location_file]: null
+      });
+    },
+    get C80() {
+      return C80 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C77 = dart.constList([C78 || CT.C78, C79 || CT.C79, C80 || CT.C80], _LocationL());
+    },
+    get C76() {
+      return C76 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C77 || CT.C77,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 15,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C83() {
+      return C83 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 20,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C82() {
+      return C82 = dart.constList([C83 || CT.C83], _LocationL());
+    },
+    get C81() {
+      return C81 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C82 || CT.C82,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 133,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C86() {
+      return C86 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 13,
+        [_Location_line]: 135,
+        [_Location_file]: null
+      });
+    },
+    get C87() {
+      return C87 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "thickness",
+        [_Location_column]: 13,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C88() {
+      return C88 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "indent",
+        [_Location_column]: 13,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C89() {
+      return C89 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 13,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C85() {
+      return C85 = dart.constList([C86 || CT.C86, C87 || CT.C87, C88 || CT.C88, C89 || CT.C89], _LocationL());
+    },
+    get C84() {
+      return C84 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C85 || CT.C85,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 134,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C92() {
+      return C92 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 13,
+        [_Location_file]: null
+      });
+    },
+    get C93() {
+      return C93 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 14,
+        [_Location_file]: null
+      });
+    },
+    get C91() {
+      return C91 = dart.constList([C92 || CT.C92, C93 || CT.C93], _LocationL());
+    },
+    get C90() {
+      return C90 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C91 || CT.C91,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 12,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    },
+    get C96() {
+      return C96 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 10,
+        [_Location_file]: null
+      });
+    },
+    get C97() {
+      return C97 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 12,
+        [_Location_file]: null
+      });
+    },
+    get C95() {
+      return C95 = dart.constList([C96 || CT.C96, C97 || CT.C97], _LocationL());
+    },
+    get C94() {
+      return C94 = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C95 || CT.C95,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 9,
+        [_Location_file]: "file:///D:/My%20Work/Clients/Ali%20-%20Kuwait/Latest%20Ketabook%20App/ketabook/lib/screens/orders_history_screen/widgets/order_list_item.dart"
+      });
+    }
+  }, false);
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var C2;
+  var C3;
+  var C4;
+  var C5;
+  var C6;
+  var C1;
+  var C0;
+  var C9;
+  var C10;
+  var C11;
+  var C8;
+  var C7;
+  var C14;
+  var C13;
+  var C12;
+  var C17;
+  var C18;
+  var C16;
+  var C15;
+  var C21;
+  var C22;
+  var C20;
+  var C19;
+  var C25;
+  var C26;
+  var C27;
+  var C24;
+  var C23;
+  var C30;
+  var C31;
+  var C29;
+  var C28;
+  var C34;
+  var C35;
+  var C33;
+  var C32;
+  var C38;
+  var C37;
+  var C36;
+  var C41;
+  var C42;
+  var C40;
+  var C39;
+  var C45;
+  var C44;
+  var C43;
+  var C48;
+  var C49;
+  var C47;
+  var C46;
+  var C52;
+  var C51;
+  var C50;
+  var C55;
+  var C56;
+  var C57;
+  var C54;
+  var C53;
+  var C60;
+  var C61;
+  var C62;
+  var C59;
+  var C58;
+  var C65;
+  var C66;
+  var C64;
+  var C63;
+  var C69;
+  var C70;
+  var C71;
+  var C72;
+  var C68;
+  var C67;
+  var C75;
+  var C74;
+  var C73;
+  var C78;
+  var C79;
+  var C80;
+  var C77;
+  var C76;
+  var C83;
+  var C82;
+  var C81;
+  var C86;
+  var C87;
+  var C88;
+  var C89;
+  var C85;
+  var C84;
+  var C92;
+  var C93;
+  var C91;
+  var C90;
+  var C96;
+  var C97;
+  var C95;
+  var C94;
+  order_list_item.OrderListItem = class OrderListItem extends framework.StatelessWidget {
+    build(context) {
+      return new gesture_detector.GestureDetector.new({onTap: dart.fn(() => null, VoidToNullN()), child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.start, children: JSArrayOfWidgetL().of([new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.start, children: JSArrayOfWidgetL().of([new container.Container.new({width: size_config.getProportionateScreenWidth(80.0), height: size_config.getProportionateScreenHeight(120.0), child: new card.Card.new({margin: new edge_insets.EdgeInsets.all(0.0), elevation: 5.0, color: new ui.Color.new(4291348428), clipBehavior: ui.Clip.antiAliasWithSaveLayer, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(8.0)}), $creationLocationd_0dea112b090073317d4: C0 || CT.C0}), $creationLocationd_0dea112b090073317d4: C7 || CT.C7}), new basic.SizedBox.new({width: size_config.getProportionateScreenWidth(12.0), $creationLocationd_0dea112b090073317d4: C12 || CT.C12}), new basic.Expanded.new({child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, mainAxisAlignment: flex.MainAxisAlignment.center, mainAxisSize: flex.MainAxisSize.min, children: JSArrayOfWidgetL().of([new basic.Padding.new({padding: dart.test(utils.isEnglish(context)) ? new edge_insets.EdgeInsets.only({right: size_config.getProportionateScreenWidth(16.0)}) : new edge_insets.EdgeInsets.only({left: size_config.getProportionateScreenWidth(16.0)}), child: new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: JSArrayOfWidgetL().of([new text.Text.new("O48786N1", {style: theme.Theme.of(context).textTheme.headline6.merge(new text_style.TextStyle.new({color: colors.Colors.black, fontSize: size_config.getProportionateScreenWidth(16.0)})), $creationLocationd_0dea112b090073317d4: C15 || CT.C15}), new container.Container.new({padding: new edge_insets.EdgeInsets.symmetric({horizontal: 5.0, vertical: 2.0}), decoration: new box_decoration.BoxDecoration.new({color: constants.kPrimaryColor, borderRadius: new border_radius.BorderRadius.circular(8.0)}), child: new text.Text.new("Delivered", {style: theme.Theme.of(context).textTheme.headline6.merge(new text_style.TextStyle.new({fontSize: size_config.getProportionateScreenWidth(13.0), fontWeight: ui.FontWeight.w400})), $creationLocationd_0dea112b090073317d4: C19 || CT.C19}), $creationLocationd_0dea112b090073317d4: C23 || CT.C23})]), $creationLocationd_0dea112b090073317d4: C28 || CT.C28}), $creationLocationd_0dea112b090073317d4: C32 || CT.C32}), new basic.SizedBox.new({height: size_config.getProportionateScreenHeight(10.0), $creationLocationd_0dea112b090073317d4: C36 || CT.C36}), new text.Text.new("Valles Marineris", {style: theme.Theme.of(context).textTheme.headline6.merge(new text_style.TextStyle.new({color: new ui.Color.new(4284900966), fontSize: size_config.getProportionateScreenWidth(14.0)})), $creationLocationd_0dea112b090073317d4: C39 || CT.C39}), new basic.SizedBox.new({height: size_config.getProportionateScreenHeight(20.0), $creationLocationd_0dea112b090073317d4: C43 || CT.C43}), new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.start, children: JSArrayOfWidgetL().of([new text.Text.new("13 " + dart.str(utils.trans(context, "kd")), {style: theme.Theme.of(context).textTheme.headline6.merge(new text_style.TextStyle.new({color: constants.kPrimaryColor, fontSize: size_config.getProportionateScreenWidth(14.0)})), $creationLocationd_0dea112b090073317d4: C46 || CT.C46}), new basic.SizedBox.new({width: size_config.getProportionateScreenWidth(20.0), $creationLocationd_0dea112b090073317d4: C50 || CT.C50}), new container.Container.new({width: size_config.getProportionateScreenWidth(125.0), color: colors.Colors.red, child: new text.Text.new("12/10/2020 11:46", {textAlign: ui.TextAlign.center, style: theme.Theme.of(context).textTheme.headline6.merge(new text_style.TextStyle.new({fontSize: size_config.getProportionateScreenWidth(14.0)})), $creationLocationd_0dea112b090073317d4: C53 || CT.C53}), $creationLocationd_0dea112b090073317d4: C58 || CT.C58})]), $creationLocationd_0dea112b090073317d4: C63 || CT.C63})]), $creationLocationd_0dea112b090073317d4: C67 || CT.C67}), $creationLocationd_0dea112b090073317d4: C73 || CT.C73})]), $creationLocationd_0dea112b090073317d4: C76 || CT.C76}), new basic.SizedBox.new({height: size_config.getProportionateScreenHeight(5.0), $creationLocationd_0dea112b090073317d4: C81 || CT.C81}), new divider.Divider.new({height: 10.0, thickness: 1.0, indent: size_config.getProportionateScreenWidth(90.0), color: colors.Colors.red, $creationLocationd_0dea112b090073317d4: C84 || CT.C84})]), $creationLocationd_0dea112b090073317d4: C90 || CT.C90}), $creationLocationd_0dea112b090073317d4: C94 || CT.C94});
+    }
+  };
+  (order_list_item.OrderListItem.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    order_list_item.OrderListItem.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = order_list_item.OrderListItem.prototype;
+  dart.addTypeTests(order_list_item.OrderListItem);
+  dart.addTypeCaches(order_list_item.OrderListItem);
+  dart.setMethodSignature(order_list_item.OrderListItem, () => ({
+    __proto__: dart.getMethods(order_list_item.OrderListItem.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(order_list_item.OrderListItem, L0);
+  dart.trackLibraries("packages/ketabook/screens/orders_history_screen/widgets/order_list_item.dart", {
+    "package:ketabook/screens/orders_history_screen/widgets/order_list_item.dart": order_list_item
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["order_list_item.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAO4B;AACxB,YAAO,kDACE,cAAM,6BAEN,yCACgC,wCAC3B,uBACR,uCACyC,mDACF,wCAC3B,uBACR,oCAES,wCAA4B,eAC3B,yCAA6B,eAC9B,2BACc,+BAAI,iBACZ,YACJ,iBAAM,2BACM,uCACZ,uEACsB,wCAAS,sHAU1C,+BAAgB,wCAA4B,gEAC5C,+BACS,0CACkC,kDACF,6CACV,iCACjB,uBACR,0CACW,gBAAU,OAAO,KACT,wCACF,wCAA4B,UAE1B,uCACH,wCAA4B,gBAEnC,sCACgC,+CAC3B,uBACR,kBACE,oBACa,AAAY,AAAU,AAAU,eAA7B,OAAO,4BACjB,qCACgB,+BACJ,wCAA4B,mEAIhD,sCACsB,kDACJ,eAAa,mBACjB,6CACH,uCACoB,wCAAS,eAE/B,kBACL,qBACa,AACR,AACA,AACA,eAHW,OAAO,4BAIjB,wCACY,wCAA4B,mBACf,6PAQzC,gCAAiB,yCAA6B,gEAC9C,kBACE,4BACa,AAAY,AAAU,AAAU,eAA7B,OAAO,4BACjB,qCACS,iBAAM,uBACH,wCAA4B,mEAIhD,gCAAiB,yCAA6B,gEAC9C,sCACuC,wCAC3B,uBACR,kBACE,AAA4B,iBAAtB,YAAM,OAAO,EAAE,gBACR,AAAY,AAAU,AAAU,eAA7B,OAAO,4BACjB,qCACS,mCACG,wCAA4B,mEAIhD,+BAAgB,wCAA4B,gEAC5C,oCACS,wCAA4B,eACrB,0BACP,kBACL,gCACqB,4BACR,AAAY,AAAU,AAAU,eAA7B,OAAO,4BACjB,wCACY,wCAA4B,sWAYhE,gCAAiB,yCAA6B,+DAC9C,iCACU,iBACG,aACH,wCAA4B,cACtB;IAKxB;;;;;;EACF","file":"../../../../../../../../../packages/ketabook/screens/orders_history_screen/widgets/order_list_item.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__orders_history_screen__widgets__order_list_item: order_list_item
+  };
+}));
+
+//# sourceMappingURL=order_list_item.dart.lib.js.map

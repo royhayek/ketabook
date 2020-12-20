@@ -1,0 +1,2942 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/icon_data.dart'], (function load__packages__open_iconic_flutter__open_iconic_flutter_dart(dart_sdk, packages__flutter__src__widgets__icon_data$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const icon_data = packages__flutter__src__widgets__icon_data$46dart.src__widgets__icon_data;
+  var open_iconic_flutter = Object.create(dart.library);
+  const CT = Object.create(null);
+  var L0 = "package:open_iconic_flutter/open_iconic_flutter.dart";
+  dart.defineLazy(CT, {
+    get C0() {
+      return C0 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57344
+      });
+    },
+    get C1() {
+      return C1 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57345
+      });
+    },
+    get C2() {
+      return C2 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57346
+      });
+    },
+    get C3() {
+      return C3 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57347
+      });
+    },
+    get C4() {
+      return C4 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57348
+      });
+    },
+    get C5() {
+      return C5 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57349
+      });
+    },
+    get C6() {
+      return C6 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57350
+      });
+    },
+    get C7() {
+      return C7 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57351
+      });
+    },
+    get C8() {
+      return C8 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57352
+      });
+    },
+    get C9() {
+      return C9 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57353
+      });
+    },
+    get C10() {
+      return C10 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57354
+      });
+    },
+    get C11() {
+      return C11 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57355
+      });
+    },
+    get C12() {
+      return C12 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57356
+      });
+    },
+    get C13() {
+      return C13 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57357
+      });
+    },
+    get C14() {
+      return C14 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57358
+      });
+    },
+    get C15() {
+      return C15 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57359
+      });
+    },
+    get C16() {
+      return C16 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57360
+      });
+    },
+    get C17() {
+      return C17 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57361
+      });
+    },
+    get C18() {
+      return C18 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57362
+      });
+    },
+    get C19() {
+      return C19 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57363
+      });
+    },
+    get C20() {
+      return C20 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57364
+      });
+    },
+    get C21() {
+      return C21 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57365
+      });
+    },
+    get C22() {
+      return C22 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57366
+      });
+    },
+    get C23() {
+      return C23 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57367
+      });
+    },
+    get C24() {
+      return C24 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57368
+      });
+    },
+    get C25() {
+      return C25 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57369
+      });
+    },
+    get C26() {
+      return C26 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57370
+      });
+    },
+    get C27() {
+      return C27 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57371
+      });
+    },
+    get C28() {
+      return C28 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57372
+      });
+    },
+    get C29() {
+      return C29 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57373
+      });
+    },
+    get C30() {
+      return C30 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57374
+      });
+    },
+    get C31() {
+      return C31 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57375
+      });
+    },
+    get C32() {
+      return C32 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57376
+      });
+    },
+    get C33() {
+      return C33 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57377
+      });
+    },
+    get C34() {
+      return C34 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57378
+      });
+    },
+    get C35() {
+      return C35 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57379
+      });
+    },
+    get C36() {
+      return C36 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57380
+      });
+    },
+    get C37() {
+      return C37 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57381
+      });
+    },
+    get C38() {
+      return C38 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57382
+      });
+    },
+    get C39() {
+      return C39 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57383
+      });
+    },
+    get C40() {
+      return C40 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57384
+      });
+    },
+    get C41() {
+      return C41 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57385
+      });
+    },
+    get C42() {
+      return C42 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57386
+      });
+    },
+    get C43() {
+      return C43 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57387
+      });
+    },
+    get C44() {
+      return C44 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57388
+      });
+    },
+    get C45() {
+      return C45 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57389
+      });
+    },
+    get C46() {
+      return C46 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57390
+      });
+    },
+    get C47() {
+      return C47 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57391
+      });
+    },
+    get C48() {
+      return C48 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57392
+      });
+    },
+    get C49() {
+      return C49 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57393
+      });
+    },
+    get C50() {
+      return C50 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57394
+      });
+    },
+    get C51() {
+      return C51 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57395
+      });
+    },
+    get C52() {
+      return C52 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57396
+      });
+    },
+    get C53() {
+      return C53 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57397
+      });
+    },
+    get C54() {
+      return C54 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57398
+      });
+    },
+    get C55() {
+      return C55 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57399
+      });
+    },
+    get C56() {
+      return C56 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57400
+      });
+    },
+    get C57() {
+      return C57 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57401
+      });
+    },
+    get C58() {
+      return C58 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57402
+      });
+    },
+    get C59() {
+      return C59 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57403
+      });
+    },
+    get C60() {
+      return C60 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57404
+      });
+    },
+    get C61() {
+      return C61 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57405
+      });
+    },
+    get C62() {
+      return C62 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57406
+      });
+    },
+    get C63() {
+      return C63 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57407
+      });
+    },
+    get C64() {
+      return C64 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57408
+      });
+    },
+    get C65() {
+      return C65 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57409
+      });
+    },
+    get C66() {
+      return C66 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57410
+      });
+    },
+    get C67() {
+      return C67 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57411
+      });
+    },
+    get C68() {
+      return C68 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57412
+      });
+    },
+    get C69() {
+      return C69 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57413
+      });
+    },
+    get C70() {
+      return C70 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57414
+      });
+    },
+    get C71() {
+      return C71 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57415
+      });
+    },
+    get C72() {
+      return C72 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57416
+      });
+    },
+    get C73() {
+      return C73 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57417
+      });
+    },
+    get C74() {
+      return C74 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57418
+      });
+    },
+    get C75() {
+      return C75 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57419
+      });
+    },
+    get C76() {
+      return C76 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57420
+      });
+    },
+    get C77() {
+      return C77 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57421
+      });
+    },
+    get C78() {
+      return C78 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57422
+      });
+    },
+    get C79() {
+      return C79 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57423
+      });
+    },
+    get C80() {
+      return C80 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57424
+      });
+    },
+    get C81() {
+      return C81 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57425
+      });
+    },
+    get C82() {
+      return C82 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57426
+      });
+    },
+    get C83() {
+      return C83 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57427
+      });
+    },
+    get C84() {
+      return C84 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57428
+      });
+    },
+    get C85() {
+      return C85 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57429
+      });
+    },
+    get C86() {
+      return C86 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57430
+      });
+    },
+    get C87() {
+      return C87 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57431
+      });
+    },
+    get C88() {
+      return C88 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57432
+      });
+    },
+    get C89() {
+      return C89 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57433
+      });
+    },
+    get C90() {
+      return C90 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57434
+      });
+    },
+    get C91() {
+      return C91 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57435
+      });
+    },
+    get C92() {
+      return C92 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57436
+      });
+    },
+    get C93() {
+      return C93 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57437
+      });
+    },
+    get C94() {
+      return C94 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57438
+      });
+    },
+    get C95() {
+      return C95 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57439
+      });
+    },
+    get C96() {
+      return C96 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57440
+      });
+    },
+    get C97() {
+      return C97 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57441
+      });
+    },
+    get C98() {
+      return C98 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57442
+      });
+    },
+    get C99() {
+      return C99 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57443
+      });
+    },
+    get C100() {
+      return C100 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57444
+      });
+    },
+    get C101() {
+      return C101 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57445
+      });
+    },
+    get C102() {
+      return C102 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57446
+      });
+    },
+    get C103() {
+      return C103 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57447
+      });
+    },
+    get C104() {
+      return C104 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57448
+      });
+    },
+    get C105() {
+      return C105 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57449
+      });
+    },
+    get C106() {
+      return C106 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57450
+      });
+    },
+    get C107() {
+      return C107 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57451
+      });
+    },
+    get C108() {
+      return C108 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57452
+      });
+    },
+    get C109() {
+      return C109 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57453
+      });
+    },
+    get C110() {
+      return C110 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57454
+      });
+    },
+    get C111() {
+      return C111 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57455
+      });
+    },
+    get C112() {
+      return C112 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57456
+      });
+    },
+    get C113() {
+      return C113 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57457
+      });
+    },
+    get C114() {
+      return C114 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57458
+      });
+    },
+    get C115() {
+      return C115 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57459
+      });
+    },
+    get C116() {
+      return C116 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57460
+      });
+    },
+    get C117() {
+      return C117 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57461
+      });
+    },
+    get C118() {
+      return C118 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57462
+      });
+    },
+    get C119() {
+      return C119 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57463
+      });
+    },
+    get C120() {
+      return C120 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57464
+      });
+    },
+    get C121() {
+      return C121 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57465
+      });
+    },
+    get C122() {
+      return C122 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57466
+      });
+    },
+    get C123() {
+      return C123 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57467
+      });
+    },
+    get C124() {
+      return C124 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57468
+      });
+    },
+    get C125() {
+      return C125 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57469
+      });
+    },
+    get C126() {
+      return C126 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57470
+      });
+    },
+    get C127() {
+      return C127 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57471
+      });
+    },
+    get C128() {
+      return C128 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57472
+      });
+    },
+    get C129() {
+      return C129 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57473
+      });
+    },
+    get C130() {
+      return C130 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57474
+      });
+    },
+    get C131() {
+      return C131 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57475
+      });
+    },
+    get C132() {
+      return C132 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57476
+      });
+    },
+    get C133() {
+      return C133 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57477
+      });
+    },
+    get C134() {
+      return C134 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57478
+      });
+    },
+    get C135() {
+      return C135 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57479
+      });
+    },
+    get C136() {
+      return C136 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57480
+      });
+    },
+    get C137() {
+      return C137 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57481
+      });
+    },
+    get C138() {
+      return C138 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57482
+      });
+    },
+    get C139() {
+      return C139 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57483
+      });
+    },
+    get C140() {
+      return C140 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57484
+      });
+    },
+    get C141() {
+      return C141 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57485
+      });
+    },
+    get C142() {
+      return C142 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57486
+      });
+    },
+    get C143() {
+      return C143 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57487
+      });
+    },
+    get C144() {
+      return C144 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57488
+      });
+    },
+    get C145() {
+      return C145 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57489
+      });
+    },
+    get C146() {
+      return C146 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57490
+      });
+    },
+    get C147() {
+      return C147 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57491
+      });
+    },
+    get C148() {
+      return C148 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57492
+      });
+    },
+    get C149() {
+      return C149 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57493
+      });
+    },
+    get C150() {
+      return C150 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57494
+      });
+    },
+    get C151() {
+      return C151 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57495
+      });
+    },
+    get C152() {
+      return C152 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57496
+      });
+    },
+    get C153() {
+      return C153 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57497
+      });
+    },
+    get C154() {
+      return C154 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57498
+      });
+    },
+    get C155() {
+      return C155 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57499
+      });
+    },
+    get C156() {
+      return C156 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57500
+      });
+    },
+    get C157() {
+      return C157 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57501
+      });
+    },
+    get C158() {
+      return C158 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57502
+      });
+    },
+    get C159() {
+      return C159 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57503
+      });
+    },
+    get C160() {
+      return C160 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57504
+      });
+    },
+    get C161() {
+      return C161 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57505
+      });
+    },
+    get C162() {
+      return C162 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57506
+      });
+    },
+    get C163() {
+      return C163 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57507
+      });
+    },
+    get C164() {
+      return C164 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57508
+      });
+    },
+    get C165() {
+      return C165 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57509
+      });
+    },
+    get C166() {
+      return C166 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57510
+      });
+    },
+    get C167() {
+      return C167 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57511
+      });
+    },
+    get C168() {
+      return C168 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57512
+      });
+    },
+    get C169() {
+      return C169 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57513
+      });
+    },
+    get C170() {
+      return C170 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57514
+      });
+    },
+    get C171() {
+      return C171 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57515
+      });
+    },
+    get C172() {
+      return C172 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57516
+      });
+    },
+    get C173() {
+      return C173 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57517
+      });
+    },
+    get C174() {
+      return C174 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57518
+      });
+    },
+    get C175() {
+      return C175 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57519
+      });
+    },
+    get C176() {
+      return C176 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57520
+      });
+    },
+    get C177() {
+      return C177 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57521
+      });
+    },
+    get C178() {
+      return C178 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57522
+      });
+    },
+    get C179() {
+      return C179 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57523
+      });
+    },
+    get C180() {
+      return C180 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57524
+      });
+    },
+    get C181() {
+      return C181 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57525
+      });
+    },
+    get C182() {
+      return C182 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57526
+      });
+    },
+    get C183() {
+      return C183 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57527
+      });
+    },
+    get C184() {
+      return C184 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57528
+      });
+    },
+    get C185() {
+      return C185 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57529
+      });
+    },
+    get C186() {
+      return C186 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57530
+      });
+    },
+    get C187() {
+      return C187 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57531
+      });
+    },
+    get C188() {
+      return C188 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57532
+      });
+    },
+    get C189() {
+      return C189 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57533
+      });
+    },
+    get C190() {
+      return C190 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57534
+      });
+    },
+    get C191() {
+      return C191 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57535
+      });
+    },
+    get C192() {
+      return C192 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57536
+      });
+    },
+    get C193() {
+      return C193 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57537
+      });
+    },
+    get C194() {
+      return C194 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57538
+      });
+    },
+    get C195() {
+      return C195 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57539
+      });
+    },
+    get C196() {
+      return C196 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57540
+      });
+    },
+    get C197() {
+      return C197 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57541
+      });
+    },
+    get C198() {
+      return C198 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57542
+      });
+    },
+    get C199() {
+      return C199 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57543
+      });
+    },
+    get C200() {
+      return C200 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57544
+      });
+    },
+    get C201() {
+      return C201 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57545
+      });
+    },
+    get C202() {
+      return C202 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57546
+      });
+    },
+    get C203() {
+      return C203 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57547
+      });
+    },
+    get C204() {
+      return C204 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57548
+      });
+    },
+    get C205() {
+      return C205 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57549
+      });
+    },
+    get C206() {
+      return C206 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57550
+      });
+    },
+    get C207() {
+      return C207 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57551
+      });
+    },
+    get C208() {
+      return C208 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57552
+      });
+    },
+    get C209() {
+      return C209 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57553
+      });
+    },
+    get C210() {
+      return C210 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57554
+      });
+    },
+    get C211() {
+      return C211 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57555
+      });
+    },
+    get C212() {
+      return C212 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57556
+      });
+    },
+    get C213() {
+      return C213 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57557
+      });
+    },
+    get C214() {
+      return C214 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57558
+      });
+    },
+    get C215() {
+      return C215 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57559
+      });
+    },
+    get C216() {
+      return C216 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57560
+      });
+    },
+    get C217() {
+      return C217 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57561
+      });
+    },
+    get C218() {
+      return C218 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57562
+      });
+    },
+    get C219() {
+      return C219 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57563
+      });
+    },
+    get C220() {
+      return C220 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57564
+      });
+    },
+    get C221() {
+      return C221 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57565
+      });
+    },
+    get C222() {
+      return C222 = dart.const({
+        __proto__: open_iconic_flutter._IconData.prototype,
+        [IconData_matchTextDirection]: false,
+        [IconData_fontPackage]: "open_iconic_flutter",
+        [IconData_fontFamily]: "OpenIconic",
+        [IconData_codePoint]: 57566
+      });
+    }
+  }, false);
+  var IconData_matchTextDirection = dart.privateName(icon_data, "IconData.matchTextDirection");
+  var IconData_fontPackage = dart.privateName(icon_data, "IconData.fontPackage");
+  var IconData_fontFamily = dart.privateName(icon_data, "IconData.fontFamily");
+  var IconData_codePoint = dart.privateName(icon_data, "IconData.codePoint");
+  var C0;
+  var C1;
+  var C2;
+  var C3;
+  var C4;
+  var C5;
+  var C6;
+  var C7;
+  var C8;
+  var C9;
+  var C10;
+  var C11;
+  var C12;
+  var C13;
+  var C14;
+  var C15;
+  var C16;
+  var C17;
+  var C18;
+  var C19;
+  var C20;
+  var C21;
+  var C22;
+  var C23;
+  var C24;
+  var C25;
+  var C26;
+  var C27;
+  var C28;
+  var C29;
+  var C30;
+  var C31;
+  var C32;
+  var C33;
+  var C34;
+  var C35;
+  var C36;
+  var C37;
+  var C38;
+  var C39;
+  var C40;
+  var C41;
+  var C42;
+  var C43;
+  var C44;
+  var C45;
+  var C46;
+  var C47;
+  var C48;
+  var C49;
+  var C50;
+  var C51;
+  var C52;
+  var C53;
+  var C54;
+  var C55;
+  var C56;
+  var C57;
+  var C58;
+  var C59;
+  var C60;
+  var C61;
+  var C62;
+  var C63;
+  var C64;
+  var C65;
+  var C66;
+  var C67;
+  var C68;
+  var C69;
+  var C70;
+  var C71;
+  var C72;
+  var C73;
+  var C74;
+  var C75;
+  var C76;
+  var C77;
+  var C78;
+  var C79;
+  var C80;
+  var C81;
+  var C82;
+  var C83;
+  var C84;
+  var C85;
+  var C86;
+  var C87;
+  var C88;
+  var C89;
+  var C90;
+  var C91;
+  var C92;
+  var C93;
+  var C94;
+  var C95;
+  var C96;
+  var C97;
+  var C98;
+  var C99;
+  var C100;
+  var C101;
+  var C102;
+  var C103;
+  var C104;
+  var C105;
+  var C106;
+  var C107;
+  var C108;
+  var C109;
+  var C110;
+  var C111;
+  var C112;
+  var C113;
+  var C114;
+  var C115;
+  var C116;
+  var C117;
+  var C118;
+  var C119;
+  var C120;
+  var C121;
+  var C122;
+  var C123;
+  var C124;
+  var C125;
+  var C126;
+  var C127;
+  var C128;
+  var C129;
+  var C130;
+  var C131;
+  var C132;
+  var C133;
+  var C134;
+  var C135;
+  var C136;
+  var C137;
+  var C138;
+  var C139;
+  var C140;
+  var C141;
+  var C142;
+  var C143;
+  var C144;
+  var C145;
+  var C146;
+  var C147;
+  var C148;
+  var C149;
+  var C150;
+  var C151;
+  var C152;
+  var C153;
+  var C154;
+  var C155;
+  var C156;
+  var C157;
+  var C158;
+  var C159;
+  var C160;
+  var C161;
+  var C162;
+  var C163;
+  var C164;
+  var C165;
+  var C166;
+  var C167;
+  var C168;
+  var C169;
+  var C170;
+  var C171;
+  var C172;
+  var C173;
+  var C174;
+  var C175;
+  var C176;
+  var C177;
+  var C178;
+  var C179;
+  var C180;
+  var C181;
+  var C182;
+  var C183;
+  var C184;
+  var C185;
+  var C186;
+  var C187;
+  var C188;
+  var C189;
+  var C190;
+  var C191;
+  var C192;
+  var C193;
+  var C194;
+  var C195;
+  var C196;
+  var C197;
+  var C198;
+  var C199;
+  var C200;
+  var C201;
+  var C202;
+  var C203;
+  var C204;
+  var C205;
+  var C206;
+  var C207;
+  var C208;
+  var C209;
+  var C210;
+  var C211;
+  var C212;
+  var C213;
+  var C214;
+  var C215;
+  var C216;
+  var C217;
+  var C218;
+  var C219;
+  var C220;
+  var C221;
+  var C222;
+  open_iconic_flutter.OpenIconicIcons = class OpenIconicIcons extends core.Object {};
+  (open_iconic_flutter.OpenIconicIcons.new = function() {
+    ;
+  }).prototype = open_iconic_flutter.OpenIconicIcons.prototype;
+  dart.addTypeTests(open_iconic_flutter.OpenIconicIcons);
+  dart.addTypeCaches(open_iconic_flutter.OpenIconicIcons);
+  dart.setLibraryUri(open_iconic_flutter.OpenIconicIcons, L0);
+  dart.defineLazy(open_iconic_flutter.OpenIconicIcons, {
+    /*open_iconic_flutter.OpenIconicIcons.accountLogin*/get accountLogin() {
+      return C0 || CT.C0;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.accountLogout*/get accountLogout() {
+      return C1 || CT.C1;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.actionRedo*/get actionRedo() {
+      return C2 || CT.C2;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.actionUndo*/get actionUndo() {
+      return C3 || CT.C3;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.alignCenter*/get alignCenter() {
+      return C4 || CT.C4;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.alignLeft*/get alignLeft() {
+      return C5 || CT.C5;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.alignRight*/get alignRight() {
+      return C6 || CT.C6;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.aperture*/get aperture() {
+      return C7 || CT.C7;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowBottom*/get arrowBottom() {
+      return C8 || CT.C8;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowCircleBottom*/get arrowCircleBottom() {
+      return C9 || CT.C9;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowCircleLeft*/get arrowCircleLeft() {
+      return C10 || CT.C10;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowCircleRight*/get arrowCircleRight() {
+      return C11 || CT.C11;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowCircleTop*/get arrowCircleTop() {
+      return C12 || CT.C12;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowLeft*/get arrowLeft() {
+      return C13 || CT.C13;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowRight*/get arrowRight() {
+      return C14 || CT.C14;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowThickBottom*/get arrowThickBottom() {
+      return C15 || CT.C15;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowThickLeft*/get arrowThickLeft() {
+      return C16 || CT.C16;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowThickRight*/get arrowThickRight() {
+      return C17 || CT.C17;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowThickTop*/get arrowThickTop() {
+      return C18 || CT.C18;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.arrowTop*/get arrowTop() {
+      return C19 || CT.C19;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.audioSpectrum*/get audioSpectrum() {
+      return C20 || CT.C20;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.audio*/get audio() {
+      return C21 || CT.C21;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.badge*/get badge() {
+      return C22 || CT.C22;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.ban*/get ban() {
+      return C23 || CT.C23;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.barChart*/get barChart() {
+      return C24 || CT.C24;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.basket*/get basket() {
+      return C25 || CT.C25;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.batteryEmpty*/get batteryEmpty() {
+      return C26 || CT.C26;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.batteryFull*/get batteryFull() {
+      return C27 || CT.C27;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.beaker*/get beaker() {
+      return C28 || CT.C28;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bell*/get bell() {
+      return C29 || CT.C29;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bluetooth*/get bluetooth() {
+      return C30 || CT.C30;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bold*/get bold() {
+      return C31 || CT.C31;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bolt*/get bolt() {
+      return C32 || CT.C32;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.book*/get book() {
+      return C33 || CT.C33;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bookmark*/get bookmark() {
+      return C34 || CT.C34;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.box*/get box() {
+      return C35 || CT.C35;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.briefcase*/get briefcase() {
+      return C36 || CT.C36;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.britishPound*/get britishPound() {
+      return C37 || CT.C37;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.browser*/get browser() {
+      return C38 || CT.C38;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.brush*/get brush() {
+      return C39 || CT.C39;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bug*/get bug() {
+      return C40 || CT.C40;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.bullhorn*/get bullhorn() {
+      return C41 || CT.C41;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.calculator*/get calculator() {
+      return C42 || CT.C42;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.calendar*/get calendar() {
+      return C43 || CT.C43;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cameraSlr*/get cameraSlr() {
+      return C44 || CT.C44;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.caretBottom*/get caretBottom() {
+      return C45 || CT.C45;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.caretLeft*/get caretLeft() {
+      return C46 || CT.C46;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.caretRight*/get caretRight() {
+      return C47 || CT.C47;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.caretTop*/get caretTop() {
+      return C48 || CT.C48;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cart*/get cart() {
+      return C49 || CT.C49;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.chat*/get chat() {
+      return C50 || CT.C50;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.check*/get check() {
+      return C51 || CT.C51;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.chevronBottom*/get chevronBottom() {
+      return C52 || CT.C52;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.chevronLeft*/get chevronLeft() {
+      return C53 || CT.C53;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.chevronRight*/get chevronRight() {
+      return C54 || CT.C54;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.chevronTop*/get chevronTop() {
+      return C55 || CT.C55;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.circleCheck*/get circleCheck() {
+      return C56 || CT.C56;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.circleX*/get circleX() {
+      return C57 || CT.C57;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.clipboard*/get clipboard() {
+      return C58 || CT.C58;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.clock*/get clock() {
+      return C59 || CT.C59;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cloudDownload*/get cloudDownload() {
+      return C60 || CT.C60;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cloudUpload*/get cloudUpload() {
+      return C61 || CT.C61;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cloud*/get cloud() {
+      return C62 || CT.C62;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cloudy*/get cloudy() {
+      return C63 || CT.C63;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.code*/get code() {
+      return C64 || CT.C64;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.cog*/get cog() {
+      return C65 || CT.C65;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.collapseDown*/get collapseDown() {
+      return C66 || CT.C66;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.collapseLeft*/get collapseLeft() {
+      return C67 || CT.C67;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.collapseRight*/get collapseRight() {
+      return C68 || CT.C68;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.collapseUp*/get collapseUp() {
+      return C69 || CT.C69;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.command*/get command() {
+      return C70 || CT.C70;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.commentSquare*/get commentSquare() {
+      return C71 || CT.C71;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.compass*/get compass() {
+      return C72 || CT.C72;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.contrast*/get contrast() {
+      return C73 || CT.C73;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.copywriting*/get copywriting() {
+      return C74 || CT.C74;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.creditCard*/get creditCard() {
+      return C75 || CT.C75;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.crop*/get crop() {
+      return C76 || CT.C76;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.dashboard*/get dashboard() {
+      return C77 || CT.C77;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.dataTransferDownload*/get dataTransferDownload() {
+      return C78 || CT.C78;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.dataTransferUpload*/get dataTransferUpload() {
+      return C79 || CT.C79;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.delete*/get delete() {
+      return C80 || CT.C80;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.dial*/get dial() {
+      return C81 || CT.C81;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.document*/get document() {
+      return C82 || CT.C82;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.dollar*/get dollar() {
+      return C83 || CT.C83;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.doubleQuoteSansLeft*/get doubleQuoteSansLeft() {
+      return C84 || CT.C84;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.doubleQuoteSansRight*/get doubleQuoteSansRight() {
+      return C85 || CT.C85;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.doubleQuoteSerifLeft*/get doubleQuoteSerifLeft() {
+      return C86 || CT.C86;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.doubleQuoteSerifRight*/get doubleQuoteSerifRight() {
+      return C87 || CT.C87;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.droplet*/get droplet() {
+      return C88 || CT.C88;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.eject*/get eject() {
+      return C89 || CT.C89;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.elevator*/get elevator() {
+      return C90 || CT.C90;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.ellipses*/get ellipses() {
+      return C91 || CT.C91;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.envelopeClosed*/get envelopeClosed() {
+      return C92 || CT.C92;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.envelopeOpen*/get envelopeOpen() {
+      return C93 || CT.C93;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.euro*/get euro() {
+      return C94 || CT.C94;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.excerpt*/get excerpt() {
+      return C95 || CT.C95;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.expandDown*/get expandDown() {
+      return C96 || CT.C96;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.expandLeft*/get expandLeft() {
+      return C97 || CT.C97;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.expandRight*/get expandRight() {
+      return C98 || CT.C98;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.expandUp*/get expandUp() {
+      return C99 || CT.C99;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.externalLink*/get externalLink() {
+      return C100 || CT.C100;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.eye*/get eye() {
+      return C101 || CT.C101;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.eyedropper*/get eyedropper() {
+      return C102 || CT.C102;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.file*/get file() {
+      return C103 || CT.C103;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.fire*/get fire() {
+      return C104 || CT.C104;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.flag*/get flag() {
+      return C105 || CT.C105;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.flash*/get flash() {
+      return C106 || CT.C106;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.folder*/get folder() {
+      return C107 || CT.C107;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.fork*/get fork() {
+      return C108 || CT.C108;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.fullscreenEnter*/get fullscreenEnter() {
+      return C109 || CT.C109;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.fullscreenExit*/get fullscreenExit() {
+      return C110 || CT.C110;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.globe*/get globe() {
+      return C111 || CT.C111;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.graph*/get graph() {
+      return C112 || CT.C112;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.gridFourUp*/get gridFourUp() {
+      return C113 || CT.C113;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.gridThreeUp*/get gridThreeUp() {
+      return C114 || CT.C114;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.gridTwoUp*/get gridTwoUp() {
+      return C115 || CT.C115;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.hardDrive*/get hardDrive() {
+      return C116 || CT.C116;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.header*/get header() {
+      return C117 || CT.C117;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.headphones*/get headphones() {
+      return C118 || CT.C118;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.heart*/get heart() {
+      return C119 || CT.C119;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.home*/get home() {
+      return C120 || CT.C120;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.image*/get image() {
+      return C121 || CT.C121;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.inbox*/get inbox() {
+      return C122 || CT.C122;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.infinity*/get infinity() {
+      return C123 || CT.C123;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.info*/get info() {
+      return C124 || CT.C124;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.italic*/get italic() {
+      return C125 || CT.C125;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.justifyCenter*/get justifyCenter() {
+      return C126 || CT.C126;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.justifyLeft*/get justifyLeft() {
+      return C127 || CT.C127;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.justifyRight*/get justifyRight() {
+      return C128 || CT.C128;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.key*/get key() {
+      return C129 || CT.C129;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.laptop*/get laptop() {
+      return C130 || CT.C130;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.layers*/get layers() {
+      return C131 || CT.C131;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.lightbulb*/get lightbulb() {
+      return C132 || CT.C132;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.linkBroken*/get linkBroken() {
+      return C133 || CT.C133;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.linkIntact*/get linkIntact() {
+      return C134 || CT.C134;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.listRich*/get listRich() {
+      return C135 || CT.C135;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.list*/get list() {
+      return C136 || CT.C136;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.location*/get location() {
+      return C137 || CT.C137;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.lockLocked*/get lockLocked() {
+      return C138 || CT.C138;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.lockUnlocked*/get lockUnlocked() {
+      return C139 || CT.C139;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.loopCircular*/get loopCircular() {
+      return C140 || CT.C140;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.loopSquare*/get loopSquare() {
+      return C141 || CT.C141;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.loop*/get loop() {
+      return C142 || CT.C142;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.magnifyingGlass*/get magnifyingGlass() {
+      return C143 || CT.C143;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mapMarker*/get mapMarker() {
+      return C144 || CT.C144;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.map*/get map() {
+      return C145 || CT.C145;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaPause*/get mediaPause() {
+      return C146 || CT.C146;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaPlay*/get mediaPlay() {
+      return C147 || CT.C147;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaRecord*/get mediaRecord() {
+      return C148 || CT.C148;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaSkipBackward*/get mediaSkipBackward() {
+      return C149 || CT.C149;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaSkipForward*/get mediaSkipForward() {
+      return C150 || CT.C150;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaStepBackward*/get mediaStepBackward() {
+      return C151 || CT.C151;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaStepForward*/get mediaStepForward() {
+      return C152 || CT.C152;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.mediaStop*/get mediaStop() {
+      return C153 || CT.C153;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.medicalCross*/get medicalCross() {
+      return C154 || CT.C154;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.menu*/get menu() {
+      return C155 || CT.C155;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.microphone*/get microphone() {
+      return C156 || CT.C156;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.minus*/get minus() {
+      return C157 || CT.C157;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.monitor*/get monitor() {
+      return C158 || CT.C158;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.moon*/get moon() {
+      return C159 || CT.C159;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.move*/get move() {
+      return C160 || CT.C160;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.musicalNote*/get musicalNote() {
+      return C161 || CT.C161;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.paperclip*/get paperclip() {
+      return C162 || CT.C162;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.pencil*/get pencil() {
+      return C163 || CT.C163;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.people*/get people() {
+      return C164 || CT.C164;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.person*/get person() {
+      return C165 || CT.C165;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.phone*/get phone() {
+      return C166 || CT.C166;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.pieChart*/get pieChart() {
+      return C167 || CT.C167;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.pin*/get pin() {
+      return C168 || CT.C168;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.playCircle*/get playCircle() {
+      return C169 || CT.C169;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.plus*/get plus() {
+      return C170 || CT.C170;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.powerStandby*/get powerStandby() {
+      return C171 || CT.C171;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.print*/get print() {
+      return C172 || CT.C172;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.project*/get project() {
+      return C173 || CT.C173;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.pulse*/get pulse() {
+      return C174 || CT.C174;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.puzzlePiece*/get puzzlePiece() {
+      return C175 || CT.C175;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.questionMark*/get questionMark() {
+      return C176 || CT.C176;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.rain*/get rain() {
+      return C177 || CT.C177;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.random*/get random() {
+      return C178 || CT.C178;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.reload*/get reload() {
+      return C179 || CT.C179;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.resizeBoth*/get resizeBoth() {
+      return C180 || CT.C180;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.resizeHeight*/get resizeHeight() {
+      return C181 || CT.C181;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.resizeWidth*/get resizeWidth() {
+      return C182 || CT.C182;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.rssAlt*/get rssAlt() {
+      return C183 || CT.C183;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.rss*/get rss() {
+      return C184 || CT.C184;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.script*/get script() {
+      return C185 || CT.C185;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.shareBoxed*/get shareBoxed() {
+      return C186 || CT.C186;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.share*/get share() {
+      return C187 || CT.C187;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.shield*/get shield() {
+      return C188 || CT.C188;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.signal*/get signal() {
+      return C189 || CT.C189;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.signpost*/get signpost() {
+      return C190 || CT.C190;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.sortAscending*/get sortAscending() {
+      return C191 || CT.C191;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.sortDescending*/get sortDescending() {
+      return C192 || CT.C192;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.spreadsheet*/get spreadsheet() {
+      return C193 || CT.C193;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.star*/get star() {
+      return C194 || CT.C194;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.sun*/get sun() {
+      return C195 || CT.C195;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.tablet*/get tablet() {
+      return C196 || CT.C196;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.tag*/get tag() {
+      return C197 || CT.C197;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.tags*/get tags() {
+      return C198 || CT.C198;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.target*/get target() {
+      return C199 || CT.C199;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.task*/get task() {
+      return C200 || CT.C200;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.terminal*/get terminal() {
+      return C201 || CT.C201;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.text*/get text() {
+      return C202 || CT.C202;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.thumbDown*/get thumbDown() {
+      return C203 || CT.C203;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.thumbUp*/get thumbUp() {
+      return C204 || CT.C204;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.timer*/get timer() {
+      return C205 || CT.C205;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.transfer*/get transfer() {
+      return C206 || CT.C206;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.trash*/get trash() {
+      return C207 || CT.C207;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.underline*/get underline() {
+      return C208 || CT.C208;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.verticalAlignBottom*/get verticalAlignBottom() {
+      return C209 || CT.C209;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.verticalAlignCenter*/get verticalAlignCenter() {
+      return C210 || CT.C210;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.verticalAlignTop*/get verticalAlignTop() {
+      return C211 || CT.C211;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.video*/get video() {
+      return C212 || CT.C212;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.volumeHigh*/get volumeHigh() {
+      return C213 || CT.C213;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.volumeLow*/get volumeLow() {
+      return C214 || CT.C214;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.volumeOff*/get volumeOff() {
+      return C215 || CT.C215;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.warning*/get warning() {
+      return C216 || CT.C216;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.wifi*/get wifi() {
+      return C217 || CT.C217;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.wrench*/get wrench() {
+      return C218 || CT.C218;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.x*/get x() {
+      return C219 || CT.C219;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.yen*/get yen() {
+      return C220 || CT.C220;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.zoomIn*/get zoomIn() {
+      return C221 || CT.C221;
+    },
+    /*open_iconic_flutter.OpenIconicIcons.zoomOut*/get zoomOut() {
+      return C222 || CT.C222;
+    }
+  }, true);
+  open_iconic_flutter._IconData = class _IconData extends icon_data.IconData {};
+  (open_iconic_flutter._IconData.new = function(codePoint) {
+    open_iconic_flutter._IconData.__proto__.new.call(this, codePoint, {fontFamily: "OpenIconic", fontPackage: "open_iconic_flutter"});
+    ;
+  }).prototype = open_iconic_flutter._IconData.prototype;
+  dart.addTypeTests(open_iconic_flutter._IconData);
+  dart.addTypeCaches(open_iconic_flutter._IconData);
+  dart.setLibraryUri(open_iconic_flutter._IconData, L0);
+  dart.trackLibraries("packages/open_iconic_flutter/open_iconic_flutter.dart", {
+    "package:open_iconic_flutter/open_iconic_flutter.dart": open_iconic_flutter
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["open_iconic_flutter.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAoOA;;;;;MA/NwB,gDAAY;;;MACZ,iDAAa;;;MACb,8CAAU;;;MACV,8CAAU;;;MACV,+CAAW;;;MACX,6CAAS;;;MACT,8CAAU;;;MACV,4CAAQ;;;MACR,+CAAW;;;MACX,qDAAiB;;;MACjB,mDAAe;;;MACf,oDAAgB;;;MAChB,kDAAc;;;MACd,6CAAS;;;MACT,8CAAU;;;MACV,oDAAgB;;;MAChB,kDAAc;;;MACd,mDAAe;;;MACf,iDAAa;;;MACb,4CAAQ;;;MACR,iDAAa;;;MACb,yCAAK;;;MACL,yCAAK;;;MACL,uCAAG;;;MACH,4CAAQ;;;MACR,0CAAM;;;MACN,gDAAY;;;MACZ,+CAAW;;;MACX,0CAAM;;;MACN,wCAAI;;;MACJ,6CAAS;;;MACT,wCAAI;;;MACJ,wCAAI;;;MACJ,wCAAI;;;MACJ,4CAAQ;;;MACR,uCAAG;;;MACH,6CAAS;;;MACT,gDAAY;;;MACZ,2CAAO;;;MACP,yCAAK;;;MACL,uCAAG;;;MACH,4CAAQ;;;MACR,8CAAU;;;MACV,4CAAQ;;;MACR,6CAAS;;;MACT,+CAAW;;;MACX,6CAAS;;;MACT,8CAAU;;;MACV,4CAAQ;;;MACR,wCAAI;;;MACJ,wCAAI;;;MACJ,yCAAK;;;MACL,iDAAa;;;MACb,+CAAW;;;MACX,gDAAY;;;MACZ,8CAAU;;;MACV,+CAAW;;;MACX,2CAAO;;;MACP,6CAAS;;;MACT,yCAAK;;;MACL,iDAAa;;;MACb,+CAAW;;;MACX,yCAAK;;;MACL,0CAAM;;;MACN,wCAAI;;;MACJ,uCAAG;;;MACH,gDAAY;;;MACZ,gDAAY;;;MACZ,iDAAa;;;MACb,8CAAU;;;MACV,2CAAO;;;MACP,iDAAa;;;MACb,2CAAO;;;MACP,4CAAQ;;;MACR,+CAAW;;;MACX,8CAAU;;;MACV,wCAAI;;;MACJ,6CAAS;;;MACT,wDAAoB;;;MACpB,sDAAkB;;;MAClB,0CAAM;;;MACN,wCAAI;;;MACJ,4CAAQ;;;MACR,0CAAM;;;MACN,uDAAmB;;;MACnB,wDAAoB;;;MACpB,wDAAoB;;;MACpB,yDAAqB;;;MACrB,2CAAO;;;MACP,yCAAK;;;MACL,4CAAQ;;;MACR,4CAAQ;;;MACR,kDAAc;;;MACd,gDAAY;;;MACZ,wCAAI;;;MACJ,2CAAO;;;MACP,8CAAU;;;MACV,8CAAU;;;MACV,+CAAW;;;MACX,4CAAQ;;;MACR,gDAAY;;;MACZ,uCAAG;;;MACH,8CAAU;;;MACV,wCAAI;;;MACJ,wCAAI;;;MACJ,wCAAI;;;MACJ,yCAAK;;;MACL,0CAAM;;;MACN,wCAAI;;;MACJ,mDAAe;;;MACf,kDAAc;;;MACd,yCAAK;;;MACL,yCAAK;;;MACL,8CAAU;;;MACV,+CAAW;;;MACX,6CAAS;;;MACT,6CAAS;;;MACT,0CAAM;;;MACN,8CAAU;;;MACV,yCAAK;;;MACL,wCAAI;;;MACJ,yCAAK;;;MACL,yCAAK;;;MACL,4CAAQ;;;MACR,wCAAI;;;MACJ,0CAAM;;;MACN,iDAAa;;;MACb,+CAAW;;;MACX,gDAAY;;;MACZ,uCAAG;;;MACH,0CAAM;;;MACN,0CAAM;;;MACN,6CAAS;;;MACT,8CAAU;;;MACV,8CAAU;;;MACV,4CAAQ;;;MACR,wCAAI;;;MACJ,4CAAQ;;;MACR,8CAAU;;;MACV,gDAAY;;;MACZ,gDAAY;;;MACZ,8CAAU;;;MACV,wCAAI;;;MACJ,mDAAe;;;MACf,6CAAS;;;MACT,uCAAG;;;MACH,8CAAU;;;MACV,6CAAS;;;MACT,+CAAW;;;MACX,qDAAiB;;;MACjB,oDAAgB;;;MAChB,qDAAiB;;;MACjB,oDAAgB;;;MAChB,6CAAS;;;MACT,gDAAY;;;MACZ,wCAAI;;;MACJ,8CAAU;;;MACV,yCAAK;;;MACL,2CAAO;;;MACP,wCAAI;;;MACJ,wCAAI;;;MACJ,+CAAW;;;MACX,6CAAS;;;MACT,0CAAM;;;MACN,0CAAM;;;MACN,0CAAM;;;MACN,yCAAK;;;MACL,4CAAQ;;;MACR,uCAAG;;;MACH,8CAAU;;;MACV,wCAAI;;;MACJ,gDAAY;;;MACZ,yCAAK;;;MACL,2CAAO;;;MACP,yCAAK;;;MACL,+CAAW;;;MACX,gDAAY;;;MACZ,wCAAI;;;MACJ,0CAAM;;;MACN,0CAAM;;;MACN,8CAAU;;;MACV,gDAAY;;;MACZ,+CAAW;;;MACX,0CAAM;;;MACN,uCAAG;;;MACH,0CAAM;;;MACN,8CAAU;;;MACV,yCAAK;;;MACL,0CAAM;;;MACN,0CAAM;;;MACN,4CAAQ;;;MACR,iDAAa;;;MACb,kDAAc;;;MACd,+CAAW;;;MACX,wCAAI;;;MACJ,uCAAG;;;MACH,0CAAM;;;MACN,uCAAG;;;MACH,wCAAI;;;MACJ,0CAAM;;;MACN,wCAAI;;;MACJ,4CAAQ;;;MACR,wCAAI;;;MACJ,6CAAS;;;MACT,2CAAO;;;MACP,yCAAK;;;MACL,4CAAQ;;;MACR,yCAAK;;;MACL,6CAAS;;;MACT,uDAAmB;;;MACnB,uDAAmB;;;MACnB,oDAAgB;;;MAChB,yCAAK;;;MACL,8CAAU;;;MACV,6CAAS;;;MACT,6CAAS;;;MACT,2CAAO;;;MACP,wCAAI;;;MACJ,0CAAM;;;MACN,qCAAC;;;MACD,uCAAG;;;MACH,0CAAM;;;MACN,2CAAO;;;;;gDAIT;AACd,2DACE,SAAS,eACG,2BACC;;EACd","file":"../../../../../../packages/open_iconic_flutter/open_iconic_flutter.dart.lib.js"}');
+  // Exports:
+  return {
+    open_iconic_flutter: open_iconic_flutter
+  };
+}));
+
+//# sourceMappingURL=open_iconic_flutter.dart.lib.js.map
