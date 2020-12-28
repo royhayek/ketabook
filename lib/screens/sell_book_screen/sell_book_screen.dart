@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
@@ -26,6 +25,7 @@ import 'package:ketabook/widgets/custom_filled_text_field.dart';
 import 'package:ketabook/widgets/default_button.dart';
 import 'package:ketabook/widgets/progress_dialog.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 
 class SellBookScreen extends StatefulWidget {
   final Book book;
@@ -569,9 +569,7 @@ class _SellBookScreenState extends State<SellBookScreen> {
         isAddingBook = false;
       });
     } else {
-      Fluttertoast.showToast(
-          msg: trans(context, 'please_fill_all_information'),
-          fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'please_fill_all_information'), context);
     }
   }
 

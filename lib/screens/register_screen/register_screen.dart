@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 import 'package:ketabook/models/user_model.dart';
 import 'package:ketabook/services/http_services.dart';
@@ -9,6 +8,7 @@ import 'package:ketabook/widgets/custom_text_field.dart';
 import 'package:ketabook/widgets/default_button.dart';
 import 'package:ketabook/widgets/progress_dialog.dart';
 import 'package:ketabook/widgets/terms_of_use_checkbox.dart';
+import 'package:toast/toast.dart';
 
 class RegisterScreen extends StatefulWidget {
   static String routeName = "/register_screen";
@@ -36,22 +36,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
     String address = addressController.text.trim();
 
     if (agree) {
-      Fluttertoast.showToast(
-          msg: trans(context, 'you_need_to_agree_to_terms_of_use'),
-              fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'you_need_to_agree_to_terms_of_use'), context);
       return;
     }
 
     if (name.isEmpty || email.isEmpty || password.isEmpty || phone.isEmpty) {
-      Fluttertoast.showToast(
-          msg: trans(context, 'please_fill_all_required_fields'),
-          fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'please_fill_all_required_fields'), context);
     } else {
       if (!validateEmail(email)) {
-        Fluttertoast.showToast(
-            msg: trans(context, 'please_enter_a_valid_email'),
-            fontSize: getProportionateScreenWidth(14));
-
+        Toast.show(trans(context, 'please_enter_a_valid_email'), context);
         return;
       }
       await loadingDialog(context).show();

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ketabook/providers/auth_provider.dart';
 import 'package:ketabook/providers/app_provider.dart';
 import 'package:ketabook/models/user_model.dart';
@@ -13,6 +12,7 @@ import 'package:ketabook/widgets/custom_text_field.dart';
 import 'package:ketabook/widgets/default_button.dart';
 import 'package:ketabook/widgets/progress_dialog.dart';
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 
 class LoginScreen extends StatefulWidget {
   static String routeName = "/login_screen";
@@ -38,9 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
     String password = passwordController.text.trim();
 
     if (email.isEmpty || password.isEmpty) {
-      Fluttertoast.showToast(
-          msg: trans(context, 'please_fill_all_required_fields'),
-          fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'please_fill_all_required_fields'), context);
     } else {
       await loadingDialog(context).show();
       UserModel user = UserModel();

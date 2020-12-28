@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:ketabook/models/user_model.dart';
 import 'package:ketabook/providers/auth_provider.dart';
 import 'package:ketabook/providers/app_provider.dart';
 import 'package:ketabook/providers/cart_provider.dart';
@@ -20,7 +21,7 @@ import 'package:ketabook/widgets/progress_dialog.dart';
 import 'package:ketabook/widgets/terms_of_use_checkbox.dart';
 import 'package:ketabook/widgets/custom_filled_text_field.dart';
 import 'package:provider/provider.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:toast/toast.dart';
 
 class CheckoutScreen extends StatefulWidget {
   static String routeName = "/checkout_screen";
@@ -297,9 +298,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     });
 
     if (agree) {
-      Fluttertoast.showToast(
-          msg: trans(context, 'you_need_to_agree_to_terms_of_use'),
-          fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'you_need_to_agree_to_terms_of_use'), context);
       return;
     }
 
@@ -423,11 +422,40 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           });
         }
       });
+
+      _updateProfile();
     } else {
       _scaffoldKey.currentState.showSnackBar(SnackBar(
           content: Text(
         trans(context, 'please_fill_all_information'),
       )));
     }
+  }
+
+  _updateProfile() async {
+    AuthProvider authProvider =
+        Provider.of<AuthProvider>(context, listen: false);
+    String id = authProvider.user.id;
+    String name = _nameController.text;
+    String email = authProvider.user.email;
+    String phone = _phoneController.text;
+    String password = authProvider.user.password;
+    String address = _addressController.text;
+    String dateJoin = authProvider.user.dateJoin;
+
+    UserModel user = UserModel();
+    user.id = id;
+    user.name = name;
+    user.email = email;
+    user.phone = phone;
+    user.password = password;
+    user.address = address;
+    user.dateJoin = dateJoin;
+    user.timeJoin = timeFormat.format(DateTime.now());
+    user.universityId = '';
+    user.statusCode = '1';
+    user.dob = '';
+    user.gender = '';
+    HttpService().updateProfile(context, user);
   }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ketabook/services/http_services.dart';
 import 'package:ketabook/size_config.dart';
 import 'package:ketabook/utils/utils.dart';
 import 'package:ketabook/widgets/custom_text_field.dart';
 import 'package:ketabook/widgets/default_button.dart';
 import 'package:ketabook/widgets/progress_dialog.dart';
+import 'package:toast/toast.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   static String routeName = "/forgot_password_screen";
@@ -21,9 +21,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   forgotPassword(BuildContext context) async {
     String email = emailController.text.trim().toLowerCase();
     if (email.isEmpty) {
-      Fluttertoast.showToast(
-          msg: trans(context, 'please_fill_all_required_fields'),
-          fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'please_fill_all_required_fields'), context);
     } else {
       await loadingDialog(context).show();
       HttpService().forgotPassword(context, email);

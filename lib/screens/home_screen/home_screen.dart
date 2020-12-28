@@ -21,6 +21,7 @@ import 'package:ketabook/screens/universities_colleges_screen/universities_colle
 import 'package:ketabook/size_config.dart';
 import 'package:ketabook/widgets/search_text_field.dart';
 import 'package:provider/provider.dart';
+import 'dart:math' as math;
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -116,26 +117,29 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Expanded(
-                              child: Card(
-                                elevation: 10,
-                                shadowColor:
-                                    Theme.of(context).cardTheme.shadowColor,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                        SizeConfig.screenWidth / 50),
+                              child: Container(
+                                height: SizeConfig.screenHeight / 12,
+                                child: Card(
+                                  elevation: 10,
+                                  shadowColor:
+                                      Theme.of(context).cardTheme.shadowColor,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(
+                                          SizeConfig.screenWidth / 50),
+                                    ),
                                   ),
+                                  child: SearchTextField(
+                                      label: trans(context, 'search_for_books'),
+                                      controller: searchController,
+                                      onSubmitted: (String str) {
+                                        setState(() {
+                                          keyword = str;
+                                        });
+                                        application.setKeyword(keyword);
+                                        TabsScreen.setPageIndex(context, 3);
+                                      }),
                                 ),
-                                child: SearchTextField(
-                                    label: trans(context, 'search_for_books'),
-                                    controller: searchController,
-                                    onSubmitted: (String str) {
-                                      setState(() {
-                                        keyword = str;
-                                      });
-                                      application.setKeyword(keyword);
-                                      TabsScreen.setPageIndex(context, 3);
-                                    }),
                               ),
                             ),
                             SizedBox(width: getProportionateScreenWidth(8)),
@@ -158,39 +162,62 @@ class _HomeScreenState extends State<HomeScreen> {
                                           SizeConfig.screenWidth / 50),
                                     ),
                                   ),
-                                  child: Center(
-                                    child: Stack(
-                                      children: [
-                                        Padding(
+                                  child: Stack(
+                                    children: [
+                                      Center(
+                                        child: Padding(
                                           padding: const EdgeInsets.all(13.0),
-                                          child: Image.asset(
-                                            'assets/images/ic_cart.png',
-                                            width: SizeConfig.screenWidth / 2.4,
-                                          ),
+                                          child: isEnglish(context)
+                                              ? Image.asset(
+                                                  'assets/images/ic_cart.png',
+                                                  width:
+                                                      SizeConfig.screenWidth /
+                                                          2.4,
+                                                )
+                                              : Transform(
+                                                  alignment: Alignment.center,
+                                                  transform: Matrix4.rotationY(
+                                                      math.pi),
+                                                  child: Image.asset(
+                                                    'assets/images/ic_cart.png',
+                                                    width:
+                                                        SizeConfig.screenWidth /
+                                                            2.4,
+                                                  )),
                                         ),
-                                        // cartTotalCount != 0
-                                        //     ?
-
-                                        Consumer<CartProvider>(
+                                      ),
+                                      Center(
+                                        child: Consumer<CartProvider>(
                                           builder: (context, model, child) {
                                             return Padding(
-                                              padding:
-                                                  const EdgeInsets.all(7.0),
+                                              padding: EdgeInsets.only(
+                                                right: isEnglish(context)
+                                                    ? SizeConfig.screenWidth /
+                                                        50
+                                                    : 0,
+                                                left: isEnglish(context)
+                                                    ? 0
+                                                    : SizeConfig.screenWidth /
+                                                        50,
+                                                top: SizeConfig.screenHeight /
+                                                    70,
+                                              ),
                                               child: model
                                                           .getUserCartBooks()
                                                           .length !=
                                                       0
                                                   ? Align(
-                                                      alignment:
-                                                          Alignment.topRight,
+                                                      alignment: isEnglish(
+                                                              context)
+                                                          ? Alignment.topRight
+                                                          : Alignment.topLeft,
                                                       child: CircleAvatar(
                                                         backgroundColor:
                                                             Color(0xFFFF3B30),
                                                         child: FittedBox(
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsets
-                                                                    .all(
+                                                                EdgeInsets.all(
                                                               1.0,
                                                             ),
                                                             child: Text(
@@ -219,10 +246,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   : Container(),
                                             );
                                           },
-                                        )
-                                        // : Container()
-                                      ],
-                                    ),
+                                        ),
+                                      )
+                                      // : Container()
+                                    ],
                                   ),
                                 ),
                               ),

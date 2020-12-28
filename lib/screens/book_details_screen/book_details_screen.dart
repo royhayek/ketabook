@@ -20,7 +20,7 @@ import 'package:ketabook/utils/utils.dart';
 import 'package:ketabook/widgets/default_button.dart';
 import 'package:ketabook/widgets/list_view_title.dart';
 import 'package:provider/provider.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:toast/toast.dart';
 
 class BookDetailsScreen extends StatefulWidget {
   static String routeName = "/book_details_screen";
@@ -458,9 +458,7 @@ class _BookDetailsScreenState extends State<BookDetailsScreen> {
     await prefs.getUserId().then((id) async {
       if (id != null) {
         if (cart.getUserCartBooks().any((b) => b.id == widget.book.id)) {
-          Fluttertoast.showToast(
-              msg: trans(context, 'book_already_exist'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'book_already_exist'), context);
         } else {
           await HttpService().addToCart(context, widget.book, id);
           cart.addBookToCart(widget.book);

@@ -159,7 +159,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       user.phone = phone;
       user.password = password;
       user.address = address;
-      user.dateJoin = dateFormat.format(DateTime.now());
+      user.dateJoin = _user.dateJoin;
       user.timeJoin = timeFormat.format(DateTime.now());
       user.universityId = '';
       user.statusCode = '1';

@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart';
 import 'package:ketabook/providers/auth_provider.dart';
 import 'package:ketabook/providers/app_provider.dart';
@@ -31,8 +30,7 @@ import 'package:ketabook/session_manager.dart';
 import 'package:ketabook/utils/utils.dart';
 import 'package:ketabook/widgets/progress_dialog.dart';
 import 'package:provider/provider.dart';
-
-import '../size_config.dart';
+import 'package:toast/toast.dart';
 
 class HttpService {
   SessionManager session = SessionManager();
@@ -267,14 +265,10 @@ class HttpService {
         } else {
           if (message == 'success') {
             await loadingDialog(context).hide();
-            Fluttertoast.showToast(
-                msg: trans(context, 'REGISTRATION_SUCCESS'),
-                fontSize: getProportionateScreenWidth(14));
+            Toast.show(trans(context, 'REGISTRATION_SUCCESS'), context);
           } else {
             await loadingDialog(context).hide();
-            Fluttertoast.showToast(
-                msg: trans(context, message),
-                fontSize: getProportionateScreenWidth(14));
+            Toast.show(trans(context, message), context);
           }
         }
       } else {
@@ -338,29 +332,19 @@ class HttpService {
           );
         } else if (status == '0') {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'LoginFail'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'LoginFail'), context);
         } else if (status == '2') {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'YourAccountWaitingApprove'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'YourAccountWaitingApprove'), context);
         } else if (status == '3') {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'YourAccountBlock'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'YourAccountBlock'), context);
         } else if (status == '4') {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'YourAccountActivateRequired'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'YourAccountActivateRequired'), context);
         } else {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'LoginFail'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'LoginFail'), context);
         }
       } else {
         throw Exception('Failed to login user');
@@ -385,9 +369,7 @@ class HttpService {
         print(body);
         String message = body['message'];
 
-        Fluttertoast.showToast(
-            msg: trans(context, message),
-            fontSize: getProportionateScreenWidth(14));
+        Toast.show(trans(context, message), context);
 
         await loadingDialog(context).hide();
       } else {
@@ -485,9 +467,7 @@ class HttpService {
           }
         } else {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'book_add_fail'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'book_add_fail'), context);
         }
       } else {
         await loadingDialog(context).hide();
@@ -520,13 +500,9 @@ class HttpService {
         print(body);
 
         if (status == '1') {
-          Fluttertoast.showToast(
-              msg: trans(context, 'cart_add_successfully'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'cart_add_successfully'), context);
         } else {
-          Fluttertoast.showToast(
-              msg: trans(context, 'book_add_fail'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'book_add_fail'), context);
         }
       }
     } catch (e) {
@@ -617,9 +593,7 @@ class HttpService {
           String id = body['id'];
           return id;
         } else {
-          Fluttertoast.showToast(
-              msg: trans(context, 'book_add_fail'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'book_add_fail'), context);
         }
       }
     } catch (e) {
@@ -776,20 +750,14 @@ class HttpService {
         String message = body['message'];
         if (status == '1') {
           await loadingDialog(context).hide();
-          Fluttertoast.showToast(
-              msg: trans(context, 'UPDATE_SUCCESS'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'UPDATE_SUCCESS'), context);
         } else {
           if (message == 'success') {
             await loadingDialog(context).hide();
-            Fluttertoast.showToast(
-                msg: trans(context, 'UPDATE_SUCCESS'),
-                fontSize: getProportionateScreenWidth(14));
+            Toast.show(trans(context, 'UPDATE_SUCCESS'), context);
           } else {
             await loadingDialog(context).hide();
-            Fluttertoast.showToast(
-                msg: trans(context, message),
-                fontSize: getProportionateScreenWidth(14));
+            Toast.show(trans(context, message), context);
           }
         }
       } else {
