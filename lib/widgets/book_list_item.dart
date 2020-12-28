@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ketabook/providers/auth_provider.dart';
 import 'package:ketabook/providers/app_provider.dart';
 import 'package:ketabook/providers/cart_provider.dart';
@@ -15,6 +14,7 @@ import 'package:ketabook/utils/utils.dart';
 import 'dart:math' as math;
 
 import 'package:provider/provider.dart';
+import 'package:toast/toast.dart';
 
 class BookListItem extends StatefulWidget {
   final Book book;
@@ -210,9 +210,7 @@ class _BookListItemState extends State<BookListItem> {
     await prefs.getUserId().then((id) async {
       if (id != null) {
         if (cart.getUserCartBooks().any((b) => b.id == widget.book.id)) {
-          Fluttertoast.showToast(
-              msg: trans(context, 'book_already_exist'),
-              fontSize: getProportionateScreenWidth(14));
+          Toast.show(trans(context, 'book_already_exist'), context);
         } else {
           await HttpService().addToCart(context, widget.book, id);
           cart.addBookToCart(widget.book);

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ketabook.ketabook">
+    package="com.ketabook-kw">
 
     <uses-permission android:name="android.permission.INTERNET"/>
    <application

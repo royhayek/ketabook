@@ -23,7 +23,7 @@ import 'package:ketabook/widgets/custom_filled_text_field.dart';
 import 'package:ketabook/widgets/default_button.dart';
 import 'package:ketabook/widgets/progress_dialog.dart';
 import 'package:provider/provider.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:toast/toast.dart';
 
 class EditBookScreen extends StatefulWidget {
   final Book book;
@@ -524,9 +524,7 @@ class _EditBookScreenState extends State<EditBookScreen> {
         id: Provider.of<AuthProvider>(context, listen: false).user.id,
       );
     } else {
-      Fluttertoast.showToast(
-          msg: trans(context, 'please_fill_all_information'),
-          fontSize: getProportionateScreenWidth(14));
+      Toast.show(trans(context, 'please_fill_all_information'), context);
     }
   }
 

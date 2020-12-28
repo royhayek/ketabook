@@ -1,4 +1,4 @@
-package com.ketabook.ketabook
+package com.ketabook-kw
 
 import io.flutter.embedding.android.FlutterActivity
 
